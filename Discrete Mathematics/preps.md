@@ -34,6 +34,12 @@
 * Parallel edges: If 2 or more edges are associated with same vertices then we call them as parallel edges.
 * Any vertex having degree = 1 is called as a pendant vertex
 
+#### Categories of Graphs
+
+1. Simple Graph - No parallel edges and no loops
+2. Multi Graph - Only parallel edges are present but no self loops
+3. Pseudo Graph - Both parallel edges and loops are present.
+
 #### Handshaking Theorem
 
 * Sum of Degrees of all vertices = 2 * number of edges
@@ -52,6 +58,9 @@ Let {o1, o2, o3,...} be a set of degrees of vertices which are odd and {e1, e2, 
 we know that even + even = even and odd + odd = even,</br>
 Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
+#### Theorem 3
+
+* Maximum degree in a Simple Graph
 
 ### Sets
 
