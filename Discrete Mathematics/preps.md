@@ -89,7 +89,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 #### Important questions
 
-1.
+1. <a href = "Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>
 
 ### Sets
 
