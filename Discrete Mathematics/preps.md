@@ -26,13 +26,15 @@
 
 * Every Graph is made up of <b>vertices</b> and <b>edges</b>
 * G = (V, E) : Graph = ({Set of Vertices} , {Set of Edges}), where, V = {v1, v2, v3, ...} and E = {e1, e2, e3, ...}
-* Each edge should be associated with a pair of unordered vertices (Which results in an non directed graph)
+* Vertices are also called order and edges are also called as size.
+* Each edge should be associated with a pair of unordered vertices (Which results in a non directed graph)
 * End vertices: A vertex with degree exactly one, meaning it is connected to the rest of the graph by a single edge.
 * Loop : If an edge is connected to the same vertex then it's called a loop.
 * Degree / Valency: The number of edges incident on a vertex (Degree contributed by self loop = 2) Also called as number of welding points.
 * If a degree of a vertex is odd, then it's called a odd degree vertex, If a degree of a vertex is even, then it's called a even degree vertex.
 * Parallel edges: If 2 or more edges are associated with same vertices then we call them as parallel edges.
 * Any vertex having degree = 1 is called as a pendant vertex
+* Graphs can have 0 edges also, but has to have vertices.
 
 #### Categories of Graphs
 
@@ -60,7 +62,34 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 #### Theorem 3
 
-* Maximum degree in a Simple Graph
+* Maximum degree in a Simple Graph is less than or equal to n-1 where n is the number of vertices present in the graph
+
+#### Theorem 4
+
+* Maximum number of edges in the a Simple Graph is less than or equal to [n(n-1)/2].
+
+#### Theorem 5
+
+* Total number of Simple Graphs that are possible with any number of vertices is equal to 2<sup>e</sup> where e is the number of maximum edges that can be assigned to the graph.
+
+* For example: if the number of vertices of a graph = 4, then maximum number of edges = [4(3)/2] = 6. Now number of Simple Graphs = 2<sup>6</sup> = 64.
+
+* This can also be written as,  2<sup>[n(n-1)/2]</sup>.
+
+* Now, this using combinatorics can be written as <sup>[n(n-1)/2]</sup>C<sub>e</sub>
+* Therefore, if we have to find total graphs for 4 vertices with atleast 2 edges, then the answer will be = <sup>6</sup>C<sub>2</sub> + <sup>6</sup>C<sub>3</sub> + <sup>6</sup>C<sub>4</sub> + <sup>6</sup>C<sub>5</sub> + <sup>6</sup>C<sub>6</sub>
+* And if the question is flipped, if we have to find total graphs for 4 vertices with atmost 2 edges, then the answer will be = <sup>6</sup>C<sub>0</sub> + <sup>6</sup>C<sub>1</sub> + <sup>6</sup>C<sub>2</sub>
+
+#### Theorem 6
+
+* Minimum Degree of a graph [δ(G)]
+* Maximum Degree of a graph [Δ(G)]
+* Average Degree = (Sum of all Degrees)/(Total number of vertices) = [2e/n]
+* In most graphs we get δ(G) <= (2e/n) <= Δ(G)
+
+#### Important questions
+
+1.
 
 ### Sets
 
