@@ -87,9 +87,39 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Average Degree = (Sum of all Degrees)/(Total number of vertices) = [2e/n]
 * In most graphs we get δ(G) <= (2e/n) <= Δ(G)
 
+#### Degree Sequence
+
+* Writing degrees of all vertices either in increasing or in decreasing order (GATE standard is to write in decreasing order)
+
+* Where is it applied? For Ex: What will be the total number of edges for the graph od Degree Sequence 5, 2, 2, 2, 2, 1? 
+    * Ans: sum of degree of all vertices = 2e. 5 + 2 + 2 + 2 + 2 + 1 = 14. Therefore, e = 7.
+
+* Visualization is important to check if the Simple graph is possible or not. <b>Important:</b> Refer <a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf"> Slide 6: Graph Theory 03 Class Notes.pdf</a>
+
+* The other way to check if the degree sequence gives a simple graph or not is by plotting the graph.
+    * This can also be done by checking number of odd degree vertex and also maximum number of edges possible, and also checking for pendant vertices. <b>Refer</b><a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf"> Slide 7: Graph Theory 03 Class Notes.pdf </a>
+
+#### Havel - Hakimi Theorem
+
+* This theorem is used to verify if a graph is possible for large Degree Sequence
+* This algorithm helps reduce the size of the Degree Sequence to a more easy format which can be used to verify if the graph can be formed or not.
+*<b>Important</b> Refer <a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf"> Slide 13: Graph Theory 03 Class Notes.pdf</a>
+
+#### Types of Graphs
+
+* Complete Graph (Kn): The number of vertices >= 1. And Degrees of all vertices must be n - 1.
+    * Sum of degrees of all vertices = 2e. Then n(n-1) = 2e. Therefore e = [n(n-1)/2]
+    * [δ(G)] = (2e/n) = [Δ(G)] = (n-1)
+
+* Regular Graph: Degree of all graphs are same
+    * [δ(G)] = (2e/n) = [Δ(G)]
+
+* Therefore all complete graphs are regular graphs
+
 #### Important questions
 
-1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>
+1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>, <a href = https://github.com/MohitMahajan03/GATE-2027/blob/main/Discrete%20Mathematics/Graph%20Theory%2002%20%20Class%20Notes.pdf> Github </a>
+2. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 03  Class Notes.pdf">Page 14, Problems on Havel - Hakimi Theorem and others (Graph Theory 03)</a>
 
 ### Sets
 
