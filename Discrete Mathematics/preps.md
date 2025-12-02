@@ -107,7 +107,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 #### Types of Graphs
 
-* Complete Graph (Kn): The number of vertices >= 1. And Degrees of all vertices must be n - 1.
+* Complete Graph (Kn)(n >= 1): The number of vertices >= 1. And Degrees of all vertices must be n - 1.
     * Sum of degrees of all vertices = 2e. Then n(n-1) = 2e. Therefore e = [n(n-1)/2]
     * [δ(G)] = (2e/n) = [Δ(G)] = (n-1)
 
@@ -115,6 +115,13 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
     * [δ(G)] = (2e/n) = [Δ(G)]
 
 * Therefore all complete graphs are regular graphs
+
+* Cycle graph (Cn) (n >= 3): The degree of all vertices is 2, and the edges are connect the vertices as a cycle.
+    * Therefore, sum of degree of all vertices = n * 2 = 2e, then n = e.
+    * Number of vertices = number of edges.
+    * All Cycle graphs are regular
+
+* Cyclic Graph: It is a graph containing a cycle.
 
 #### Important questions
 
