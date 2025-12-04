@@ -123,6 +123,21 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 * Cyclic Graph: It is a graph containing a cycle.
 
+* Wheel Graph (Wn) (n >= 4):  It is a cycle graph with a spokes attached to the center node
+    * The degree of the center node is always n-1
+    * The degree of the remaining vertices are always 3
+    * Therefore sum of degrees of all vertices = (n-1) + (n-1)(3) = 2e => e = 2(n-1)
+
+* Bipartite Graph: It's a graph of 2 partitions
+    * The Vertices of these graphs can be divided into 2 partitions, such that all the edges will be from 1 set to another set, but not in same set.
+    * Note: Any graph having odd length cycle as a sub graph can never be a bipartite graph
+    * 2 or more isolated vertices also form a bipartite graph
+
+#### Theorem 7
+
+* A Bipartite graph does not contain odd length cycle
+
+
 #### Important questions
 
 1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>, <a href = https://github.com/MohitMahajan03/GATE-2027/blob/main/Discrete%20Mathematics/Graph%20Theory%2002%20%20Class%20Notes.pdf> Github </a>
