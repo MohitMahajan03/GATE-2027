@@ -133,10 +133,23 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
     * Note: Any graph having odd length cycle as a sub graph can never be a bipartite graph
     * 2 or more isolated vertices also form a bipartite graph
 
+* Complete Bipartite graph (Km,n): |V1| = m, |V2| = n.
+    * All vertices of |V1| should be connected to all vertices of |V2|.
+    * Ex: K 2,4
+
+* Star Graph (K 1,n-1): It is an extended version of the complete bipartite graph.
+
+* <b>Important</b> Complement Graph: (G<sup>c</sup>/ G<sup>|</sup>): V(G) = V(G<sup>c</sup>), In complement graphs, edges present in normal graph are absent and vice-versa.
+    * When we super impose G and G<sup>c</sup>, we get a complete graph.
+    * e(G) + e(G<sup>c</sup>) = Kn; e(G) + e(G<sup>c</sup>) = (n(n-1))/2 => e(G<sup>c</sup>) = (n(n-1))/2 - e(G).
+
+* Line Graph (L(G)): Check PPT
+
+    * Maximum degree of Line Graph of a Complete Graph of Kn is 2(n-2). Check notes for proof.
+
 #### Theorem 7
 
 * A Bipartite graph does not contain odd length cycle
-
 
 #### Important questions
 
