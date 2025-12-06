@@ -147,6 +147,19 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
     * Maximum degree of Line Graph of a Complete Graph of Kn is 2(n-2). Check notes for proof.
 
+* Isomorphic graph (Same property Graph): G1, G2 are isomorphic to each other, if:
+    * They have same number of vertices
+    * They have same number of edges
+    * They have the same degree sequence.
+    * And they have 1:1 correspondence of vertices and edges.
+
+    * Note!: If any 2 graphs satisfy the above 3 conditions they are not necessarily isomorphic. Always check incidence properties.
+
+* Self-complement graph: (G is Equivalent to G<sup>c</sup>): When a graph is complement to it's own graph.
+    * Total number of edges in self-complement graph = n(n-1)/4
+    * For a self complement graph n or (n-1) should be divisible by 4.
+
+
 #### Theorem 7
 
 * A Bipartite graph does not contain odd length cycle
