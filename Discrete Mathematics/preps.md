@@ -158,7 +158,11 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Self-complement graph: (G is Equivalent to G<sup>c</sup>): When a graph is complement to it's own graph.
     * Total number of edges in self-complement graph = n(n-1)/4
     * For a self complement graph n or (n-1) should be divisible by 4.
+    * C<sub>5</sub> is the only cycle graph which is self compelement
 
+* Hypercube(Q<sub>n</sub>): Where "n" is number of bits.
+    * V(Q<sub>n</sub>) = 2<sup>n</sup>
+    * E(Q<sub>n</sub>) = n * 2<sup>n-1</sup>
 
 #### Theorem 7
 
