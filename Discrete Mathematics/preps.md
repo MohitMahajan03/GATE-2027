@@ -62,11 +62,11 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 #### Theorem 3
 
-* Maximum degree in a Simple Graph is less than or equal to n-1 where n is the number of vertices present in the graph
+* Maximum degree of a vertex in a Simple Graph is less than or equal to n-1 where n is the number of vertices present in the graph
 
 #### Theorem 4
 
-* Maximum number of edges in the a Simple Graph is less than or equal to [n(n-1)/2].
+* Maximum number of edges in a Simple Graph is less than or equal to [n(n-1)/2].
 
 #### Theorem 5
 
@@ -94,8 +94,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Where is it applied? For Ex: What will be the total number of edges for the graph od Degree Sequence 5, 2, 2, 2, 2, 1? 
     * Ans: sum of degree of all vertices = 2e. 5 + 2 + 2 + 2 + 2 + 1 = 14. Therefore, e = 7.
 
-* Visualization is important to check if the Simple graph is possible or not. <b>Important:</b> Refer <a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf"> Slide 6: Graph Theory 03 Class Notes.pdf</a>
-
+* Visualization is important to check if the Simple graph is possible or not. <b>Important:</b> Refer <a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf">Slide 6: Graph Theory 03 Class Notes.pdf </a>
 * The other way to check if the degree sequence gives a simple graph or not is by plotting the graph.
     * This can also be done by checking number of odd degree vertex and also maximum number of edges possible, and also checking for pendant vertices. <b>Refer</b><a href = "Discrete Mathematics/Graph Theory 03  Class Notes.pdf"> Slide 7: Graph Theory 03 Class Notes.pdf </a>
 
@@ -116,7 +115,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 * Therefore all complete graphs are regular graphs
 
-* Cycle graph (Cn) (n >= 3): The degree of all vertices is 2, and the edges are connect the vertices as a cycle.
+* Cycle graph (Cn) (n >= 3): The degree of all vertices is 2, and the edges connect the vertices as a cycle.
     * Therefore, sum of degree of all vertices = n * 2 = 2e, then n = e.
     * Number of vertices = number of edges.
     * All Cycle graphs are regular
@@ -168,7 +167,22 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 * A Bipartite graph does not contain odd length cycle
 
+#### Connected and Disconnected Graphs
+
+* Walk : Going through the graph by alternating sequences of vertices and edges, such that we can repeat the vertices and edges as many times,
+* Trail : Going through the graph by alternating sequences of vertices and edges, such that vertices can be repeated as many times but not edges.
+* Path : Going through the graph by alternating sequences of vertices and edges, such that no repetition of vertices or edges can take place
+
+#### Connected Graph
+
+* When a path is available between all pair of vertices, then we call it as a connected graph
+* If K = 1 then it is connected graph
+
 #### Important questions
+
+* When path is not available for at least 1 pair of vertices then it called a disconnected graph
+* Disconnected graph contains connected subparts. These subparts are called components (K).
+
 
 1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>, <a href = https://github.com/MohitMahajan03/GATE-2027/blob/main/Discrete%20Mathematics/Graph%20Theory%2002%20%20Class%20Notes.pdf> Github </a>
 2. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 03  Class Notes.pdf">Page 14, Problems on Havel - Hakimi Theorem and others (Graph Theory 03)</a>
