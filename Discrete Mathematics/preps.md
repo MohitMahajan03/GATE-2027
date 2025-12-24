@@ -178,11 +178,29 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * When a path is available between all pair of vertices, then we call it as a connected graph
 * If K = 1 then it is connected graph
 
+* If G is disconnected then G<sup>c</sup> will be connected
+* But if G is connected then G<sup>c</sup> may not be connected
+
+#### Theorem 8
+
+* If δ(G) >= (n-1)/2 then it is a connected graph.
+* Vice Versa is not true.
+
+#### Range of Edges
+
+* For K = 1
+    * n - 1(connected) <= e <= n(n-1)/2 (max)
+    * Which also means, G is connected and does not contain a cycle. Therefore G is an Acyclic graph
+    * Unique path exists between all pair of vertices.
+
+* For K >= 2
+    * Minimum number of edges for a disconnected graph = n - k
+    * n-k <= e <= [(n-k)(n-k+1)]/2
+     
 #### Important questions
 
 * When path is not available for at least 1 pair of vertices then it called a disconnected graph
 * Disconnected graph contains connected subparts. These subparts are called components (K).
-
 
 1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>, <a href = https://github.com/MohitMahajan03/GATE-2027/blob/main/Discrete%20Mathematics/Graph%20Theory%2002%20%20Class%20Notes.pdf> Github </a>
 2. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 03  Class Notes.pdf">Page 14, Problems on Havel - Hakimi Theorem and others (Graph Theory 03)</a>
