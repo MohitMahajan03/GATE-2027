@@ -163,6 +163,8 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
     * V(Q<sub>n</sub>) = 2<sup>n</sup>
     * E(Q<sub>n</sub>) = n * 2<sup>n-1</sup>
 
+* Petersen Graph
+
 #### Theorem 7
 
 * A Bipartite graph does not contain odd length cycle
@@ -196,7 +198,38 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * For K >= 2
     * Minimum number of edges for a disconnected graph = n - k
     * n-k <= e <= [(n-k)(n-k+1)]/2
-     
+
+#### Convert connected graph to a Disconnected graph
+
+* Cut edge / bridge : Removal of a single edge from a graph will make graph as a disconnected graph.
+    * If cut edge exists, then it can never be a part of a cycle.
+    * If every edge is a cut edge, then it is a minimally connected graph or a tree.
+
+* Cut edge set / Cut set: Removal of set of edges from a Graph that will make the graph as a disconnected graph
+
+* Cut Vertex/ Cut Point/ Articulation Point : Removal of a single vertex from a graph that will make the graph as a disconnected graph.
+
+* Cut Vertex set : Removal of set of vertices from a graph will make the graph a disconnected graph. 
+
+* If cut edge exist does not mean that cut vertex also exists
+* If cut vertex exist does not mean that cut edge also exists
+
+#### Edge Connectivity (λ(G))
+
+* Removal of minimum number of edges from a Graph will make a graph as a Disconnected Graph.
+
+* λ(G) <= δ(G)
+
+* λ(G) <= δ(G) <= (2e/n) <= Δ(G) <= (n-1)
+
+#### Vertex Connectivity (K(G))
+
+* Removal of minimum number of Graph will that will make the graph disconnected or isolated vertex
+
+* K(G) <= λ(G)
+
+* K(G) <= λ(G) <= δ(G) <= (2e/n) <= Δ(G) <= (n-1)
+
 #### Important questions
 
 * When path is not available for at least 1 pair of vertices then it called a disconnected graph
