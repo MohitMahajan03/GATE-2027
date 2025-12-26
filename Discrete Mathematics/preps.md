@@ -230,6 +230,29 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 * K(G) <= λ(G) <= δ(G) <= (2e/n) <= Δ(G) <= (n-1)
 
+#### Eulerian Graphs
+
+* Closed Trail : It is a trail + starting and ending vertex is the same.
+* Euler Circuit: It is a Closed trail such that it should cover all the edges exactly once.
+* If a graph satisfies the euler circuit, then it is called as a Euler Graph/ Eulerian Graph.
+
+* Euler line/ Euler path: It is a Open trail such that it should cover all edges exactly once
+
+#### Theorem 9
+
+* Graph is Eulerian iff the graph is a connected graph and Degrees of all vertices are even.
+
+#### Theorem 10
+
+* Graph is semi-Eulerian iff it contains exactly 2 odd degree vertices
+
+#### Hamiltonian Graphs
+
+* Closed Path: Path which consists of same starting and ending vertex.
+* Hamiltonian Circuit: A closed path which covers all the vertices exactly once.
+* Every Hamiltonian circuit contains Hamiltonian Path, but the vice versa is not true.
+
+
 #### Important questions
 
 * When path is not available for at least 1 pair of vertices then it called a disconnected graph
