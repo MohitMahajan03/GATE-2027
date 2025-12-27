@@ -271,6 +271,19 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * X(Qn) = 2
 * X(Bipartite Graph) [connected] = 2
 
+#### Independent Set (Refer Graph Theory Part 12)
+
+* Set of non adjacent vertices (Refer Graph Theory Part 12)
+* Maximal Independent Set : Independent set such that no new vertex can be added to the set.
+* Independence Number β(G): Number of elements in the Maximal independent set
+* β(G) >= n.(X(G))
+
+#### Independent Edge Set / Matching set (Refer Graph Theory Part 12)
+
+* It is a set of non adjacent edges.
+* Maximal Matching set: It is a matching set such that we cannot add new edge into the set.
+* Matching number m(G): Number of edges present in the larges maximal matching set.
+
 #### Important questions
 
 * When path is not available for at least 1 pair of vertices then it called a disconnected graph
