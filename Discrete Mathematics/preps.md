@@ -216,7 +216,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 
 #### Edge Connectivity (λ(G))
 
-* Removal of minimum number of edges from a Graph will make a graph as a Disconnected Graph.
+* Removal of minimum number of edges from a Graph that will make a graph as a Disconnected Graph.
 
 * λ(G) <= δ(G)
 
@@ -252,6 +252,24 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Hamiltonian Circuit: A closed path which covers all the vertices exactly once.
 * Every Hamiltonian circuit contains Hamiltonian Path, but the vice versa is not true.
 
+#### Coloring
+
+* Properly Coloring: Adjacent vertex should not have same color.
+
+#### Chromatic Number (X(G))
+
+* Paint every vertex with minimum number of colors such that adjacent vertices are not of the same number.
+
+* Chromatic number of trivial graph is always 1
+* Chromatic number of tree (Acyclic connected graph) is always 2
+* Every tree is always 2 chromatic.
+* X(Cn) = 2 for n = even
+* X(Cn) = 3 for n = odd
+* X(Wn) = 3 for n = odd
+* X(Wn) = 4 for n = even
+* X(Kn) = n
+* X(Qn) = 2
+* X(Bipartite Graph) [connected] = 2
 
 #### Important questions
 
