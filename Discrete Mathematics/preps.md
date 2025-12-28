@@ -284,13 +284,21 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Maximal Matching set: It is a matching set such that we cannot add new edge into the set.
 * Matching number m(G): Number of edges present in the larges maximal matching set.
 
-#### Important questions
+#### Planarity
 
-* When path is not available for at least 1 pair of vertices then it called a disconnected graph
-* Disconnected graph contains connected subparts. These subparts are called components (K).
+* Planar Graph: If we can draw a graph over a plane without intersection of it's edges.
+* Non-Planar Graph : If we cannot draw a graph over a plane without intersection of it's edges.
 
-1. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 02  Class Notes.pdf">Page 17, Problems on Theorem 1 and others (Graph Theory 02)</a>, <a href = https://github.com/MohitMahajan03/GATE-2027/blob/main/Discrete%20Mathematics/Graph%20Theory%2002%20%20Class%20Notes.pdf> Github </a>
-2. <a href = "GATE-2027/Discrete Mathematics/Graph Theory 03  Class Notes.pdf">Page 14, Problems on Havel - Hakimi Theorem and others (Graph Theory 03)</a>
+* K5 is the first non planar graph: also called as Kerotski 1st graph (with minimum number of vertices)
+* K3,3 is the first non planar graph: also called as Kerotski 2nd graph (with minimum number of edges)
+
+#### Region / Faces
+
+* When we draw planar graph over a plane (embedding), it creates a region / face (r / f).
+* There are open region, which is unbounded and infinite
+* There are closed, bounded and finite region.
+* Euler formula -> n - e + f = 2 for connected planar graphs
+* Euler formula -> n - e + f = K + 1 where K is number of components of Disconnected graph  
 
 ### Sets
 
