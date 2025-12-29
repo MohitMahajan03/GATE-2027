@@ -298,7 +298,17 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * There are open region, which is unbounded and infinite
 * There are closed, bounded and finite region.
 * Euler formula -> n - e + f = 2 for connected planar graphs
-* Euler formula -> n - e + f = K + 1 where K is number of components of Disconnected graph  
+* Euler formula -> n - e + f = K + 1 where K is number of components of Disconnected graph
+* Degree of Region [d(Ri)] : Number of edges involved in the region
+* Sum of Degree of all closed regions = 2 x e >= 3 x f for e >= 3.
+
+#### Theorem 11
+
+* We know that 2e >= 3f
+* 2e >= 3(2 + e - n)
+* 3n - 6 >= 3e - 2e
+* Therefore, If a graph is planar then it will satisfy e <= (3n) - 6
+
 
 ### Sets
 
