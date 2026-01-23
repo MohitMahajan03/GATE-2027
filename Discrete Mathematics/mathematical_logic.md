@@ -62,7 +62,44 @@
 
 * All Satisfiable expressions are not Contingency
 
-
-#### Type - 1: 
+#### Type - 1
 
 * Refer Mathematical logic part 1 : 1:35:00. (Amazing logic, beautifully explained!)
+
+#### Type - 2 (Logical Equivalence) ≡
+
+* a->b ≡ ~b->~a : If the expression holds true when LHS and RHS are true, and false when LHS and RHS are false, then it is said that the expression holds logical equivalence.
+
+* If A ≡ B, then A <-> B will always be tautology.
+
+* P ^ P ≡ P
+* P v P ≡ P
+* P ^ F ≡ F
+* P v T ≡ T
+* P ^ T ≡ P
+* P v F ≡ P
+* P v Q ≡ Q v P
+* P ^ Q ≡ Q ^ P
+* a v (b v c) ≡ (a v b) v c
+* a ^ (b ^ c) ≡ (a ^ b) ^ c
+* a ^ (b v c) ≡ (a ^ b) v (a ^ c)
+* a v (b ^ c) ≡ (a v b) ^ (a v c)
+
+* Absorption Law:
+    * a v (a ^ b) ≡ a
+    * a ^ (a v b) ≡ a
+
+* De Morgan's laws
+    * ~(p ^ q) ≡ ~p v ~q
+    * ~(p v q) ≡ ~p ^ ~q
+
+* Negation laws
+    * p v ~p ≡ T
+    * p ^ ~p ≡ F
+
+* God's law
+    * a -> b ≡ ~b -> ~a
+    * a -> b ≡ ~a v b
+    
+    * Example (a -> b) ^ (a -> c) ≡ a -> (b ^ c)
+    * Example (a -> c) ^ (b -> c) ≡ (a v b) -> c
