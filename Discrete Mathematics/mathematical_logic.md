@@ -103,3 +103,10 @@
     
     * Example (a -> b) ^ (a -> c) ≡ a -> (b ^ c)
     * Example (a -> c) ^ (b -> c) ≡ (a v b) -> c
+
+#### Tips
+
+1. To tackle large expressions take common terms out.
+2. If there are no common terms, use the DeMorgan's law to take negations inside and then take out common terms
+3. As soon as common terms are out, use absorption laws to reduce the expressions.
+
