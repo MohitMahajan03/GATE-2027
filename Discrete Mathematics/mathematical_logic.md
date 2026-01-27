@@ -110,3 +110,26 @@
 2. If there are no common terms, use the DeMorgan's law to take negations inside and then take out common terms
 3. As soon as common terms are out, use absorption laws to reduce the expressions.
 
+#### Inference Rule
+
+* Premises -> Conclusion
+* Take Premises as True, and then check the conclusion
+* If the conclusion turns out to be true, then it is an inference rule
+* There can be multiple premises for a single statement, and all of them are joined by "and" condition. P1 ^ P2 ^ P3... -> Conclusion
+* There can be multiple conclusions too.
+
+* Ex: 
+    * P1: Either your mobile is present in left pocket or right pocket.
+    * P2 : It is not in left pocket
+    * C : It must be in Right pocket
+
+    * Which sums up to ((L v R) ^ ~L) -> R
+    * Also, ((L v R) ^ ~R) -> L
+
+* ((a -> b) ^ a) -> b (modus ponens)
+* ((a -> b) ^ ~b) -> ~a (modus tollens)
+* ((a -> b) ^ (b -> c)) -> (a -> c) (hypothetical syllogism)
+* ((a v b) ^ ~a) -> b (disjunctive syllogism)
+* a -> (a v b) (addition)
+* (a v b) -> a (simplification)
+* (a v b) -> b (simplification)
