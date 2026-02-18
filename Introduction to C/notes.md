@@ -4,7 +4,7 @@
 
 ### Block Diagram of a Computer System
 
-* <img src = "Introduction to C/block_diagram.png">
+* View block_diagram.png
 
 * Humans provide instructions to the computer and the computer executes them.
 * A program is sa sequence of instructions
@@ -25,3 +25,36 @@
 * It gives access to developers to manipulate the hardware, hence it is a middle level language.
 
 * C is used to build system programs, device drivers, Compilers and assemblers, embedded systems, IoT devices, Application software, databases, Games, Networking protocols and web servers.
+
+### System Programs
+
+* They are Programs that helps in translation of High Level Language to Low Level Language.
+* View translation.png
+
+#### Preprocessor
+
+* Helps in including support files into the program
+* Help in defining macros to help in holding numeric value
+* It runs before the acutal compilation.
+
+#### Compiler
+
+* The compiler converts the high level program to target assembly program.
+* Output of a compiler is an object code (Assembly code), Which is not executable.
+* It identifies syntax errors
+
+#### Assembler
+
+* The assembler generates the assembly level program from the object code
+* Therefore, It generates relocatable Machine code from object code.
+* Relocatable means, the code can be executed in an part of the main memory.
+* Therefore, output of assembler is a .exe file or an executable file.
+
+#### Linker and Loader
+
+* Linker combines all code files together before the execution
+* Loader is the system program that loads the program, data and related subroutines into the memory for execution
+
+#### Executable File
+
+* It consists of Machine instruction code. Which can be executed by the processor.
