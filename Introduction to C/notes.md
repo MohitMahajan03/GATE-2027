@@ -58,3 +58,30 @@
 #### Executable File
 
 * It consists of Machine instruction code. Which can be executed by the processor.
+
+## Data Types and Operators
+
+1. Macro
+    * They are defined using preprocessor directives and primarily used for code substitution and generation
+    * Increases readability and maintainability of the code
+    * Example '''# define size 100'''
+
+### Number System
+
+1. Decimal Number System -> 40 = 4 * 10 + 0 * 0 = 40
+2. Binary Number System -> 10100 = 2<sup>4</sup> * 1 + 2<sup>3</sup> * 0 + 2<sup>2</sup> * 1 + 2<sup>1</sup> * 0 + 2<sup>0</sup> * 0 = 20
+
+### Integers
+1. In C language, there are 2 types of integers -> Signed and Unsigned integers.
+2. 
+
+### Unstructured Info
+1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
+2. Decimal to binary conversion -> refer image decimal_to_binary.png
+3. Think in powers of 2 while converting decimal to binary, it is faster : Ex 98 = 64+32+0+0+0+2+0 = 1100010
+
+### Good Problems
+
+1. If 111111..... n-times, what is the decimal value? = 2<sup>n(n+1)/2</sup> + 1. (Solved it on my own!!)
+2. 12012 is a ternary operator, what is it's decimal value?
+3.  
