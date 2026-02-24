@@ -73,7 +73,16 @@
 
 ### Integers
 1. In C language, there are 2 types of integers -> Signed and Unsigned integers.
-2. 
+2. To represent the sign, the 1 bit (MSB) is reserved. 
+3. If MSB is 0, then the number is a positive number
+4. if MSB is 1, then the number is negative number.
+
+#### 2's complement representation
+* To represent any number as a negative number in binary, then we have to find the 2's complement of that number
+* It is done in following the steps below
+  1. Take 1's complement of the number. Ex: 010 -> 101
+  2. Then add binary 1 to the number -> 101 + 1 = 110
+* Now 110 is the negative number of 010
 
 ### Unstructured Info
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
