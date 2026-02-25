@@ -77,12 +77,14 @@
     * (64)<sub>10</sub> -> (40)<sub>16</sub>
 
 ### Types of Integers (Fundamentals)
+
 1. In C language, there are 2 types of integers -> Signed and Unsigned integers.
 2. To represent the sign, the 1 bit (MSB) is reserved.
 3. If MSB is 0, then the number is a positive number
 4. if MSB is 1, then the number is negative number.
 
 #### 2's complement representation
+
 * To represent any number as a negative number in binary, then we have to find the 2's complement of that number
 * It is done in following the steps below
   1. Take 1's complement of the number. Ex: 010 -> 101
@@ -100,9 +102,11 @@
 ### Data Types and their sizes in C
 
 * Group of 8 bits is called byte
-* Integer -> 4 bytes = 4 * 8 = 32 bits
+* Integer -> 4 bytes = 4 * 8 = 32 bits -> format specifier "%d"
+
 
 ### Structure of C Program
+
 1. Preprocessor Directive -> #include<stdio.h>
 2. Global Variables
 3. Helper Functions
@@ -111,6 +115,7 @@
    * Program block defines scope and visibility of a variable
 
 ### Unstructured Info
+
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
 2. Decimal to binary conversion -> refer image decimal_to_binary.png
 3. Think in powers of 2 while converting decimal to binary, it is faster : Ex 98 = 64+32+0+0+0+2+0 = 1100010
@@ -118,6 +123,11 @@
 5. Conversion of Octal to Decimal is as same as Binary to Decimal, just instead of powers of 2, we use powers of 8
 6. Decimal to Hexadecimal, and Hexadecimal to Decimal follow the same pattern.
 7. Declarative statement is a statement that define data type and name of the variable
+8. Types of statement
+    1. Declarative
+    2. Arithmetic (Relational, bitwise)
+    3. Input and output statement
+    4. Control statement
 
 ### Good Problems
 
