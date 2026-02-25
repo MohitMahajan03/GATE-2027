@@ -108,7 +108,9 @@
 ### Data Types and their sizes in C
 
 * Group of 8 bits is called byte
-* Integer -> 4 bytes = 4 * 8 = 32 bits -> format specifier "%d" -> Binary constants : int a = 0b101; Octal : int a = 015; Hexadecimal : int a = 0x12
+* Integer -> (DOS 2 Bytes) 4 bytes = 4 * 8 = 32 bits -> format specifier "%d" -> Binary constants : int a = 0b101; Octal : int a = 015; Hexadecimal : int a = 0x12
+    * Signed int ranges = 
+    * Unsigned int ranges = 
 * Character -> 
 * Float -> 
 
