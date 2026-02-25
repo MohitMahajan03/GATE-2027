@@ -99,11 +99,26 @@
     1. Directly expand the number in the form of Decimal number.
     2. Interpret the MSB as negative number. Ex: 1011 -> -8 + 0 + 2 + 1 = -5
 
+### Intro to C programming
+
+* A token is a sequence of characters having a logical meaning to C language. Example : Keywords, operators, constants, identifiers, special symbol.
+* Keywords : Words that are reserved by the C language, that cannot be used for any other purposes.
+* Identifiers: They are name given to variables and functions: naming conventions -> alphabet, underscore/numeric, alphabet/numeric.
+
 ### Data Types and their sizes in C
 
 * Group of 8 bits is called byte
-* Integer -> 4 bytes = 4 * 8 = 32 bits -> format specifier "%d"
+* Integer -> 4 bytes = 4 * 8 = 32 bits -> format specifier "%d" -> Binary constants : int a = 0b101; Octal : int a = 015; Hexadecimal : int a = 0x12
+* Character -> 
+* Float -> 
 
+### Types of operators
+
+1. Arithmetic operator
+2. Relational operator
+3. Logical operator
+4. Bitwise operator
+5. Ternary operator / Conditional operator
 
 ### Structure of C Program
 
