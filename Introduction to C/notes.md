@@ -72,6 +72,9 @@
 2. Binary Number System -> 10100 = 2<sup>4</sup> * 1 + 2<sup>3</sup> * 0 + 2<sup>2</sup> * 1 + 2<sup>1</sup> * 0 + 2<sup>0</sup> * 0 = 20.
 3. Octal Number System -> Number system having base 8. (0, 1, 2, 3, 5, 6, 7)
     * (47)<sub>10</sub> -> 57<sub>8</sub>
+4. Hexadecimal Number System -> Is a base 16 notation of numbers
+    * 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+    * (64)<sub>10</sub> -> (40)<sub>16</sub>
 
 ### Types of Integers (Fundamentals)
 1. In C language, there are 2 types of integers -> Signed and Unsigned integers.
@@ -94,19 +97,29 @@
     1. Directly expand the number in the form of Decimal number.
     2. Interpret the MSB as negative number. Ex: 1011 -> -8 + 0 + 2 + 1 = -5
 
-### Data Types and their sizes
+### Data Types and their sizes in C
 
 * Group of 8 bits is called byte
 * Integer -> 4 bytes = 4 * 8 = 32 bits
-* 
+
+### Structure of C Program
+1. Preprocessor Directive -> #include<stdio.h>
+2. Global Variables
+3. Helper Functions
+4. Main function -> Place where program starts execution
+5. Program Body -> enclosed in { } -> It creates a program block
+   * Program block defines scope and visibility of a variable
 
 ### Unstructured Info
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
 2. Decimal to binary conversion -> refer image decimal_to_binary.png
 3. Think in powers of 2 while converting decimal to binary, it is faster : Ex 98 = 64+32+0+0+0+2+0 = 1100010
+4. Decimal to octal -> Take the decimal number and keep dividing by 8, take the remainder after each division to (Exactly like decimal to binary)
+5. Conversion of Octal to Decimal is as same as Binary to Decimal, just instead of powers of 2, we use powers of 8
+6. Decimal to Hexadecimal, and Hexadecimal to Decimal follow the same pattern.
+7. Declarative statement is a statement that define data type and name of the variable
 
 ### Good Problems
 
 1. If 111111..... n-times, what is the decimal value? = 2<sup>n(n+1)/2</sup> + 1. (Solved it on my own!!)
 2. 12012 is a ternary operator, what is it's decimal value?
-3.  
