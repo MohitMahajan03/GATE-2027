@@ -111,8 +111,12 @@
 * Integer -> (DOS 2 Bytes) 4 bytes = 4 * 8 = 32 bits -> format specifier "%d" -> Binary constants : int a = 0b101; Octal : int a = 015; Hexadecimal : int a = 0x12
     * Signed int ranges = 
     * Unsigned int ranges = 
-* Character -> 
-* Float -> 
+    * short int ranges = size (2B)
+    * long int ranges = size(8B) format specifier (%ld)
+* Character -> 1 byte = 1 * 8 = 8 bits -> format specifier "%c" -> represented by ASCII (American Standard Code for information interchange) values
+  * Ranges : A - 65 : Z - 90 ; a - 97 : z - 122 ; 0 - 48 : 9 - 57;
+* Float -> 4 bytes -> 4 * 8 = 32 bits -> format specifier "%f" -> Follows IEEE-754 standard. -> refer image float_bit_format.png
+* Double -> 8 bytes -> 8 * 8 = 68 bits -> format specifier "%lf"
 
 ### Types of operators
 
@@ -150,3 +154,4 @@
 
 1. If 111111..... n-times, what is the decimal value? = 2<sup>n(n+1)/2</sup> + 1. (Solved it on my own!!)
 2. 12012 is a ternary operator, what is it's decimal value?
+3. Will "short a = 10;" and "long a = 10;" work?
