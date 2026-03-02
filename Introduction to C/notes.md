@@ -120,7 +120,10 @@
 
 ### Types of operators
 
-1. Arithmetic operator
+1. Arithmetic operator (+, -, *, /, %, =) -> Binary operators
+   * int to int -> int
+   * int to float -> float
+   * float to float -> int
 2. Relational operator
 3. Logical operator
 4. Bitwise operator
@@ -154,4 +157,4 @@
 
 1. If 111111..... n-times, what is the decimal value? = 2<sup>n(n+1)/2</sup> + 1. (Solved it on my own!!)
 2. 12012 is a ternary operator, what is it's decimal value?
-3. Will "short a = 10;" and "long a = 10;" work?
+3. Will "short a = 10;" and "long a = 10;" work? Yes they work
