@@ -124,10 +124,22 @@
    * int to int -> int
    * int to float -> float
    * float to float -> int
-2. Relational operator
-3. Logical operator
+2. Relational operator (>, <, <=, >=, ==, !=)
+3. Logical operator (&&, ||, !) -> ! is a unary operator.
 4. Bitwise operator
-5. Ternary operator / Conditional operator
+5. Ternary operator / Conditional operator (&, |, ^, ~, <<, >>)
+6. Unary Operator (-, !) -> Operators that are applied on single operand. Ex : -5, -9.
+
+### Precedence rule
+
+* In general, the C language uses the BODMAS rule to find find the value of an expression.
+
+### Operators ++ and --
+
+* These operators modify the value of the variable
+* It is not applied on constants and expression.
+* Post-increment -> x++; Pre-increment -> ++x;
+* Post-decrement -> x--; Pre-decrement -> --x;
 
 ### Structure of C Program
 
