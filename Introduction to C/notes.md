@@ -159,6 +159,16 @@
     2. Iterative statement
     3. Jump statement
 
+1. Branching Statement
+    * if(condition)
+    * else
+    * else if
+    * nested if
+    * switch case
+    * ternary operator : Syntac -> expr1 ? expr2 : expr3; if expr1 is true, then return expr2, else return expr3
+    * 
+
+
 ### Unstructured Info
 
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
