@@ -26,6 +26,8 @@
 
 * C is used to build system programs, device drivers, Compilers and assemblers, embedded systems, IoT devices, Application software, databases, Games, Networking protocols and web servers.
 
+* C is a sequential language. Each statement of the program is executed one after another in a sequential manner
+
 ### System Programs
 
 * They are Programs that helps in translation of High Level Language to Low Level Language.
@@ -149,6 +151,13 @@
 4. Main function -> Place where program starts execution
 5. Program Body -> enclosed in { } -> It creates a program block
    * Program block defines scope and visibility of a variable
+
+### Control Flow Statements
+
+* Types of Control Flow
+    1. Conditional or selection or branching or decision
+    2. Iterative statement
+    3. Jump statement
 
 ### Unstructured Info
 
