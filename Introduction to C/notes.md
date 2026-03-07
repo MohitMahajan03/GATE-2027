@@ -165,9 +165,12 @@
     * else if
     * nested if
     * switch case
-    * ternary operator : Syntac -> expr1 ? expr2 : expr3; if expr1 is true, then return expr2, else return expr3
-    * 
+    * ternary operator : Syntax -> expr1 ? expr2 : expr3; if expr1 is true, then return expr2, else return expr3
 
+2. Iterative Staments -> Execution of repetative tasks
+   * For loop
+   * While loop
+   * Do-While loop
 
 ### Unstructured Info
 
