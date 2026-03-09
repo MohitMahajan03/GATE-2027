@@ -186,6 +186,8 @@
     2. Arithmetic (Relational, bitwise)
     3. Input and output statement
     4. Control statement
+9. Break can only be used in switch and loops
+10. Continue can skip remainder of the body of the loop and go on with the next iteration
 
 ### Good Problems
 
