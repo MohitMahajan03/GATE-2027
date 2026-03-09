@@ -36,3 +36,38 @@
 5. Bitwise operators : &, |, ^, ~, <<, >>
 6. Membership operator : in, not in
 7. Identity operators : is, is not
+
+### Control Statements
+
+* These are the staments that can change the flow or order of instructions of execution of instructions in the program.
+
+1. if
+2. elif
+3. else
+4. match Ex:
+
+    ```
+    x = 10
+    match x:
+        case x if x > 0:
+            print("Positive")
+            
+        case x if x < 0:
+            print("Negatice")
+            
+        case x if x==0:
+            print("Zero")
+
+### Loops
+
+* When we repeatedly want to perform similar type of operation.
+
+1. For
+2. While
+
+### Miscellaneous Helpful Functions
+
+1. Input
+2. Range(start, stop, step)
+3. Enumerate -> returns 2 values, index and value (used with lists and for loops)
+4. 
