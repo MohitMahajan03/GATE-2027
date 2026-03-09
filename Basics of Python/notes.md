@@ -65,6 +65,70 @@
 1. For
 2. While
 
+### Inbuilt Data Structures in Python
+
+* All numeric data types are immutable. Ex: 
+    ```
+    a = 4 # mem addr -> 1972 ; 
+    a = 10 # mem addr -> 647 
+    #Value of the object is not updated in the same address
+* ```
+    print(id(a)) # Prints the address where 'a' is pointing to
+* The old value in the old address is picked up by the garbage collector
+
+1. int : (int + int) -> int ; (int - int) -> int ; (int * int) -> int ; (int / int) -> float
+2. float
+3. complex -> contains real and imaginary part 
+    ```
+    a = complex(3, 4)
+    print(a.real) # Prints 3
+    print(a.imag) # Prints 4
+4. string -> immutable, ordered data structure
+    * Slicing -> str[start_idx : end_idx : step_size] -> By default step_size is +1.
+    * Reverse -> str[ : : -1]
+    * upper -> str.upper() -> Capitalize all characters in the string; To check -> st.isupper()
+    * lower -> str.lower() -> Lower case all characters in the string; To check -> str.islower()
+    * Replace -> 
+        ```
+        str1 = "I love Java"
+        a = str1.replace("Java", "Python") 
+5. list -> mutable, indexed, ordered, We can perform slices on lists
+    * Append -> add element to the end of the list: l1.append(10)
+    * Insert -> add element at a given index without overwriting: l1.insert(1, 50)
+    *  Remove -> Remove element from the list : l1.remove(20)
+    *  Clear -> Remove all elements from the list : l1.clear()
+    *  Delete -> remove values from particular index : del l1[1]
+    *  Pop -> remove last element from list : l1.pop()
+   ``` 
+    list[start_index : stop_index : step_count]
+    list_rev[ : : -1]
+
+6. tuple -> (10, 20, 30, 40, 50)
+    * Tuples are immutable, indexed, ordered, We can perform slices on tuples, same way as lists
+7. set -> {10, 30 ,50}
+    * Sets are mutable, unordered, No indexing, No slicing, No duplicates, We cannot store other sets in a set
+    * Mutable objects cannot be stored in a set.
+    * Remove -> Removes data from the set : s1.remove(10)
+    * Update -> Updates data in the set : s1.update({10, 20})
+    * Union -> adds 2 sets : s1.union(s2)
+    * Difference -> has elements that belongs uniquely to 1st set: s1.difference(s2)
+    * Intersection: gets common elements between the 2 sets: s1.intersection(s2)
+    * Disjoint -> if there are no common elements : s1.isdisjoint(s2)
+8. dictionary -> It is used to store store data in key value pair format
+    * Indexing of dictionary is done on the keys
+    * Keys cannot be duplicate
+    * Dictionary is mutable and values can be of any object type
+    * But Dictionary keys are always immutable objects.
+    * Keys -> Returns all the keys in the dictionary : dict.keys()
+    * Values -> Returns all the values in the dictionary : dict.values()
+    * Items -> Return key value pairs : dict.items()
+    * From Keys -> Initializes keys using a list : dict.fromkeys(students, None) -> Initializes all keys to None
+    * Update -> Updates the key value pair : dict.update({"Ravi" : 74})
+9.  range
+10. frozen set -> A set which is frozen, immutable
+    * a = frozenset({1, 2, 3})
+    * All properties of set are applicable in frozen set
+
 ### Miscellaneous Helpful Functions
 
 1. Input
