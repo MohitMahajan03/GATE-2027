@@ -172,6 +172,18 @@
    * While loop
    * Do-While loop
 
+### Functions
+
+* It is a logical group of statments that forms a single logical unit
+* Helps us give more structure to the to the program, to manage the code and reusability
+
+1. Forward declaration -> declaring the function before the main function.
+2. Function call -> Calling the functions
+3. After the main function, function definition takes place
+4. When function is called, control is transferred to the body of the function
+5. The actual parameters are passed as values to the functions through the formal parameters. If the sctual parameter values are copied to the formal parameters, then the function follows call by value.
+6. After function is executed, if there is any return value, a value is returned and control is tranferred back to callee function
+
 ### Unstructured Info
 
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
