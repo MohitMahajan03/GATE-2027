@@ -129,6 +129,37 @@
     * a = frozenset({1, 2, 3})
     * All properties of set are applicable in frozen set
 
+### Functions
+
+* They are Reusable block of code
+    ```
+    def main(input arguments):
+        return
+
+* When a function returns nothing it means it returns None
+* Order of arguments that are passed is important for positional arguments
+* So how do you pass any number of positional arguments? *args -> meaning it can take more than 1 input; And args is of type tuple;
+* Order of arguments does not matter in keyword arguments -> fun(age = 32, name = "Ravi")
+* def fun(**kwargs) -> fun(name="Ravi", age=26) -> **kwargs will be of type dictionary
+* Nested Functions are allowed in python
+* Lambda functions : They are anonymous functions
+  * lambda (set of inputs) : set of instructions
+  * a = lambda x,y,z : x+y+z
+  * type(a) -> function
+  * Example
+        
+        ```
+        l1 = [9, 7, 6, 12, 20, 4, 3, 15] # Filter all values < 10
+        a = list(filter(lambda x: x > 10, l1))
+
+        a = reduce(lambda x, y : x + y, l1) # reduces the entire list to 1 value
+
+        a = map(lambda x : x * 4, l1) # allows an operation to be performed on all the values of a list
+
+
+
+
+
 ### Miscellaneous Helpful Functions
 
 1. Input
