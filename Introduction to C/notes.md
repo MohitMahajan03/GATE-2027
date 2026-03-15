@@ -183,6 +183,18 @@
 4. When function is called, control is transferred to the body of the function
 5. The actual parameters are passed as values to the functions through the formal parameters. If the sctual parameter values are copied to the formal parameters, then the function follows call by value.
 6. After function is executed, if there is any return value, a value is returned and control is tranferred back to callee function
+7. Function nesting is possible in C
+
+### Recursion
+
+* It is a mathematical problem solving technique
+* Solution of the problem is expressed as a smaller instance of the same problem
+* In programming recursion is defined as a function which calls itself is defined as recursion
+  
+* Things to keep in mind:
+    1. Base Condition : Conditions which terminates the recursion without reursive funnction call. 
+    2. Progress : The next recursive function call should be uodated value, otherwise it leads to infinite function. 
+
 
 ### Unstructured Info
 
