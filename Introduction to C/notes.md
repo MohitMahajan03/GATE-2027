@@ -211,6 +211,13 @@
 
 * Global Variable can be accessed anywhere in the program, Lifetime of global variable is until the program is running
 
+### Storage Classes
+
+* Memory Layout of a C program: When a program is in execution then it uses different sections of the memory explained as follows
+    1. Code Area : Linker and Loader loads the exe file in this area for execution.
+    2. initialized Data Segment : All data which has initial value defined, like Global variables.
+    3. Heap : Memory allocated by compiler for local and global variables. The user can also allocate and deallocate the memory
+    4. Stack 
 
 ### Unstructured Info
 
