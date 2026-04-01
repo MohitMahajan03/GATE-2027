@@ -192,8 +192,24 @@
 * In programming recursion is defined as a function which calls itself is defined as recursion
   
 * Things to keep in mind:
-    1. Base Condition : Conditions which terminates the recursion without reursive funnction call. 
-    2. Progress : The next recursive function call should be uodated value, otherwise it leads to infinite function. 
+    1. Base Condition : Conditions which terminates the recursion without recursive function call.
+    2. Progress : The next recursive function call should be updated value, otherwise it leads to infinite function.
+
+### Scopes and Lifetimes
+
+* With every variable, 2 aspects are associated
+    1. Scope: The place where we can access the variable is called the scope of hte variable
+        * Local scope variable is restricted to within the {} enclosing it.
+
+    2. Lifetime: Every time a function is in execution then the memory for the local variable is allocated. Upon termination of a function, memory is deallocated
+
+* Compile time allocation : If memory is allocated during compilation then it is called compile time allocation. Global Variables
+
+* Run time allocation : If memory is allocated during run time then it is called run time allocation. Local Variables
+
+* In different scopes, 2 local variables, can have the same name, But not in same scope
+
+* Global Variable can be accessed anywhere in the program, Lifetime of global variable is until the program is running
 
 
 ### Unstructured Info
