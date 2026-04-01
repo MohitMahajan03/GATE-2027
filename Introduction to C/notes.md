@@ -215,9 +215,28 @@
 
 * Memory Layout of a C program: When a program is in execution then it uses different sections of the memory explained as follows
     1. Code Area : Linker and Loader loads the exe file in this area for execution.
-    2. initialized Data Segment : All data which has initial value defined, like Global variables.
-    3. Heap : Memory allocated by compiler for local and global variables. The user can also allocate and deallocate the memory
-    4. Stack 
+    2. initialized Data Segment : All data which has initial value defined, like Global variables. (Compile time allocation)
+    3. Heap : Memory allocated by compiler for local and global variables. The user can also allocate and deallocate the memory. (Runtime allocation), using malloc and calloc and free
+    4. Stack : Memory allocated in stack is also dynamically allocated i.e at runtime. Local variables are stored in stack. Activation record is stored in the Stack
+
+* Storage Class depends on:
+    1. The area of memory where a variable is stored
+    2. The scope of a variable
+    3. Lifetime of the variable
+    4. Initial value of a variable
+
+* Types of Storage classes:
+    1. auto :
+        * auto is short for automatic.
+        * auto is default storage class of local variable. Ex: auto int a;
+        * auto variables are stored in stack.
+        * As soon as we call the function, local variable allocation takes place. And upon termination of function, memory is deallocation takes place.
+        * Initial value is garbage value
+        * Scope is within the function and lifetime is as long as function is in execution.
+    2. static :
+        * Default storage class for global variable.
+    3. register
+    4. extern
 
 ### Unstructured Info
 
