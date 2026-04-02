@@ -235,8 +235,17 @@
         * Scope is within the function and lifetime is as long as function is in execution.
     2. static :
         * Default storage class for global variable. Ex: static int a;
-    3. register
-    4. extern
+        * Static variable stored in Initialized data segment, with initial value 0
+        * Lifetime of static variable is as long as the program is running
+        * Local variable can also be static variable
+        * If local variable is declared as static, then it preserves it's value during multiple function calls.
+        * Local static variable is initialized only once
+    3. register :
+        * It is a memory within the processor
+        * Because register is inside the processor, data in registers can be accessed very fast
+        * Only local variables can have register storage class, register int a;
+    4. extern : Short for external
+        * extern keyword extends scope of the variable. Such that the global variables can be accessed in other program files
 
 ### Unstructured Info
 
