@@ -165,4 +165,5 @@
 1. Input
 2. Range(start, stop, step)
 3. Enumerate -> returns 2 values, index and value (used with lists and for loops)
-4. 
+4. Print Square * pattern
+5. Print Hollow square * pattern

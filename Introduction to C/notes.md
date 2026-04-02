@@ -234,7 +234,7 @@
         * Initial value is garbage value
         * Scope is within the function and lifetime is as long as function is in execution.
     2. static :
-        * Default storage class for global variable.
+        * Default storage class for global variable. Ex: static int a;
     3. register
     4. extern
 
