@@ -279,6 +279,16 @@
         }
     ```
 * a[0] is also called as the base address of the array
+* So for integer array a -> a[1] is present at 1004 since int -> 4 bytes
+* Address = Base address + (Size of datatype * position)
+* Array of characters is a string
+* 2D array -> int a[10][10];
+
+### Array Addressing
+
+* Each memory location has an address, and is assigned 1 Byte, Therefore it byte addressed
+* Let's assume and integer array's starting address is at 1000
+* 
 
 ### Unstructured Info
 
