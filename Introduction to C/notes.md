@@ -247,6 +247,24 @@
     4. extern : Short for external
         * extern keyword extends scope of the variable. Such that the global variables can be accessed in other program files
 
+### Pointers
+
+* C language allows a access of address of a variable
+* Pointer variable is a variable that holds the address of another variable of same data type
+* Declaration -> int *ptr = &a ;
+* printf("%p", ptr); -> prints address of a
+* printf("%d", *ptr); -> prints value of a
+
+### Pointers to pointer
+
+```
+    int a = 10;
+    int *ptr;
+    int **ptr1;
+    ptr = &a;
+    ptr1 = &ptr;
+```
+
 ### Unstructured Info
 
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
