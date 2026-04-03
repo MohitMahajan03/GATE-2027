@@ -265,6 +265,21 @@
     ptr1 = &ptr;
 ```
 
+### Array
+
+* An array is a variable that can hold multiple values of same data type.
+* It is a derived data type from primitive data types.
+* Array stores elements in consecutive memory locations
+* Declaration, Initialization, accessing array elements
+    ``` 
+        int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        for (int i = 0; i < 10; i++)
+        {
+            printf("%d", a[i]);
+        }
+    ```
+* a[0] is also called as the base address of the array
+
 ### Unstructured Info
 
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
