@@ -297,6 +297,22 @@
 * internally 2D arrays are mapped in 1D in the memory sequentially
 * All of the elements are stored in single sequency row wise for example: int a[2][2] = {{1, 2}, {3, 4}} is saved as 1, 2, 3, 4 in the memory layout
 
+### String
+
+1. String is a token
+2. String is an array of characters
+3. Null character -> '\0' marks the end of a string. ASCII value of Null character is 0
+4. Declaration and initialization
+    ``` 
+    char str[6] = "Vijay"; 
+    char ch[6] = {'V', 'i', 'j', 'a', 'y', '\0'};
+    ```
+5. we can declare string using character pointer
+6. To print a string the format specifier %s is used and followed by the pointer to the character array.
+7. String related functions are defined in header file string.h
+8. strlen(start): takes in start pointer and returns length of the string 
+
+
 ### Unstructured Info
 
 1. in b10001 -> first "1" from left is the MSB (Most Significant bit) and first "1" from right is the LSB (Least Significant bit)
