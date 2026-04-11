@@ -312,6 +312,47 @@
 7. String related functions are defined in header file string.h
 8. strlen(start): takes in start pointer and returns length of the string 
 
+### Structures
+
+* Structure gives the power to the user to define their own datatype
+* Structure and union are user defined data types.
+* Example to create a structure
+    ```
+        struct student{
+            char name[20];
+            int roll_no;
+        };
+        // name[20] and roll_no are the members of the structure
+    ```
+* Structure can be declared as global as well as local.
+* Declaration of structure variable
+    ```
+    struct student s;
+    // s is a structure variable of type student
+    ```
+* Initialization: 
+    ```
+    struct student s = {"Ravi", 120};
+    ```
+* Accessing the variables
+    ```
+    printf("%s", s.name);
+    printf("%d", s.roll_no);
+    ```
+
+### Unions
+
+* Difference between structure and union is that, the memory size assigned to union will only be the memory needed by the largest datatype
+* Example to create a structure
+    ```
+        union student{
+            char name[20];
+            int roll_no;
+        };
+        // name[20] and roll_no are the members of the union
+        // only 4 bytes of memory is assigned for this union student
+    ```
+* So therefore at one time only 1 member can be stored.
 
 ### Unstructured Info
 
