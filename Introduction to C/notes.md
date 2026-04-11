@@ -288,7 +288,14 @@
 
 * Each memory location has an address, and is assigned 1 Byte, Therefore it byte addressed
 * Let's assume and integer array's starting address is at 1000
-* 
+* Then the 1st index address is from 1000 to 1003, then 2nd index address starts from 1004 to 1007 and so on.
+* Therefore general formula to calculate any address is = Base address + (size of datatype * index value)
+
+### 2D Arrays
+
+* Arrays are always stored in sequential order in the memory
+* internally 2D arrays are mapped in 1D in the memory sequentially
+* All of the elements are stored in single sequency row wise for example: int a[2][2] = {{1, 2}, {3, 4}} is saved as 1, 2, 3, 4 in the memory layout
 
 ### Unstructured Info
 
