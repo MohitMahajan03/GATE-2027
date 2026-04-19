@@ -32,7 +32,15 @@
    * ~A + ~A + ~A = ~A
    * 0 + 0 = 0
 
-2. 'NOT' operations -> (~)
+2. 'AND' operations -> (.)
+    * A . 0 = 0 . A = 0
+    * A . 1 = A
+    * A . ~A = 0
+    * A . A = A
+
+3. Boolean laws
+    * A(B+C) = AB + AC -> Distributive Law
+    * A + (BC) = (A + B)(A + C) -> Distributive Law
 
 ### Misc Info
 
@@ -46,12 +54,14 @@
 ### Home Work
 
 #### L1
+
 1. (173)<sub>10</sub> = (10101101)<sub>2</sub>
 2. (222)<sub>10</sub> = (11011110)<sub>2</sub>
 3. (1011101)<sub>2</sub> = (93)<sub>10</sub>
 4. Only B, C are valid numbers
 
 #### L2
+
 1. AB + ~AC + BC + AC + ~C 
    * AB + C(~A + A) + BC + ~C
    * AB + BC + C + ~C
@@ -70,3 +80,7 @@
     * B + BC
     * B(1 + C)
     * B
+
+### L3
+
+1. (A + B + ~C)(A + B + C)(~A + B + C)
