@@ -84,3 +84,38 @@
 ### L3
 
 1. (A + B + ~C)(A + B + C)(~A + B + C)
+    * [(A + B) + ~C.C][~A + B + C]
+    * (A + B)(~A + B + C)
+    * B + A.(~A + C)
+    * B + AC
+
+2. (A + ~B + ~C)(~A + B + ~C)(A + B + ~C)
+    * (A + ~B + ~C)[(B + ~C)]
+    * ~C + (A + ~B).B
+    * ~C + AB
+
+3. AB + ~ABC 
+    * B(A + ~AC)
+    * B[(A + ~A).(A + C)]
+    * B(A + C)
+    * AB + BC
+
+4. (A + B + C)(~A + B + C)(A + ~B + C)(~A + ~B + C)
+    * [(A + C)+ B.~B][(~A + C) + B.~B]
+    * (A + C)(~A + C)
+    * C + A.~A
+    * C
+
+5. A + BC + ~ABC + ~A~BC + CD
+    * A + BC(1 + ~A) + ~A~BC + CD
+    * A + BC + ~A~BC + CD
+    * A + C(B + ~A~B) + CD
+    * A + C(B.~B + ~AB) + CD
+    * A + ~ABC + CD
+    * (A.~A + AB + AC) + CD
+    * A(B + C) + CD
+
+6. (A + B)(B + C)(~A + ~C)
+    * [A.~A + A.~C + ~AB + B~C](B + C)
+    * [](B + C)
+    * 
