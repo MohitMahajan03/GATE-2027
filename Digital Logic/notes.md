@@ -42,6 +42,9 @@
     * A(B+C) = AB + AC -> Distributive Law
     * A + (BC) = (A + B)(A + C) -> Distributive Law
 
+4. Redundancy / Consensus Theorem (Important)
+    * For this theorem to work, the expression should have a minimum of 3 terms
+
 ### Misc Info
 
 * Maximum number of n bits in any format, it's equvalent value in decimal is equal to (weight<sup>n</sup> - 1)<sub>10</sub>
@@ -109,11 +112,11 @@
 5. A + BC + ~ABC + ~A~BC + CD
     * A + BC(1 + ~A) + ~A~BC + CD
     * A + BC + ~A~BC + CD
-    * A + C(B + ~A~B) + CD
-    * A + C(B.~B + ~AB) + CD
-    * A + ~ABC + CD
-    * (A.~A + AB + AC) + CD
-    * A(B + C) + CD
+    * BC + (A + ~A)(A + ~BC) + CD
+    * BC + (A + ~BC) + CD
+    * BC + A + ~BC + CD
+    * A + C(B + ~B + D)
+    * A + C
 
 6. (A + B)(B + C)(~A + ~C)
     * [A.~A + A.~C + ~AB + B~C](B + C)
