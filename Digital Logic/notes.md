@@ -156,7 +156,11 @@
     * ~AB + C
 
 5. ~A~B + ~B~C + ~AC
+    * ~B~C + ~AC (redundancy Theorem)
 
 6. ~AB + BC + B~C
+    *  
 
 7. AB + A~BC + ~BC
+    * AB + ~BC(A + 1)
+    * AB + ~BC
