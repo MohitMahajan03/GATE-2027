@@ -55,6 +55,13 @@
     * ~(A + B + C) = ~A.~B.~C
     * ~(ABC) = ~A + ~B + ~C
 
+6. P.[P + Anything] = P
+    * P.P + P.anythin
+    * P + P.anything
+    * P[1 + Aything]
+    * P.1
+    * P
+
 ### Misc Info
 
 * Maximum number of n bits in any format, it's equvalent value in decimal is equal to (weight<sup>n</sup> - 1)<sub>10</sub>
@@ -158,9 +165,57 @@
 5. ~A~B + ~B~C + ~AC
     * ~B~C + ~AC (redundancy Theorem)
 
-6. ~AB + BC + B~C
+6. ~AB + BC + B~C -> B
     *  
 
 7. AB + A~BC + ~BC
     * AB + ~BC(A + 1)
     * AB + ~BC
+
+#### L5
+
+1. ~(A~B(~AB + ~BC + A~BD + A~B~D))
+    * NOTE : P.[P + anything] = P
+    * ~(A~B(~AB + ~BC + A~B(D + ~D)))
+    * ~(A~B(~AB + ~BC + A~B))
+    * ~(A~B)
+    * ~A + B
+
+2. ~A~B + AC + ~BC
+    * ~A~B + AC -> Redundancy theorem
+
+3. AB + A~BC + ~A~C
+    * A(B + ~BC) + ~A~C
+    * A((B + ~B)(B + C)) + ~A~C
+    * AB + AC + ~A~C
+
+4. AB + A~BC + ~B~C
+    * A((B + ~B)(B + C)) + ~B~C
+    * A(1.(B + C)) + ~B~C
+    * A(B + C) + ~B~C
+    * AB + AC + ~B~C
+    * A(B + C) + ~(B + C)
+    * (~(B + C) + A).(~(B + C) + (B + C)) 
+    * A + ~B~C
+    * (A + ~B)(A + ~C)
+
+5. AB + ~A(~B + D) + BD
+    * Now, B(~B + D) -> BD
+    * Therefore AB + ~A~B + ~AD
+
+6. A~B[ABC + ~BC + A~BC + BCD]
+    * A~B[ABC + ~BC + BCD]
+    * A~B[C(AB + ~B) + BCD]
+    * A~B[C(A + ~B) + BCD]
+    * A~B[AC + ~BC + BCD]
+    * A~B[C(A + ~B + BD)]
+    * A~B[C(A + ~B + D)]
+    * A~B[AC + ~BC + CD]
+    * A~BC + A~BC + A~BCD
+    * A~BC + A~BCD
+    * A~BC[1 + D]
+    * A~BC
+
+7. ~A~B + A~B + B~C
+8. A + ~AB + ~AC
+9. A~B + A~C +~A~BC
