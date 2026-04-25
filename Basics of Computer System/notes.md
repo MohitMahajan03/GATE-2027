@@ -28,3 +28,16 @@
 
 * Deals with physical devices and their interconnections
 * With a perpective of improving the performance
+
+### Digital Computer
+
+* Computer which takes input in form of binary and gives output in binary
+* Binary is a number system where all the numbers are denoted by only 2 digits 0 and 1
+* Program and data are fed to the computer in binary
+* The compiler converts the program and data into binary
+
+### Main Memory (RAM)
+
+* All programs that need to be run are loaded into the main memory
+* It is used to store current running programs and their data
+* 
