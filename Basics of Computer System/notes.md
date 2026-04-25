@@ -40,4 +40,38 @@
 
 * All programs that need to be run are loaded into the main memory
 * It is used to store current running programs and their data
-* 
+
+### Data in Computer System
+
+* Data that goes to the CPU can be of a number or character, both of them will be in binary format
+* Numbers are of the following forms
+   * unsigned
+   * signed -> Fixed Point and Floating Point
+   * Fixed Point -> sign magnitude, 1's complement, 2's complement
+   * Floating point -> Single Precision, Double Precision
+* Character are of the following forms
+   * ASCII
+   * EBCDIC
+* Unsigned Numbers -> No sign of positive or negative
+* Signed Number -> Numbers that can be positive or negative
+* Arithmetic Numbers -> Numbers on which Arithmetic operations can be performed, these are Signed Numbers
+* Fixed Point -> Directly represented in Binary
+* Floating Point -> 1 * mantissa * 2<sup>exponent</sup>
+
+### ASCII
+
+* American standard Code for information interchange
+* It is an encoding system to represent characters into binary
+* ASCII encoding consists of 8 bits
+
+### EBCDIC
+
+* Extended Binary Coded for information interchange
+* Uses 8 bits for encoding
+
+### Numbers and Units
+
+* Nibble -> 4 bits
+* Byte -> 8 bits
+* LSB -> Least Significant bit
+* MSB -> Most Significant bit
