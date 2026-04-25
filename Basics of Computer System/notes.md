@@ -75,3 +75,23 @@
 * Byte -> 8 bits
 * LSB -> Least Significant bit
 * MSB -> Most Significant bit
+
+### Number System
+
+* A number system of base-b will have digits from 0 to b-1
+* Types of Number systems
+   * Binary -> Base 2 -> range 0, 1
+   * Octal -> Base 8 -> range 0, 7
+   * Decimal -> Base 10 -> range 0, 9
+   * Hexadecimal -> Base 6 -> range 0, F
+
+### Checking validity of Numbers
+
+1. (1234)<sub>6</sub> -> valid
+2. (2329)<sub>9</sub> -> invalid
+3. (62AC)<sub>16</sub> -> valid
+4. (1012)<sub>3</sub> -> valid
+5. (3431)<sub>4</sub> -> invalid
+6. (1265)<sub>5</sub> -> invalid
+7. (6215)<sub>6</sub> -> invalid
+8. (8294)<sub>10</sub> -> valid
