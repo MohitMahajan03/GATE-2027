@@ -142,6 +142,13 @@
 * This metric is used to compare machines or techniques or softwares or hardwares, etc which perform same task.
 * Performance is calculated as 1/time_taken
 
+### Memory Access
+
+#### Memory Address
+
+* The Main Memory, (RAM) is divided into blocks called cells, so that data access can be easily done by tje CPU
+* The cells are numbered from 0 onwards, so the CPU, queries data/instruction from the specific memory address
+* For each memory access, CPU sends address to the memory and tells it to perform either read or write operation.
 
 ### HW
 
