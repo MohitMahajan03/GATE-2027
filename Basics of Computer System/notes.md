@@ -169,6 +169,35 @@
 #### Multitasking OS
 * It assigns multiple programs to run sequentially while switching context really fast, that it gives the illusion of multitasking
 
+### Basics of Data Structure
+
+* It is a model for organizing data
+* It is used to arrange data in such a way that the program to process data can be finished with less time and efforts.
+
+#### Types of Data structures
+
+1. Linear -> elementes are arranged in linear or sequential fashion
+   * Array
+   * linked list
+   * Queue
+   * Stack
+2. Non-linear -> elements are arranged in non linear fashion
+   * Tree
+   * Graph
+   * Hashtable
+
+#### Array
+* Linear data structure, with collection of data of same data type
+
+#### Queue
+* Known as First in First out list (FIFO)
+* It has 2 end, Rear end (Element addition End)
+* Front end (Element deletion End)
+
+#### Stack
+* Known as Last in First out list (LIFO)
+* The last element of the stack is called the top of the stack
+
 ### HW
 
 * Binary to Decimal
