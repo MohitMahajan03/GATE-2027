@@ -123,6 +123,25 @@
 * milli = 10<sup>-3</sup>sec = 1/1K
 * nano = 10<sup>-9</sup>sec = 1/1G
 
+### Terminologies
+
+#### CPU cycle
+* In one cycle, CPU can perform only 1 operation
+* Time taken for a cycle is call CPU cycle time
+
+#### Memory Cycle
+* In one memory cycle, memory can perform 1 operation
+
+#### Memory Access Time
+* Time taken for 1 read/write to happen in the memory
+
+#### Throughput
+* Number of operations performed in 1 unit of time
+
+#### Speedup or Performance Gain
+* This metric is used to compare machines or techniques or softwares or hardwares, etc which perform same task.
+* Performance is calculated as 1/time_taken
+
 
 ### HW
 
