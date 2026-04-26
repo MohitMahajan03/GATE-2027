@@ -150,6 +150,25 @@
 * The cells are numbered from 0 onwards, so the CPU, queries data/instruction from the specific memory address
 * For each memory access, CPU sends address to the memory and tells it to perform either read or write operation.
 
+### Basics of Operating Systems
+
+* OS is a software that interfaces between user and hardware
+* It provides a set of utilities to simplify application development/execution
+
+#### Services of OS
+* User interface
+* Program Execution
+* I/O Operation
+* File-System Manipulation
+* Inter Process Communication
+* Error Detection
+* Resource Allocation
+* Accounting
+* Protection and Security
+
+#### Multitasking OS
+* It assigns multiple programs to run sequentially while switching context really fast, that it gives the illusion of multitasking
+
 ### HW
 
 * Binary to Decimal
