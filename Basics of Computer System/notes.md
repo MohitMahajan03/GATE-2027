@@ -108,6 +108,22 @@
 * Divide the given decimal by 2, and note the remainders everytime, till you are left with 0 or 1
 * Then note all the digits from the last remained to the 1st remainder, you will get your binary number
 
+### Units and Conversions
+
+* Kilo -> in terms of memory 2<sup>10</sup> -> in terms of distance 10<sup>3</sup> 
+* Mega -> in terms of memory 2<sup>20</sup> -> in terms of distance 10<sup>6</sup>
+* Giga -> in terms of memory 2<sup>30</sup> -> in terms of distance 10<sup>9</sup>
+* Tera -> in terms of memory 2<sup>40</sup> -> in terms of distance 10<sup>12</sup>
+* second = 1
+* millisecond = 1/10<sup>3</sup> = 10<sup>-3</sup>
+* microsecond = 1/10<sup>6</sup> = 10<sup>-6</sup>
+* nanosecond = 1/10<sup>9</sup> = 10<sup>-9</sup>
+* picosecond = 1/10<sup>12</sup> = 10<sup>-12</sup>
+* 1us = 10<sup>-6</sup>sec = 1/1M
+* milli = 10<sup>-3</sup>sec = 1/1K
+* nano = 10<sup>-9</sup>sec = 1/1G
+
+
 ### HW
 
 * Binary to Decimal
@@ -124,3 +140,14 @@
 2. 19 = 10011
 3. 33 = 100001
 4. 50 = 110010
+
+* Units and Conversions
+1. 128 * 64M = 2<sup>7</sup> * 2<sup>6</sup> * 2<sup>20</sup> = 8G
+2. 2G/64 = 2 * 2<sup>30</sup> / 2<sup>6</sup> = 32M
+3. 1ms = 10<sup>-3</sup> seconds
+4. 1us = 10<sup>-3</sup> ms
+5. 1 sec = 10<sup>6</sup> us
+6. 5 us = 5 * 10<sup>-3</sup> ms
+7. 0.5 ms = 500 us
+8. 0.02 us = 20 ns
+9. 0.0004 ms = 0.4 us = 400 ns
