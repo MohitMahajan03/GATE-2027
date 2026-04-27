@@ -56,11 +56,39 @@
     * ~(ABC) = ~A + ~B + ~C
 
 6. P.[P + Anything] = P
-    * P.P + P.anythin
+    * P.P + P.anything
     * P + P.anything
     * P[1 + Aything]
     * P.1
     * P
+
+### Boolean Function
+
+#### Sum of Products (SOP)
+
+* Sum of all boolean product terms
+* A = 1 and ~A = 0
+* Considers function ouput 1
+
+#### Product of Sum (POS)
+
+* Product of all boolean sum terms
+* ~A = 1 and A = 0
+* Considers function output 0
+
+#### Example
+
+1. Function of A, B
+```
+A B f(A,B)  SOP      POS
+0 0    1   ~A.~B     (A + B)
+0 1    0   ~A.B      (A + ~B)
+1 0    1   A.~B      (~A + B)
+1 1    0   A.B       (~A + ~B)
+
+SOP (∑)= ~A~B + A~B = ~B[~A + A] = ~B
+POS (π)= (A + ~B)(~A + ~B) = ~B
+```
 
 ### Misc Info
 
@@ -216,6 +244,36 @@
     * A~BC[1 + D]
     * A~BC
 
-7. ~A~B + A~B + B~C
-8. A + ~AB + ~AC
-9. A~B + A~C +~A~BC
+7. ~A~B + A~B + B~C -> ~(BC)
+8. A + ~AB + ~AC -> A + B + C
+9. A~B + A~C +~A~BC -> A~C + ~BC
+
+#### L6
+
+1. f(A, B, C) = ∑(1, 2, 4, 6) = π(0, 3, 5, 7)
+```
+A B C   SOP         POS
+0 0 0   ~A~B~C      (A + B + C)
+0 0 1   ~A~BC       (A + B + ~C)
+0 1 0   ~AB~C       (A + ~B + C)
+0 1 1   ~ABC        (A + ~B + ~C)
+1 0 0   A~B~C       (~A + B + C)
+1 0 1   A~BC        (~A + B + ~C)
+1 1 0   AB~C        (~A + ~B + C)
+1 1 1   ABC         (~A + ~B + ~C)
+
+SOP ∑ = ~A~BC + ~AB~C + A~B~C + AB~C
+POS π = (A + B + C)(A + ~B + ~C)(~A + B + ~C)(~A + ~B + ~C)
+```
+
+2. f(A, B, C) = ∑(0, 2, 5, 7) -> ~f(A, B, C) = π(0, 2, 5, 7) = ∑(1, 3, 4, 6)
+3. if f(A, B, C) = ∑(1, 2, 3, 6) then ~f is/are?
+    * π(1, 2, 3, 6)
+    * ∑(0, 4, 5, 7)
+4. f(A, B, C) = π(0, 2, 4, 5, 7) then ~f is/are?
+    * ∑(0, 2, 4, 5, 7)
+    * π(1, 3, 6)
+5. ~A + ~AB + ~A~BC + A~B~C
+6. ~A~B[~A~C + ~B~C + B~CD + ~A~CD]
+    * ~A~B[~A~C + ~B~C + B~CD]
+    * ~A~B~C[~A + ~B + BD]
