@@ -28,3 +28,120 @@
 1. Take a number input from user and print reverse of it
 2. Check if a number input from user is a palindrome or not
 3. Find the largest Number in the given list [10, 4 19, 11, 23]
+
+### Program
+
+4. Draw a Sqare full of stars providing n as side of square
+
+``` 
+n = int(input("Enter the number of stars for each side "))
+
+for i in range(0, n):
+    for j in range(0, n):
+        print("*", end=" ")
+    
+    print()
+```
+
+5. Draw a Hollow Square of stars provided n as side of square
+
+``` 
+n = int(input("Enter the number of stars for each side "))
+
+for i in range(0, n):
+    print("*", end=" ")
+    for j in range(0, n-2):
+        if i == 0 or i == n-1:
+            print("*", end=" ")
+        else:
+            print(" ", end = " ")
+    
+    print("*", end=" ")
+    
+    print()
+```
+
+6. Draw a rectangle of given length and breadth with "*"
+
+```
+n = int(input("Enter the length of the rectangle "))
+m = int(input("Enter the breadth of the rectangle "))
+
+for i in range(0, n):
+    for j in range(0, m):
+        print("*", end=" ")
+    
+    print()
+```
+
+7. Draw a right angled triangle.
+
+```
+n = int(input("Enter the length of the triangle "))
+
+for i in range(0, n):
+    for j in range(0, i+1):
+        print("*", end=" ")
+    
+    print()
+```
+
+8. Draw an inverted right angled triangle
+
+```
+n = int(input("Enter the length of the triangle "))
+
+for i in range(0, n):
+    for j in range(0, n-i):
+        print("*", end=" ")
+    
+    print()
+```
+
+9. Draw a pyramid pattern
+
+```
+n = int(input("Enter the length of the pyramid "))
+space_count = 0
+for i in range(0, n+1):
+    space_count = (n*2)-i
+
+    for j in range(0, n-i):
+        print(" ", end="")
+    for j in range(0, i):
+        print("*", end=" ")
+    
+    print()
+```
+
+10. Draw a inverted pyramid pattern
+
+```
+n = int(input("Enter the length of the pyramid "))
+space_count = 0
+for i in range(n, 0, -1):
+    space_count = (n*2)-i
+
+    for j in range(0, n-i):
+        print(" ", end="")
+    for j in range(0, i):
+        print("*", end=" ")
+    
+    print()
+```
+
+11. Draw right triangle with numbers
+
+```
+n = int(input("Enter the length of the triangle "))
+
+for i in range(0, n):
+    for j in range(0, i+1):
+        print(j+1, end=" ")
+    
+    print()
+```
+
+12. Draw Floyd's triangle
+
+```
