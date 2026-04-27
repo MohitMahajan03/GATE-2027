@@ -1,4 +1,5 @@
 # Practice Problems
+
 ## Basics of Programming and problem Solving
 
 1. We first try to understand the probem statement through flowcharts and pseudo codes
@@ -31,7 +32,7 @@
 
 ### Program
 
-4. Draw a Sqare full of stars providing n as side of square
+4. Draw a Square full of stars providing n as side of square
 
 ``` 
 n = int(input("Enter the number of stars for each side "))
@@ -144,4 +145,44 @@ for i in range(0, n):
 
 12. Draw Floyd's triangle
 
+```
+n = int(input("Enter the number of rows "))
+
+count = 1
+for i in range(0, n + 1):
+    for j in range(0, i):
+        print(count , end =" ")
+        count += 1
+    
+    print()
+```
+
+13. Draw a hollow right angled triangle
+
+```
+n = int(input("Enter the number of stars for each side "))
+
+for i in range(0, n):
+    for j in range(0, i + 1):
+        if j == i or i == n-1 or j == 0:
+            print("*", end=" ")
+        else:
+            print(" ", end = " ")
+    
+    print()
+```
+
+14. Inverted hollow right angled triangle
+
+```
+n = int(input("Enter the number of stars for each side "))
+
+for i in range(n, 0, -1):
+    for j in range(0, i):
+        if j == i-1 or i == n or j == 0 or i == 0:
+            print("*", end=" ")
+        else:
+            print(" ", end = " ")
+    
+    print()
 ```
