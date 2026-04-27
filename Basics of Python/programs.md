@@ -186,3 +186,99 @@ for i in range(n, 0, -1):
     
     print()
 ```
+
+15. Given List l1 = [10, 20, 30, 40, 50] calculate sum of list
+
+```
+l1 = [10, 20, 30, 40, 50]
+
+print(sum(l1))
+```
+
+16. Find the largest element in the list l1 = [1, 9, 6, 4, 3, 11]
+
+```
+l1 = [1, 9, 6, 4, 3, 11]
+
+print(max(l1))
+```
+
+17. Remove duplicate elements from a list l1 = [1, 2, 2, 1, 7, 3, 7, 6, 9]
+
+```
+l1 = [1, 2, 2, 1, 7, 3, 7, 6, 9]
+
+l1 = list(set(l1))
+print(l1)
+```
+
+18. Check if all elements in list is unique l1 = [1, 3, 2, 4, 5, 6]
+
+```
+l1 = [1, 3, 2, 4, 5, 6]
+
+if (len(l1) == len(list(set(l1)))):
+    print("All elements are unique")
+else:
+    print("Not all elements are unique")
+```
+
+19. Reverse a list l1 = [10, 20, 30, 40, 50]
+
+```
+l1 = [10, 20, 30, 40, 50]
+
+l1 = l1[::-1]
+print(l1)
+```
+
+20. Count all odd and even elements in list l1 = [4, 3, 9, 7, 6, 12, 13]
+
+```
+l1 = [4, 3, 9, 7, 6, 12, 13]
+
+even = []
+odd = []
+for ele in l1:
+    if ele%2 == 0:
+        even.append(ele)
+    else:
+        odd.append(ele)
+        
+print("even numbers = ", len(even))
+print("odd numbers = ", len(odd))
+```
+
+21. Find maximum difference between 2 consecutive elements in a list l1 = [1, 3, 9, 6, 12, 40, 13]
+
+```
+l1 = [1, 3, 9, 6, 12, 40, 13]
+
+mins = []
+for i in range(0, len(l1)):
+    if i == 0:
+        mins.append(l1[i] - l1[i + 1])
+    elif i == (len(l1) - 1):
+        mins.append(l1[i] - l1[i - 1])
+    else:
+        mins.append(l1[i] - l1[i - 1])
+        mins.append(l1[i] - l1[i + 1])
+        
+print(min(mins))
+```
+
+22. Rotate a list by k, l1 = [1, 2, 3, 4, 5], k = 2
+
+```
+l1 = [1, 2, 3, 4, 5]
+k = 2
+
+ll = l1[:k+1]
+print(ll)
+rl = l1[k+1:]
+print(rl)
+
+l1 = rl + ll
+
+print(l1)
+```

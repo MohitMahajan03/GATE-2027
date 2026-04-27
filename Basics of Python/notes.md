@@ -46,7 +46,7 @@
 3. else
 4. match Ex:
 
-    ```
+```
     x = 10
     match x:
         case x if x > 0:
@@ -84,6 +84,7 @@
     print(a.real) # Prints 3
     print(a.imag) # Prints 4
 4. string -> immutable, ordered data structure
+
     * Slicing -> str[start_idx : end_idx : step_size] -> By default step_size is +1.
     * Reverse -> str[ : : -1]
     * upper -> str.upper() -> Capitalize all characters in the string; To check -> st.isupper()
@@ -93,6 +94,7 @@
         str1 = "I love Java"
         a = str1.replace("Java", "Python") 
 5. list -> mutable, indexed, ordered, We can perform slices on lists
+
     * Append -> add element to the end of the list: l1.append(10)
     * Insert -> add element at a given index without overwriting: l1.insert(1, 50)
     *  Remove -> Remove element from the list : l1.remove(20)
@@ -132,9 +134,9 @@
 ### Functions
 
 * They are Reusable block of code
-    ```
-    def main(input arguments):
-        return
+```
+def main(input arguments):
+    return
 
 * When a function returns nothing it means it returns None
 * Order of arguments that are passed is important for positional arguments
@@ -146,19 +148,15 @@
   * lambda (set of inputs) : set of instructions
   * a = lambda x,y,z : x+y+z
   * type(a) -> function
-  * Example
-        
-        ```
+  * Example        
+    ```
         l1 = [9, 7, 6, 12, 20, 4, 3, 15] # Filter all values < 10
         a = list(filter(lambda x: x > 10, l1))
 
         a = reduce(lambda x, y : x + y, l1) # reduces the entire list to 1 value
 
         a = map(lambda x : x * 4, l1) # allows an operation to be performed on all the values of a list
-
-
-
-
+    ```
 
 ### Miscellaneous Helpful Functions
 
