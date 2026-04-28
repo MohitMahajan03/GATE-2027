@@ -90,6 +90,39 @@ SOP (∑)= ~A~B + A~B = ~B[~A + A] = ~B
 POS (π)= (A + ~B)(~A + ~B) = ~B
 ```
 
+### Basic Gates
+
+1. NOT Gate also called as inverting buffer
+    * It is a single input gate (refer not_gate.png)
+    * Given A -> ~A
+    * Truth table:
+    ```
+    Input A Output ~A
+        0       1
+        1       0
+    ```
+2. AND Gate
+    * It is a minimum double input and single output gate (refer and_gate.png)
+    * Truth table
+    ```
+    A B     Output = A.B
+    0 0         0
+    0 1         0
+    1 0         0
+    1 1         1
+3. OR Gate
+
+### Arithmetic Gates
+
+1. XOR Gate
+2. XNOR Gate
+
+### Universal Gates
+
+1. NAND Gate
+2. NOR Gate
+
+
 ### Misc Info
 
 * Maximum number of n bits in any format, it's equvalent value in decimal is equal to (weight<sup>n</sup> - 1)<sub>10</sub>
