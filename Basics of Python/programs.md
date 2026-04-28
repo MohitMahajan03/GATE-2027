@@ -282,3 +282,56 @@ l1 = rl + ll
 
 print(l1)
 ```
+
+23. Check whether a list is a subset of other list or not l1 = [1, 2, 3] l2 = [1, 2, 3, 4, 5] give True or False
+
+```
+l1 = [1, 2, 7] 
+l2 = [1, 2, 3, 4, 5]
+
+flag = True
+for i in l1:
+    if i not in l2:
+        flag = False
+        break
+
+print(flag)
+```
+
+24. Check whether a tuple is a palindrome or not t1 = (1, 2, 3, 2, 1)
+
+```
+t1 = (1, 2, 3, 2, 1)
+
+for i in range(0, len(t1)):
+    if t1[i] != t1[len(t1)-1 - i]:
+        print("Not a palindrome")
+        exit()
+print("It is a palindrome")
+```
+
+25. Merge 2 lists into a dictionary given -> keys = ['a', 'b', 'c'] and values = [1, 2, 3]
+
+```
+keys = ['a', 'b', 'c'] 
+values = [1, 2, 3]
+
+dict_ = {}
+
+for i in range(0, len(keys)):
+    dict_[keys[i]] = values[i]
+    
+    
+print(dict_)
+
+
+
+_________OR_________
+
+keys = ['a', 'b', 'c'] 
+values = [1, 2, 3]
+
+dict_ = dict(zip(keys, values))
+print(dict_)
+
+```
