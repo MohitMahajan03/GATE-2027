@@ -335,3 +335,12 @@ dict_ = dict(zip(keys, values))
 print(dict_)
 
 ```
+26. Given a string "Hello", reverse it
+```
+s = "Hello"
+s = s[::-1]
+print(s)
+```
+
+27. Check if given string is palindrome s = "abba"
+```
