@@ -344,3 +344,111 @@ print(s)
 
 27. Check if given string is palindrome s = "abba"
 ```
+s = "abba"
+r = s[::-1]
+if r == s:
+    print("string is a palindrome")
+else:
+    print("not a palindrome")
+```
+
+28. Count Vowels and Consonants
+```
+word = "Gate 2027"
+
+vowels = 0
+consonants = 0
+
+for letter in word:
+    if letter.lower() in ['a', 'e', 'i', 'o', 'u']:
+        vowels += 1
+        continue
+    elif letter.isalpha():
+        consonants += 1
+    else:
+        continue
+    
+    
+print("Number of Vowels = ", vowels)
+print("Number of consonants = ", consonants)
+```
+
+29. Remove duplicate characters from "Hello"
+```
+word = "Hello"
+new_word = ""
+
+for letter in word:
+    if letter not in new_word:
+        new_word += letter
+        
+print(new_word)
+```
+30. Find 1st non repeating character string = "aabbaccdef"
+```
+word = "aabbaccdef"
+
+for letter in word:
+    frq = word.count(letter)
+    if frq == 1:
+        print(letter)
+        break
+```
+31. check whether 2 string are anagram or not. If s1 = "listen", then s2 = "tsilen" so characters in s1 and s2 are are same.
+```
+s1 = "listen"
+s2 = "tsilen"
+
+if sorted(s1) == sorted(s2):
+    print("The strings are anagram")
+else:
+    print("Not an anagram")
+```
+
+32. Print the frequency of each character in string
+```
+ word = "aabbccdefabx"
+
+word_dict = {}
+
+for letter in word:
+    word_dict[letter] = word.count(letter)
+    
+print(word_dict)
+```
+33. Print the longest word in the string s = "I am preparing for placements"
+```
+sentence = "I am preparing for placements"
+
+words = sentence.split(" ")
+
+counts = {}
+counts["max"] = ""
+for word in words:
+    if len(word) > len(counts["max"]):
+        counts["max"] = word
+        
+print(counts["max"])
+```
+
+34. Print all substrings of a string
+```
+# s1 = "abc"
+# substrings = a, ab, abc, bc, c, b
+word = "abc"
+
+for i in range(0, len(word)):
+    for j in range(i + 1, len(word) + 1):
+        print(word[i : j])
+```
+35. Reverse a sentence. s = "I love programming"
+```
+sentence = "I love programming"
+
+words = sentence.split(" ")
+
+words = words[::-1]
+
+sentence = " ".join(words)
+print(sentence)
+```
