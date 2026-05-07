@@ -111,6 +111,22 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
     1 0         0
     1 1         1
 3. OR Gate
+    * It is a minimum double input and single output gate
+    * Truth table
+    ```
+    A B     Output = A+B
+    0 0         0
+    0 1         1
+    1 0         1
+    1 1         1
+4. Commutative Law:
+    * If the positions of the variables are interchanged, then the result of the expression does not change. Applicable for AND and OR
+    * A.B = B.A
+    * A+B = B+A
+5. Associative Law:
+    * If in a multi input expression, if the terms can be processed by executing the operation in a cumulative fashion, and the result is same as the direct multi input expression, then the operation holds associative law. AND and OR are associative
+    * A.B.C = (A.B).C
+    * A+B+C = (A+B)+C
 
 ### Arithmetic Gates
 
@@ -310,3 +326,5 @@ POS π = (A + B + C)(A + ~B + ~C)(~A + B + ~C)(~A + ~B + ~C)
 6. ~A~B[~A~C + ~B~C + B~CD + ~A~CD]
     * ~A~B[~A~C + ~B~C + B~CD]
     * ~A~B~C[~A + ~B + BD]
+
+#### L7 -> refer video lecture for HW
