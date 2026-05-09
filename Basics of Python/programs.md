@@ -452,3 +452,159 @@ words = words[::-1]
 sentence = " ".join(words)
 print(sentence)
 ```
+36. Print max element of the list using functions
+```
+def max_of_list(lst):
+    return max(lst)
+    
+print(max_of_list([10, 20, 30, 40]))
+
+
+OR 
+
+def max_of_list(lst):
+    max_ = lst[0]
+    for num in lst:
+        if num > max_:
+            max_ = num
+    return max_
+    
+print(max_of_list([10, 20, 30, 40]))
+
+```
+37. Print sum of all elements of list using functions
+```
+def sum_of_list(lst):
+    return sum(lst)
+    
+print(sum_of_list([10, 20, 30, 40]))
+
+
+OR
+
+
+def sum_of_list(lst):
+    sum_ = 0
+    for num in lst:
+        sum_ += num
+    return sum_
+    
+print(sum_of_list([10, 20, 30, 40]))
+```
+38. A number is given in a list format and you need to add 1 to it
+    * Input: [1, 2, 9]
+    * Output: [1, 3, 0]
+```
+def add_one(lst):
+    carry = 0
+    lst = lst[::-1]
+    lst[0] += 1
+    if lst[0]//10 > 0:
+        carry = lst[0]//10
+        lst[0] = lst[0]%10
+        
+    # print(carry)
+    if carry != 0:
+        for num in range(1, len(lst)):
+            # print(lst[num], carry)
+            lst[num] += carry
+            if lst[num]//10 > 0:
+                carry = lst[num]//10
+                lst[num] = lst[num]%10
+            else:
+                carry = 0
+    if carry != 0:
+        lst.append(carry)
+
+    return lst[::-1]
+    
+    
+print(add_one([9, 9, 9]))
+```
+
+39. Print missing number, input always starts with 0 and always only 1 number is missing
+    * Input: [0, 1, 2, 3, 4, 6, 7, 8]
+    * Output: 5
+```
+def check_miss(lst):
+    for i in range(len(lst)):
+        if lst[i] != i:
+            return i
+
+print(check_miss([0, 1, 2, 3, 4, 6, 7, 8]))
+
+
+
+OR
+
+
+def check_miss(lst):
+    n = len(lst)
+    sum1 = (n*(n+1))/2
+    sum2 = sum(lst)
+    
+    return int(sum1 - sum2)
+
+print(check_miss([0, 1, 2, 3, 4, 6, 7, 8]))
+
+```
+
+40. Check whether given list is sorted or not
+```
+def check_sorting(lst):
+    for i in range(1, len(lst) - 1):
+        if lst[i - 1] > lst[i] or lst[i + 1] < lst[i]:
+            return False
+    return True
+
+print(check_sorting([0, 1, 2, 3, 4, 10, 7, 8]))
+```
+
+41. Move zeros to the end of the list
+    * Input: [7, 0, 9, 0, 0, 1, 2]
+    * Output: [7, 9, 1, 2, 0, 0, 0]
+```
+def sort_zeros(lst):
+    count = 0
+    for i in range(len(lst)):
+        if lst[i] != 0:
+            count += 1
+    i = 0
+    while i < count:
+        print("current ele = ",lst[i])
+        if lst[i] == 0:
+            for j in range(i + 1, len(lst)):
+                lst[j - 1] = lst[j]
+                
+            lst[j] = 0
+            print("index = ", i)    
+            print(lst)
+            
+        else:
+            i += 1
+    return lst
+
+print(sort_zeros([7, 0, 9, 0, 0, 1, 2]))
+```
+
+42. Longest length of consecutive 1's
+    * Input: [1, 1, 0, 1, 1, 1]
+    * Output: 3
+```
+def count_ones(lst):
+    count = 0
+    max_ = 0
+    for i in lst:
+        if i == 1:
+            count += 1
+        else:
+            if count > max_:
+                max_ = count
+            count = 0
+    
+    if count > max_:
+        max_ = count
+    return max_
+    
+print(count_ones([1, 1, 0, 1, 1, 1]))
+```
