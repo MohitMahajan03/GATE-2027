@@ -111,7 +111,7 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
     1 0         0
     1 1         1
 3. OR Gate
-    * It is a minimum double input and single output gate
+    * It is a minimum double input and single output gate (refer or_gate.png)
     * Truth table
     ```
     A B     Output = A+B
@@ -130,8 +130,35 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
 
 ### Arithmetic Gates
 
-1. XOR Gate
-2. XNOR Gate
+1. XOR Gate (Exclusive OR gate)
+   * Only defined for 2 inputs (refer xor_gate.png)
+   * A⨁B = ~AB + A~B
+   * AB⨁BC = ~(AB).BC + AB.~(BC)
+   * Truth table
+    ```
+    A B     Output = A⨁B
+    0 0         0
+    0 1         1
+    1 0         1
+    1 1         0
+    ```
+    * Commutative Law holds for XOR Gate
+    * Associative Law does not hold for XOR Gate, as it takes only 2 inputs. But it is DEFINED by default that it holds associative law, to calculate multi input XOR operation.
+        * A⨁B⨁C = (A⨁B)⨁C or (B⨁C)⨁A
+    * Properties of XOR Gate
+        * A⨁A = 0 = ~AA + A~A
+        * A⨁~A = 1
+        * A⨁0 = A = ~A.0 + A.~0
+        * A⨁1 = ~A = ~A.1 + A.~1
+
+    * Exchange properties of XOR Gate
+        * If A⨁B = C given, then A⨁C = B, then C⨁B = A
+    * A⨁A⨁A⨁A.... n times
+        * Then o/p for n being even = 0
+        * Then o/p for n being odd = A
+    * XOR Acts as buffer and inverting buffer if one of the inputs is set as 0 or 1 respectively
+
+2. XNOR Gate (Exclusive NOR gate)
 
 ### Universal Gates
 
@@ -328,3 +355,10 @@ POS π = (A + B + C)(A + ~B + ~C)(~A + B + ~C)(~A + ~B + ~C)
     * ~A~B~C[~A + ~B + BD]
 
 #### L7 -> refer video lecture for HW
+#### L8 -> refer video lectire for HW
+
+1. (A⨁B)⨁(~B⨁C)⨁(A⨁~C)⨁(A⨁B)
+    * A⨁A⨁A = A
+    * B⨁~B⨁B = 1⨁B = ~B
+    * C⨁~C = 1
+    * A⨁~B⨁1 = A⨁B
