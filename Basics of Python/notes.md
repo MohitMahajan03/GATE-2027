@@ -57,6 +57,7 @@
             
         case x if x==0:
             print("Zero")
+```
 
 ### Loops
 
@@ -137,7 +138,7 @@
 ```
 def main(input arguments):
     return
-
+```
 * When a function returns nothing it means it returns None
 * Order of arguments that are passed is important for positional arguments
 * So how do you pass any number of positional arguments? *args -> meaning it can take more than 1 input; And args is of type tuple;
@@ -165,3 +166,61 @@ def main(input arguments):
 3. Enumerate -> returns 2 values, index and value (used with lists and for loops)
 4. Print Square * pattern
 5. Print Hollow square * pattern
+
+### Exception Handling
+
+1. Types of errors
+    1. Syntax error: This types of error occurs when there is a issue in the syntax of the code.
+    2. Indentation error: This type of error occurs when there is not proper indentation in the code.
+    3. Type error: This type of error occurs when the value is not of expected type.
+        ```
+        a = 1
+        b = "2"
+        c = a+b
+        ```
+    4. Value error: This type of error occurs when the value is not in the expected range or format.
+        ```
+        a = int("abcd")
+        l1 = [10, 20, 30]
+        a = l1.index(100)
+        a,b = 1,2,3,4
+        ```
+    5. Zero Division error: When you try to divide by 0, then this error occurs
+    6. Name error: When a variable is not defined and is being accessed, this error occurs
+    7. Attribute error: This type of error occurs when you try to access an attribut that does not exist.
+        ```
+        s = "hello"
+        s.reverse() # reverse() does not exist
+        ```
+    8. Index error: This type of error occurs when you try to access index out of range.
+        ```
+        l1 = [10, 30, 40]
+        print(l1[8])
+        ```
+
+2. Exception Handling: It is used to gracefully handle the error or exceptions that occur
+* Any code that may cause error, should be written in the "try" block.
+* The "try" block will throw the error to the "except" block and "except" block will handle the exception
+```
+try:
+    a = int(input("Enter the 1st number"))
+    b = int(input(Enter the 2nd number"))
+    c = a/b
+except Exception as e:
+    print(e)
+
+print(c)
+
+```
+* Finally block: This block of code gets executed irrespective of whether exception has occurred in try "block" or not
+    ```
+    try:
+        a = int(input("Enter a number"))
+        c = 10/a
+        print(c)
+    except Exception as e:
+        print(e)
+    finally:
+        print("Hello")
+    
+    ```
