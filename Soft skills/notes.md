@@ -13,4 +13,5 @@
 
 1. Whatever decision we take, are based on our Morals, Ethics, Values and Attitude
 2. These are called as Mental Construct
-3. 
+
+## Closing notes here, watch the videos for more info
