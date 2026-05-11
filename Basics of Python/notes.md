@@ -224,3 +224,76 @@ print(c)
         print("Hello")
     
     ```
+* Else block: This block of code gets executed when there is no exception in the try block.
+
+```
+try:
+    a = int(input("Enter the number))
+    c = 10/a
+    print(c)
+except Exception as e:
+    print(e)
+
+else:
+    print("Else executed")
+
+finally:
+    print("Finally")
+```
+
+### Object Oriented Programming
+
+* Class -> Blueprint
+* Objects -> instances generated from the blueprint
+
+```
+class Student:
+    def __init__ (self, name, roll_no, cls): # Constructor
+        self.name = name
+        self.roll_no = roll_no
+        self.cls = cls
+
+stud1 = Student("Deb", 123, 10)
+```
+
+#### Principles of OOP
+
+1. Abstraction
+    * The act of representing essential features without including background details is called abstraction.
+2. Encapsulation
+    * The wrapping up of data and it's associated functions into a single unit/class is called encapsulation
+3. Inheritance -> (Refer types_of_inheritance.png)
+    * When one class wants to inherit the properties or methods of another class then it is called as inheritance.
+    * Simple inheritance : One class is inheriting properties of only 1 other class
+    * Multiple inheritance: If one class is inheriting properties from multiple classes.
+    * Multilevel inheritance: When there are multiple levels of inheritance
+    * Heirarchical inheritance: When more than 1 class inherits from 1 class
+    * Hybrid inheritance: Mix of multilevel and heirarchical inhertance.
+
+    ```
+    Access Modifier    name    Access level
+    public             name     It can be accessed anywhere
+    protected          _name    It can be accessed in class or subclass
+    private            __name   It can be accessed only in the class
+    ```
+
+    ```
+
+4. Polymorphism
+    * Representing the same thing in multiple forms is called as polymorphism
+    ```
+    class Animal:
+        def sound():
+            print("Hello")
+    class Dog (Animal):
+        def sound():
+            print("bark")
+    class Cat (Animal):
+        def sound("Meow")
+    
+    def get_sound(animal):
+        animal.sound()
+    
+    get_sound(Dog())
+    get_sound(Cat())
+    ```
