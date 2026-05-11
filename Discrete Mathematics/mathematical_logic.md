@@ -65,6 +65,18 @@
 #### Type - 1
 
 * Refer Mathematical logic part 1 : 1:35:00. (Amazing logic, beautifully explained!)
+* The quest is to prove that the expression is Valid. So we have to try to make the given expression False.
+```
+Given [a ^ (a -> b) ^ (~b v c)] -> c
+
+The expression is false only if T -> F = F
+
+So now if c = F, then a = T
+now, a->b = T -> T = T
+Therefore, b = T
+
+Therefore, [T ^ (T -> T) ^ (F v F)] -> F
+Now, LHS Has refused to become True, therefore there is no way that this expression can become False.
 
 #### Type - 2 (Logical Equivalence) ≡
 
