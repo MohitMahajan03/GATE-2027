@@ -297,3 +297,140 @@ stud1 = Student("Deb", 123, 10)
     get_sound(Dog())
     get_sound(Cat())
     ```
+
+### Iterator
+
+* An iterator it is a data stream that helps in accessing the data one by one.
+* An iterator is created by sending a list to the iter class
+    ```
+    it = iter(lst)
+    print(next(it))
+    ```
+
+```
+class NewIterator:
+    def __init__(self, maxvalue):
+        self.maxvalue = maxvalue
+        self.current = 1
+
+    def __iter__ (self):
+        return self
+
+    def __next__(self):
+        if self.current <= self.maxvalue:
+            val = self.current
+            self.current += 1
+            return val
+        else:
+            raise Stop Iteration
+
+
+obj = NewIterator(s)
+
+for i in obj:
+    print(i)
+```
+
+* Creating a Range
+```
+class NewRange:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.start >= self.end:
+            raise StopIteration
+        
+        val = self.start
+        self.start += 1
+        return val
+```
+* Creating a reverse iterator
+```
+class ReverseIterator:
+    def __init__(self, maxvalue):
+        self.maxvalue = maxvalue
+        self.current = self.maxvalue
+
+    def __iter__ (self):
+        return self
+
+    def __next__(self):
+        if self.current >= 0:
+            val = self.current
+            self.current -= 1
+            return val
+        else:
+            raise Stop Iteration
+```
+
+* Creating a Fibonacci Iterator
+```
+class FiboIterator:
+    previous = 0
+    def __init__(self, maxvalue):
+        self.maxvalue = maxvalue
+        self.current = 1
+
+    def __iter__ (self):
+        return self
+
+    def __next__(self):
+        if self.current <= maxvalue:
+            val = self.current + previous
+            previous = self.current
+            self.current = val
+            return val
+        else:
+            raise Stop Iteration
+```
+
+
+### Generator
+
+* A Generator is a function using which you can create an iterator easily.
+```
+def mygen():
+    yiedl 1 # yield will return this value and pause
+    yield 2
+    yield 3
+
+obj = mygen()
+
+print(next(obj))
+```
+
+* Creating a Fibonnaci Generator
+```
+def fib(n):
+    a = 0
+    b = 1
+    for _ in range(n):
+        yield a
+        a,b = b, a+b
+
+print(list(fib(5)))
+```
+
+* Creating even number generator
+```
+def even(n):
+    for i in range(0, n, 2):
+        yield i
+
+print(list(even(10)))
+```
+
+* Generator of Squares
+
+```
+def squares(n):
+    for i in range(0, n+1):
+        yield i**2
+
+print(list(squares(5)))
+```
