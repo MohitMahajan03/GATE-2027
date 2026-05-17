@@ -149,7 +149,7 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
         * A⨁A = 0 = ~AA + A~A
         * A⨁~A = 1
         * A⨁0 = A = ~A.0 + A.~0
-        * A⨁1 = ~A = ~A.1 + A.~1
+        * A1 = ~A = ~A.1 + A.~1
 
     * Exchange properties of XOR Gate
         * If A⨁B = C given, then A⨁C = B, then C⨁B = A
@@ -159,7 +159,17 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
     * XOR Acts as buffer and inverting buffer if one of the inputs is set as 0 or 1 respectively
 
 2. XNOR Gate (Exclusive NOR gate)
-
+    * It is defined for 2 inputs only (refer xnor_gate.png)
+    * A⊙B = ~A~B + AB
+    * Truth table
+    ```
+    A B     Output = A⊙B
+    0 0         1
+    0 1         0
+    1 0         0
+    1 1         1
+    ```
+    * ~(A⨁B) = A⊙B
 ### Universal Gates
 
 1. NAND Gate
@@ -362,3 +372,4 @@ POS π = (A + B + C)(A + ~B + ~C)(~A + B + ~C)(~A + ~B + ~C)
     * B⨁~B⨁B = 1⨁B = ~B
     * C⨁~C = 1
     * A⨁~B⨁1 = A⨁B
+
