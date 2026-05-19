@@ -608,3 +608,54 @@ def count_ones(lst):
     
 print(count_ones([1, 1, 0, 1, 1, 1]))
 ```
+
+43. Count number of digits in a number using recursion
+
+```
+def count(n, count_s = 0):
+    if n == 0:
+       return count_s
+    
+    count_s += 1
+    return(count(n//10, count_s))
+    
+print(count(1000000))
+```
+
+44. Print Fibonacci series using recursion
+
+```
+def fib(n):
+    if n <= 1:
+        return n
+    
+    return fib(n-1) + fib(n-2)
+
+print(fib(7))
+```
+
+45. Print numbers from n to 1 and 1 to n
+
+```
+def show(n):
+    if n == 0:
+        return 0
+
+    print(n)
+    show(n-1)
+    print(n)
+```
+
+46. Reverse a number using recursion
+
+```
+def reverse(n, rev = 0):
+    if n == 0:
+        return rev
+        
+    else:
+        return reverse(n//10, ((rev * 10) + n%10))
+    
+    
+print(reverse(1234))
+```

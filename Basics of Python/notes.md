@@ -434,3 +434,55 @@ def squares(n):
 
 print(list(squares(5)))
 ```
+
+### Recursion
+
+* When a function calls itself, it is known as recursion
+* Always has to consists of a base exit condition (to avoid infinite calls)
+
+* EXamples
+
+```
+def fun(n):
+    if n > 0:
+        print(n)
+        fun(n-1)
+    else:
+        return
+```
+
+```
+def fun(n):
+    if n == 0:
+        return
+    print(n)
+    fun(n-1)
+    print(n)
+
+fun(5)
+```
+
+* Print factorial of a number using recursion
+
+```
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        return (n * fact(n-1))
+
+print(fact(5))
+```
+
+* Print sum of numbers upto n
+
+```
+def till_n(n):
+    if n == 0:
+        return 0
+    else:
+        return (n + till_n(n-1))
+
+print(till_n(5))
+```
+
