@@ -170,6 +170,19 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
     1 1         1
     ```
     * ~(A⨁B) = A⊙B
+    * Commutative law holds for XNOR gate
+    * Associative Law holds for multi input XNOR Gate -> It is DEFINED to calculate multiple inputs
+    * Properties of XNOR Gate
+        * A⊙A = 1
+        * A⊙~A = 0
+        * A⊙1 = A
+        * A⊙0 = ~A
+    * Exchange properties of XNOR gate
+        * If A⊙B = C then A⊙C = B and C⊙B = A
+    * A⊙A⊙A⊙A.... n times
+        * Then o/p for n being even = 1
+        * Then o/p for n being odd = A
+    * XNOR Gate also acts as an inverting buffer if one of the inputs is set as 0.
 ### Universal Gates
 
 1. NAND Gate
