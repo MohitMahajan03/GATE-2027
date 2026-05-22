@@ -659,3 +659,93 @@ def reverse(n, rev = 0):
     
 print(reverse(1234))
 ```
+47. Reverse string using recursion
+
+```
+def rev(s):
+    if len(s) <= 0:
+        return s
+    return rev(s[1:]) + s[0]
+```
+
+48. Check whether a string is palindrome or not using recursion
+
+```
+def palindrome(s):
+    if len(s) <= 1:
+        return True
+
+    if s[0] != s[-1]:
+        return False
+
+    return palindrome(s[1:-1])
+
+print(palindrome("madam"))
+```
+49. Calculate Power of a number using recursion
+
+```
+def power(x, n):
+    if n == 0:
+        return 1
+    
+    return x * power(x, n-1)
+
+print(power(5, 2))
+```
+
+50. Calculate sum of digits in a number using recursion
+
+```
+def sums(n):
+
+    if n == 0:
+        return 0
+
+    return sums(n//10) + n%10
+    
+    
+print(sums(65))
+```
+
+51. Check if array is sorted or not using recursion
+
+```
+def order(lst):
+    if len(lst) < 2:
+        return True
+
+    if lst[-2] > lst[-1]:
+        return False
+
+    return order(lst[:-1])
+
+print(order([4, 5, 6, 7, 8]))
+```
+
+52. Convert decimal to binary using recursion
+
+```
+def dectobin(n):
+    if n == 0:
+        return ""
+
+    return dectobin(n//2) + str(n%2)
+
+print(dectobin(16))
+```
+
+53. Print first occurence of a uppercase character in a string using recursion
+
+```
+def is_upper(s):
+    if len(s) == 0:
+        return False
+
+    elif s[0].isupper():
+        return s[0]
+
+    return is_upper(s[1:])
+
+print(is_upper("maa"))
+```
