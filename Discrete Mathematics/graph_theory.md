@@ -80,6 +80,8 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * Therefore, if we have to find total graphs for 4 vertices with atleast 2 edges, then the answer will be = <sup>6</sup>C<sub>2</sub> + <sup>6</sup>C<sub>3</sub> + <sup>6</sup>C<sub>4</sub> + <sup>6</sup>C<sub>5</sub> + <sup>6</sup>C<sub>6</sub>
 * And if the question is flipped, if we have to find total graphs for 4 vertices with atmost 2 edges, then the answer will be = <sup>6</sup>C<sub>0</sub> + <sup>6</sup>C<sub>1</sub> + <sup>6</sup>C<sub>2</sub>
 
+* Where <sup>n</sup>C<sub>r</sub> = (n!)/[r! (n-r)!]
+
 #### Theorem 6
 
 * Minimum Degree of a graph [δ(G)]
