@@ -141,3 +141,52 @@
 #### L2
 
 1. Cover Functional dependency
+
+```
+A functional dependency occurs when the value of one attribute (or a set of attributes) uniquely determines the value of another attribute. This relationship is denoted as:
+
+X → Y
+
+Here, X is the determinant, and Y is the dependent attribute. This means that for each unique value of X, there is precisely one corresponding value of Y.
+
+Example:
+StudentID -> StudentName
+StudentID -> StudentAge
+```
+
+* Trivial Functional Dependency
+    * In Trivial Functional Dependency, a dependent is always a subset of the determinant. i.e., If X → Y and Y is the subset of X, then it is called a trivial functional dependency.
+    * Symbolically: A→B is a trivial functional dependency if B is a subset of A.
+    * The following dependencies are also trivial: A→A & B→B
+    * Here, {roll_no, name} → name is a trivial functional dependency, since the dependent name is a subset of determinant set {roll_no, name}. Similarly, roll_no → roll_no is also an example of trivial functional dependency.
+
+* Non-trivial Functional Dependency
+    * In Non-trivial functional dependency, the dependent is strictly not a subset of the determinant. i.e. If X → Y and Y is not a subset of X, then it is called Non-trivial functional dependency.
+
+    * Example: Id -> Name, Name -> DOB
+
+* Properties of Functional Dependency (Also known as Armstrong's axioms)
+
+    1. Reflexivity
+        * Axiom of Reflexivity: If A is a set of attributes and B is a subset of A, then A holds B. If B⊆A then A→B. This property is trivial property.
+    2. Augmentation
+        * Axiom of Augmentation: If A→B holds and Y is the attribute set, then AY→BY also holds. That is adding attributes to dependencies, does not change the basic dependencies. If A→B, then AC→BC for any C.
+    3. Transitivity
+        * Axiom of Transitivity: Same as the transitive rule in algebra, if A→B holds and B→C holds, then A→C also holds. In the dependency A→B we say that A functionally determines B. For example, if X→Y and Y→Z, then X→Z.
+
+* Terminologies
+    1. Closure of an attribute set
+        * The attribute closure of an attribute set can be defined as a set of attributes that can be functionally determined from it.
+        * Helps to identify all possible attributes that can be derived from a set of given attributes.
+        * It can be computationally expensive, especially for large datasets.
+        * Helps in database design by showing how attributes and tables are related, which can improve query performance.
+        * It becomes complex to manage as the number of attributes and tables increases.
+    2. Equality of 2 Functional dependency sets
+        * Equivalence of functional dependencies means two sets of functional dependencies (FDs) are considered equivalent if they enforce the same constraints on a relation. This happens when every FD in one set can be derived from the other set and vice versa using inference rules like Armstrong's axioms.
+        * Equivalent FDs result in the same set of valid relations and preserve the same data integrity.
+        * It helps in normalization and optimizing database design without losing any constraints.
+    3. Canonical Cover
+        * Managing a large set of functional dependencies can result in unnecessary computational overhead. This is where the canonical cover becomes useful.
+        * A canonical cover is a minimal set of functional dependencies that is equivalent to the original set.
+        * It contains no redundant dependencies or extraneous attributes.
+        * It is also known as the minimal cover or irreducible form of functional dependencies.
