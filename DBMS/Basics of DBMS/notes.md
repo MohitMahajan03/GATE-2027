@@ -134,6 +134,34 @@
 5. On update cascade
 6. On update set NULL
 
+### Functional Dependency
+
+* It defines the relationship between attributes, it is represented as X -> Y
+* Given a relation R(A, B, C, D, E), then FD represents relationships, like
+    * A -> B
+    * BC -> D
+    * C -> E
+
+#### Armstrong's Axioms
+
+1. Reflexivity: If X is a superset of Y
+2. Augmentation: If X -> Y exists then ZX -> YZ
+3. Transitivity: If X -> Y and Y -> Z then X -> Z 
+
+4. Decomposition: if X -> YZ then X -> Y and X -> Z vice versa is not true!
+5. Union: If X -> Y and A -> B then XA -> YB 
+
+#### Trivial FD
+
+* FD X -> Y is called trivial iff X is a superset of Y
+
+#### Non Trivial FD
+
+* FD X -> Y is called a non-trivial FD if set X intersection st Y is NULL.
+
+### Normalization
+
+* It is the process of reducing the redundancy from any relations so that it eliminates anomalies and ensures data integrity and efficient database operations.
 
 
 ### Home work
@@ -181,6 +209,16 @@ StudentID -> StudentAge
         * It can be computationally expensive, especially for large datasets.
         * Helps in database design by showing how attributes and tables are related, which can improve query performance.
         * It becomes complex to manage as the number of attributes and tables increases.
+        * R(A, B, C, D, E)
+        ```
+            A -> B
+            BC -> D
+            C -> E
+
+            AC+ = {A, C, B, D, E}
+        ```
+        * If X+ contains all the attributes of the relation, then X is the super key of the relation
+
     2. Equality of 2 Functional dependency sets
         * Equivalence of functional dependencies means two sets of functional dependencies (FDs) are considered equivalent if they enforce the same constraints on a relation. This happens when every FD in one set can be derived from the other set and vice versa using inference rules like Armstrong's axioms.
         * Equivalent FDs result in the same set of valid relations and preserve the same data integrity.
@@ -190,3 +228,12 @@ StudentID -> StudentAge
         * A canonical cover is a minimal set of functional dependencies that is equivalent to the original set.
         * It contains no redundant dependencies or extraneous attributes.
         * It is also known as the minimal cover or irreducible form of functional dependencies.
+
+        ```
+        F = A -> B
+            BC -> D
+            C -> E
+            AC -> D
+
+        AC -> D is redundant and can be removed without losing any property of the Relation F and hence forming a canonical cover
+        ```
