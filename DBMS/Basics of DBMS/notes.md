@@ -162,6 +162,7 @@
 ### Normalization
 
 * It is the process of reducing the redundancy from any relations so that it eliminates anomalies and ensures data integrity and efficient database operations.
+* These anomalies include -> insertion anomaly, Deletion anomaly, updation anomaly.
 
 
 ### Home work
