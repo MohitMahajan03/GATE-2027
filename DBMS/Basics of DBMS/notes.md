@@ -164,7 +164,50 @@
 * It is the process of reducing the redundancy from any relations so that it eliminates anomalies and ensures data integrity and efficient database operations.
 * These anomalies include -> insertion anomaly, Deletion anomaly, updation anomaly.
 
+1. First normal form
+    * No composite attribute should be present and no multivalued attribute should be present
+    * So, all values must be atomic -> only 1 data point per attribute per tuple
+2. Second normal form
+    * The relation must be in 1 NF and must not contain any partial dependency
+    * if Proper subset of candidate -> Non prime attribute, then partial dependency exists in that relation
+3. Third normal form
+    * The relation should be in 1 NF and every non trivial Functional dependency X -> Y should have X as a super key or Y as a Prime Attribute
+4. Boyce Codd normal form
+    * For a relation to be in BCNF, in every non-trivial functional dependency X->Y, X must be a suoer key
+5. Fourth normal form
+    * It is related to multivalued dependency
+6. Fifth normal form
+    * It is related to lossless join
 
+### Join Operations
+
+* Join operatoins are used to join tables based on some conditions
+
+1. Cross join (X) -> Refer cross_join.png
+    * It combines each row from the first table with each row from the second table
+    * There are no join criteria
+
+#### Types of join operations
+1. Inner join
+    * In an inner join, includes only those tuples that satisfy the matching criteria
+    1. Theta join
+        * Theta can use any conditions in the selection criteria
+        * So first cross join takes place, and then the tuples are filtered based on the condition
+    2. Equi join
+        * A equi join is a theta join using the equality operator. It always works on equality condition
+    3. Natural join
+        * Natural join is performed on the equality condition on all attributes between the relatoins
+        * A natural join removes the duplicated columns involved in the equality comparison so only one of each compared column names remains.
+2. Outer join
+   * In outer join along with the tuples that satisgy the matching criteria we also include tuples that do not match the criteria (from left side, or right side or from both the relations)
+   1. left outer join -> refer left_outer_join.png
+        * All tuples of natural join of the relation and from the left relations are included during the join even though they failed the join condition
+   2. Right outer join -> refer right_outer_join.png
+        * All tuples of natural join of the relation and from the right relations are included during the join even though they failed the join condition
+   3. Full outer join -> refer full_outer_join.png
+        * All tuples of R natural join S and the tuples from R and S that failed the join condition
+
+ 
 ### Home work
 
 #### L2
