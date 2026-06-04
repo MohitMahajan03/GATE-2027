@@ -208,6 +208,15 @@
         * All tuples of R natural join S and the tuples from R and S that failed the join condition
 
  
+### Decomposition of a relation -> Refer decomposition.png
+
+* Splitting a relational table into smaller sub relation is called decompostion
+* For a decomposition to be called a correct decomposition, following properties must be satisfied
+
+1. Lossless join decompostion
+    * On natural join of the decomposition, the entire relation should be get back 
+2. 
+
 ### Home work
 
 #### L2
