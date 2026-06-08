@@ -252,6 +252,27 @@
 5. Select
 6. Order By
 
+### Nested Queries
+
+* It is Query inside query, They are of 2 types
+
+1. Independent Nested Query
+    * If the inner query does not use any attribute from the outer query, then it is an independent Nested Query
+2. Correlated Nested Query
+    * If the inner query requires a specific attribute defined in the outer query for processing, then it is called as a Correlated query
+
+Refer -> order_of_execution.png
+
+### Operators
+
+* These are boolean operators that returns true or false
+
+1. IN:
+    * Returns true if tuple under consideration is present in set of tuples
+    * Complement of IN is NOT IN. 
+2. ANY:
+    * Will work with other comparison operators 
+
 ### Home work
 
 #### L2
