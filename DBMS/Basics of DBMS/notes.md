@@ -215,7 +215,42 @@
 
 1. Lossless join decompostion
     * On natural join of the decomposition, the entire relation should be get back 
-2. 
+2. Dependency preserving, if it is a subset
+
+### Commands in SQL
+
+* Create table -> create new table
+* Alter table -> add, or remove attributes
+* Drop table -> deletes the table
+* Insert -> inserts new data
+* Delete -> delete record
+* Update -> updates the tuple
+* Select -> extracts data from the database
+* truncate -> delete all rows from the table, but keeps the structure
+* count -> counts the number tuples in the valid condition. considers NULL values
+* sum -> Calculates the sum of a numerical column in the database. Ignores NULL values
+* avg -> Calculates average of a numerical column. Ignores ULL values
+* min -> gets min values
+* max -> gets min values
+
+* NOTE:
+    * We cannot select any attribute in SELECT Clause along with aggregate function until those attributes are in GROUP BY clause.
+    * If Aggregate function is along with GROUP BY clause, then aggregate function is applied on each group
+    * WHERE condition is applied on each tuple whereas HAVING condition is applied on each group
+    * HAVING condition can be used without GROUP BY, then HAVING condition is applied onto all tuples, which indirectly acts like a WHERE clause
+
+### SQL Clauses
+
+* Refer sql_clauses.png
+
+### Order of Execution
+
+1. From
+2. Where
+3. Group By
+4. Having
+5. Select
+6. Order By
 
 ### Home work
 
