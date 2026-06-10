@@ -271,7 +271,55 @@ Refer -> order_of_execution.png
     * Returns true if tuple under consideration is present in set of tuples
     * Complement of IN is NOT IN. 
 2. ANY:
-    * Will work with other comparison operators 
+    * Will work with other comparison operators. Returns true only if atleast one tuple from the set of tuples satisfy the comparison condition with respect to given tuple.
+    * "IN" is equivalent to "=ANY"
+
+3. ALL:
+    * ALL operator works with arithmetic operators
+    * All the tuples should be true for ALL to return true, even if 1 tuple fails condition, then False is returned
+    * It will always return true if inner query result is empty
+    * "NOT IN" is equivalent "<> ALL"
+
+4. EXISTS:
+    * Return true if there are any inner query results, and false if there are no tuples in the inner query result
+    * Complement of "EXISTS" is "NOT EXISTS"
+
+### Transaction
+
+* Transaction is a sequence of logically related operations
+* EX: Transfer 500 from Account A to Account B
+```
+    1. Read current bank balance of A
+    2. if A>=500
+    3. A = A - 500
+    4. Write A
+    5. Read B
+    6. B = B + 500
+    7. Write B
+    8. Commit
+```
+
+### Schedule
+
+* Time ordered sequence of operations of two or more transactions called schedule
+* Ex:
+```
+S1: R1(A), R2(A), W1(A), R1(B), W1(B), R2(B)
+
+T1      |      T2
+R1(A)   |
+        |      R2(A)
+W1(A)   |
+R1(B)   |
+W1(B)   |
+        |      R2(B)
+```
+
+* There are 2 types of Schedules
+    1. Serial Schedule: Start the execution of a new transaction only after the complete execution of previously started transaction. Output of schedule is always correct but throughput is low
+    2. Concurrent Schedule: Operations of 2 or more transactions can execute in interleaved manner. Throughput is increased, But output may be incorrect.
+
+### ACID properties
 
 ### Home work
 
