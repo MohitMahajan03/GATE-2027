@@ -1,5 +1,10 @@
 # Discrete Mathematics 8-10 marks
 
+```
+Do Deep dive from conncetivity and solve all DPPs.
+Come back to lecture 13 to solve questions
+```
+
 * Aptitude (Analytical + logical approach) is the foundation of discrete mathematics.
 
 ## Introduction to Discrete Mathematics
@@ -190,7 +195,7 @@ Therefore, the set {o1, o2, o3, ...} should have even number of vertices only.
 * If δ(G) >= (n-1)/2 then it is a connected graph.
 * Vice Versa is not true.
 
-#### Range of Edges
+#### Range of Edges for Trees
 
 * For K = 1
     * n - 1(connected) <= e <= n(n-1)/2 (max)
