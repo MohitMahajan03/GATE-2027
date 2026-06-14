@@ -183,6 +183,9 @@ POS (π)= (A + ~B)(~A + ~B) = ~B
         * Then o/p for n being even = 1
         * Then o/p for n being odd = A
     * XNOR Gate also acts as an inverting buffer if one of the inputs is set as 0.
+
+* Combined Properties of XOR and XNOR
+    * ~(A)⨁B = 
 ### Universal Gates
 
 1. NAND Gate

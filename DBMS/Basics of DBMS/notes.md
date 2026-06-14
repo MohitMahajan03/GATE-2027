@@ -318,8 +318,77 @@ W1(B)   |
 * There are 2 types of Schedules
     1. Serial Schedule: Start the execution of a new transaction only after the complete execution of previously started transaction. Output of schedule is always correct but throughput is low
     2. Concurrent Schedule: Operations of 2 or more transactions can execute in interleaved manner. Throughput is increased, But output may be incorrect.
+* Equivalent Schedules: For 2 schedules to be equivalent, every read must be same in both the schedules and final data update of every item should be similar in both the schedules
+* Serializable Schedule : Iff a schedule is equivalent to at least one of the serial schedule (over the transactions)
+* Non-Serializable Schedule : If the schedule is not equivalent to any of the serial schedule then it is a non-serializable schedule.
+
+```
+
+Learn some examples
+
+Refer serialization.png
+
+```
+
+* Classifications of schedules
+    1. Irrecoverable
+    2. recoverable -> cascade and rollback, lost - update is possible
+    3. Cascadeless rollback recoverable -> no cascade rollback, lost - update is possible
+    4. Strict recoverable schedule -> no cascade rollback and no lost update
+    5. Conflict Serializable
+    6. View Serializable
 
 ### ACID properties
+
+* ACID Properties must be followed for integrity of the database transactions
+
+1. A -> Atomicity
+    * Either execute all operations of the transaction or none of them
+    * Recovery management component must be used if a transaction fails to maintain atomicity
+2. C -> Consistency
+    * Before and after execution of transactions the database should be consistent
+3. I -> Isolation
+    * If 2 or more transactions are exeuting concurrently, then they all must be unaware of each other.
+    * There should be no influence of 1 transaction over the other.
+    * To ensure isolation condition, a non-serializable schedule should never be allowed execute.
+4. D -> Durability
+    * All updates performed by a successful transaction must persist even if system fails in later point of time.
+
+
+### Index Files
+
+* Index files are used to reduce IO cost
+* Categories of Indices
+    1. Dense index -> 1 index entry per record is maintained
+    2. Sparse index -> For a set of records there will be only 1 entry per record file
+* Types of indices
+    1. Primary Index -> generally sparse
+        * When Search key attribute values are unique in database file and records of the file are sorted based on attribute values
+    2. Clustering Index -> always sparse
+        * When search key attribute values are not unique
+    3. Secondary Index -> always dense
+        * Search key attribute values may or may not be unique, but records of the file are not ordered based on search key values.
+* If DB file is too large, and single level index file does not provide significant improvement, with respect to reduction in IO cost, then we may use multi level index
+
+### B tree
+
+* The order of a node of a B tree is defined as maximum number of child pointer it can have
+* If 'm' is the order of a node of B tree then.
+    1. maximum number of child pointer a node can have = m
+    2. maximum number of keys a node can have = m
+    3. minimum number of child pointer a non root node can have = [m/2]
+    4. minimum number of keys a non-root node can have = [m/2] - 1
+    5. minimum number of child pointer a root node can have = 2
+    6. minimum number of keys a root node can have = 1
+
+### B+ tree
+
+* In B+ tree order of a leaf node and  order of a non-leaf node is defined differently.
+* Order of a non leaf node is defined as the maximum number of child pointer a non leaf node can have
+* order of a leaf node of a B+ tree is defined as maximum number of keys a leaf node can have
+* In B tree all nodes will store key values and record pointers, corresponding to those key values
+* In B+ tree internal node will only hold the key values, and those key values are dummy key values used just for search operation. All keys with record pointers are stored in the leaf nodes
+
 
 ### Home work
 
