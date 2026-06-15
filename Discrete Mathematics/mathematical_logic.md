@@ -77,6 +77,7 @@ Therefore, b = T
 
 Therefore, [T ^ (T -> T) ^ (F v F)] -> F
 Now, LHS Has refused to become True, therefore there is no way that this expression can become False.
+```
 
 #### Type - 2 (Logical Equivalence) ≡
 
@@ -145,3 +146,17 @@ Now, LHS Has refused to become True, therefore there is no way that this express
 * a -> (a v b) (addition)
 * (a v b) -> a (simplification)
 * (a v b) -> b (simplification)
+
+#### Predicate Logic
+
+* Open statement -> x is even number? -> x is variable, hence open statement. Value of x can be substituted
+* Substituting value in open statement, makes it a simple statement
+* The Values that are used for substitution are usually selected from a fixed domain. Which will already be defined.
+* The statement x is even number is called predicate, and the subjects are the values
+* P(1): 1 is even number? P(0): is even number?
+
+#### Quantifier
+
+* It is a tool, to find the truth values of all values in a domain for a given predicate.
+* It is a tool, used to define truth value in terms of quantity. Ex. ALL and SOME.
+* ALL -> universal quantifier ∀x; SOME -> existential quantifier ∃x
