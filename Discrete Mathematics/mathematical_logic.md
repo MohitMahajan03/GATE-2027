@@ -160,3 +160,15 @@ Now, LHS Has refused to become True, therefore there is no way that this express
 * It is a tool, to find the truth values of all values in a domain for a given predicate.
 * It is a tool, used to define truth value in terms of quantity. Ex. ALL and SOME.
 * ALL -> universal quantifier ∀x; SOME -> existential quantifier ∃x
+* Universal Quantifier ∀x
+    * For every value of x, P(x) has to be true.
+* Existential Quantifier ∃x
+    * There exists x such that P(x) is true.
+
+* ~(∀x P(x)) = ∃x ~P(x)
+* ~(∃x P(x)) = ∀x ~P(x)
+* if ∀x P(x) is true -> ∃x P(x) is true. ∀x P(x) -> ∃x P(x)
+
+```
+Solve problems on Lecture 05 slide 15
+'''
