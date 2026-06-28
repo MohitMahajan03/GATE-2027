@@ -31,6 +31,22 @@
     1. Physical Layer
     ```
 
+### 2 Process Communication
+
+* In Networking, 2 processes communicate with each other belonging to different hosts
+* Communication over network by exchanging messages
+* Process are uniquely identified by IP Address (32 bit) and Port Number (16 bit)
+* Communication credentials used are Source IP address and Port number and Destination IP Address and Port number
+
+1. Client - Server Model
+    * Web browsing, Email
+    * Whoever initiates connection is the client, the connecting process is the Server
+
+2. Peer to Peer
+    * Client to Client connection
+    * Ex: Voice calling, Voice over internet protocol
+
+
 ### Application Layer
 
 * Network application program is program that connects the User to the application layer. EX: Browsers
@@ -73,18 +89,69 @@
         * Connection oriented.
 
     * Refer -> protocol_mappings.png
+* It takes messages from Application layer and breaks if they are big into smaller segments, and then adds it's header to the segments.
 
 ### Network Layer
 
 * It provides host-to-host (Inter-networks: Source and Destination hosts belong to different networks) communication services
 * It is responsible for forwarding and Routing
 * It uses the IP protocol (Internet Protocol)
+* So, the Segment of the Transport layer, is passed on to the network layer
+* The network layer, if the Segment is large, breaks it into different datagrams and adds it's header to all datagram packets
+* IP has 2 version 4 and 6
+* IP v4
+    1. Variable size header 20 bytes to 60 bytes
+    2. TTL 8 bit [Used to prevent indefinite traversing of the packet]
+    3. 32-bit IP address
+    4. Contains Classfull and Classless IP Address
+    5. IP address for v4 encountered Range problem
+    6. Solution to the Range problem -> Network Address Translation (NAT)
+
+* IP v6
+    1. Fixed size 40 bytes
+    2. Hop limit -> same as TTL 
+    3. 128-bit size IP address
+    4. Completely Classless IP address
+
+* IP address
+    * It is a unique idetifier
+    * Assigned to a device that uses IP for communication
+    * It is a Logical Address (IP address).
+    * IP address -> NetID|HostID
+
+* IP v4 address
+    * Size of IPv4 address = 32 bits
+    * Binary representation is done in 32 bits format
+    * Dotted decimal representation -> 4 octet separated by .
+    * P.Q.R.S -> 122.234.123.255
+    * Range of every octet -> 0 to 255
+
+* IP v6 address
+    * Binary representation of 128 bits each
+    * Hexadecimal representation -> 8 hextet separated by colon
+    * P:Q:R:S:T:U:V:W -> 2A01:0000:130F:0000:0000:09C0:876A:130B
+
+* MAC Address
+    * It is a physical device address
+    * 48-bit size NIC Card address
+
+* Modes of IP transmission
+    1. Unicast -> 1 sender sends data to only 1 receiver -> one to one
+        * Source IP -> Host IP address
+        * Destination IP -> Host IP address
+    2. Broadcast -> 1 sender sends data to all hosts in a network -> One to all
+        * Source IP -> Host IP address
+        * Destination IP -> Broadcast IP address -> 255.255.255.255
+    3. Multicast -> 1 sender sends data to a group of hosts in a network -> one to many
+        * Source IP -> Host IP Address
+        * Destination IP -> Multicast Address [special IP address as a Goupr ID] -> IGMP -> Internet Group Message Protocol
 
 ### Data Link Layer
 
 * Responsible for Node-to-Node (hot-to-hop) communication (Intra-network: Source and Destination hosts belong to same network)
 
 * Node is a host or a Router
+* Takes Datagram packet from Network layer, it adds Header and Footer and converts these packets into frames
 
 ### Physical Layer
 
@@ -96,27 +163,24 @@
 
 * It is the basic unit of exchange
 * This unit is decided Between same protocol of different machines
-* Refer pdu_mappings.png
+* Refer pdu_mappings_2.png
 
-### 2 Process Communication
+### Service Data Unit
 
-* In Networking, 2 processes communicate with each other belonging to different hosts
-* Communication over network by exchanging messages
-* Process are uniquely identified by IP Address (32 bit) and Port Number (16 bit)
-* Communication credentials used are Source IP address and Port number and Destination IP Address and Port number
-
-1. Client - Server Model
-    * Web browsing, Email
-    * Whoever initiates connection is the client, the connecting process is the Server
-
-2. Peer to Peer
-    * Client to Client connection
-    * Ex: Voice calling, Voice over internet protocol
+* Servicec Data Unit is the PDU of the Upper layer. For example Message from the Application layer is the SDU of Transport Layer 
 
 ### Protocol
 
 * In Networking it is a set of rules defined on how data is exchanged
 
+### Networking Devices
+
+* Refer -> network-devices.png
+* Store Process and Forward devices
+   1. Data Link Layer -> Switch (Bridge) : Performs MAC level forwarding
+   2. Network Layer -> Router : Performs Routing from 1 network to another
+   3. Application Layer -> Gateway : Also performs Routing; It is also called as protocol converter as it can convert format of packets
+1. Physical layer -> Repeater and Hub
 ### Misc
 
 * Ping is a utility to check connection between client - server, server - server, client - client
