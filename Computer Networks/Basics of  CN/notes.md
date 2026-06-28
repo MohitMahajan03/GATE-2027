@@ -125,6 +125,49 @@
     * Dotted decimal representation -> 4 octet separated by .
     * P.Q.R.S -> 122.234.123.255
     * Range of every octet -> 0 to 255
+    * Classfull IP v4
+        * Refer -> classfull.png
+        * Static Assignment
+        * NetID bits are implicitly defined
+        ```
+        Class A:
+            ->Address Starts with 0 bit
+            ->Network ID 8 bits; Host ID 24 bits 
+            ->Range: 0.0.0.0 to 127.255.255.255 
+            ->Number of networks = 2<sup>7</sup> 
+            ->Number of Hosts per network = 2<sup>24</sup>-2 
+            ->Network mask = 255.0.0.0
+        Class B
+            ->Address Starts with 10 bits
+            ->Network ID 16 bits; Host ID 16 bits 
+            ->Range: 128.0.0.0 to 191.255.255.255 
+            ->Number of networks = 2<sup>14</sup> 
+            ->Number of Hosts per network = 2<sup>16</sup>-2 
+            ->Network mask = 255.255.0.0 
+        Class C
+            ->Address Starts with 110 bits
+            ->Network ID 24 bits; Host ID 8 bits 
+            ->Range: 192.0.0.0 to 223.255.255.255 
+            ->Number of networks = 2<sup>21</sup> 
+            ->Number of Hosts per network = 2<sup>8</sup>-2 
+            ->Network mask = 255.255.255.0 
+        Class D
+            ->Address Starts with 1110 bits
+            ->Used for Multicasting 
+            ->Range: 224.0.0.0 to 239.255.255.255
+            ->Class D IPv4 address cannot be a host IP address
+            ->It is used as "Group Id" by IGMP
+        Class E
+            ->Address Starts with 1111 bits
+            ->Network ID 16 bits; Host ID 16 bits 
+            ->Range: 240.0.0.0 to 255.255.255.255 
+        ```
+    * Classless IP v4 address
+        * Dynamic Assignment
+        * NetId bits need to be defined explicitly, They are assigned Dynamically
+        * No Prefix bits for IP address
+        * IP address in the form of P.Q.R.S/x
+        * x represents number of network id bits
 
 * IP v6 address
     * Binary representation of 128 bits each
@@ -152,9 +195,14 @@
 
 * Node is a host or a Router
 * Takes Datagram packet from Network layer, it adds Header and Footer and converts these packets into frames
+* Line Configuration -> Attachment of Communication devices to a link
+    1. Point to Point -> Dedicated link between sender and receiver
+    2. Multipoint -> More than 2 devices sharing a single link, used for broadcast medium. EX: Bus Topology
+
+#### Network 
 
 ### Physical Layer
-
+ 
 * Responsible for transmission of Data in form of bits
 * Uses Copper cable, fibre cable and wireless mediums
 * Performs Encoding and Decoding
