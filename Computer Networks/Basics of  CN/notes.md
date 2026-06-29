@@ -187,7 +187,7 @@
         * Destination IP -> Broadcast IP address -> 255.255.255.255
     3. Multicast -> 1 sender sends data to a group of hosts in a network -> one to many
         * Source IP -> Host IP Address
-        * Destination IP -> Multicast Address [special IP address as a Goupr ID] -> IGMP -> Internet Group Message Protocol
+        * Destination IP -> Multicast Address [special IP address as a Goupe ID] -> IGMP -> Internet Group Message Protocol
 
 ### Data Link Layer
 
@@ -199,7 +199,69 @@
     1. Point to Point -> Dedicated link between sender and receiver
     2. Multipoint -> More than 2 devices sharing a single link, used for broadcast medium. EX: Bus Topology
 
-#### Network 
+* Services
+    1. Framing
+    2. Error Control
+    3. Flow Control
+    4. Access Control
+
+#### Error Control
+
+* Error : Corrupted Data
+
+* Types:
+    1. Single bit error
+    2. Burst error
+
+* Error Control -> Based on parity and extra bits
+    1. Error detection: Can only detect errors, cannot correct, retransmission of corrupted data.
+        * Cyclic redundancy check : Single bit parity
+        * Checksum
+    2. Error Detection and Correction: Forward error correction; Correct error and then forward
+        1. 2D Parity
+        2. Hamming Code
+
+#### Flow Control
+
+* Synchronization between transmitter and receiver to control the flow
+
+1. Stop and Wait
+2. Sliding Window
+    1. Go Back N ARQ
+    2. Selectiver Repeat ARQ (Automatic Repeat Request)
+
+#### Network Topology
+
+* Line Configuration -> attachment of communication devices to a link
+    1. point to point -> Dedicated link between 2 devices
+    2. Multipoint (Multidrop) -> More than 2 devices attached to single link, Usually a broadcast medium. Ex Bus topology.
+
+* Transmission Mode -> Define the direction of signal flow between 2 linked devices
+    1. Simplex Mode -> one way communication
+    2. Half Duplex -> Either side communication at a time
+    3. Full Duplex mode -> Both side communication is possible at same time
+
+* Network Topology -> Arrangement of hosts inside a network
+    1. Mesh -> Every device has dedicated point to point link with every other device
+        * Total nodes = n
+        * Total links = <sup>n</sup>C<sub>2</sub>
+        * Advantages -> Fast and parallel Communication
+        * Disadvantages -> High cost, insufficient utilization of links, (n-1) IO port per device
+    2. Star -> Every device has dedicated point to point link, only to a central control, which can be hub, switch or router
+        * Total nodes = n
+        * Total links = n
+        * Advantages -> easy insertion and removal of devices, easy to extend topology.
+        * Disadvantage -> if central controller fails, then all communications stop
+    3. Bus -> Every host connected to centralized backbone media/coaxial cable
+        * Total nodes = n
+        * Total links = 1
+        * Multipoint configuration using access control method to control access to the bus at a time. Defined by MAC layer Protocol
+        * Advantages -> Very low installation cost, preferable for long area network
+        * Disadvantages -> If backbone media goes down.
+    4. Ring -> Every host is connected to 2 adjacent host using point to point link in cyclic fashin
+        * Total nodes = n
+        * Total links = n
+        * Simplex Communication using Access Control Method
 
 ### Physical Layer
  
@@ -215,7 +277,7 @@
 
 ### Service Data Unit
 
-* Servicec Data Unit is the PDU of the Upper layer. For example Message from the Application layer is the SDU of Transport Layer 
+* Servicec Data Unit is the PDU of the Upper layer. For example Message from the Application layer is the SDU of Transport Layer
 
 ### Protocol
 
