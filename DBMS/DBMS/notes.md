@@ -48,6 +48,8 @@ Refer Filesystem VS DBMS from (DBMS/Basics of DBMS/notes.md)
     total number of keys = 2^4 + 2^4 - 2^3 (Since ABC will be counted twice)
     Total number of super keys = 24
 
+    Very nicely explained in L2 at 40 mins
+
 #### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
