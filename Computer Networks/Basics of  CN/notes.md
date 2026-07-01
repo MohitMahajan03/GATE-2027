@@ -58,6 +58,48 @@
     * SMTP: Simple Mail Transfer Protocol
     * HTTPS: Secure HTTP
 
+### Application Layer protocols
+
+#### DNS
+
+* Used to map between IP address' to 'Host Name' and vice versa
+
+1. Distributed Database: Implemented in hierarchy of many name servers
+2. Hosts (DNS clients) and DNS servers communicated to resolve names
+
+* DNS Hierarchy
+    1. Root Name Servers
+    2. Top-level Domain Name Servers -> .in, .com, .org, etc
+    3. Authoritative Name Server
+
+#### HTTP
+
+* HTTP picks Web page objects from the server and gives it to the client.
+* Follows Client - Server Model
+* All web browsing is done using HTTP
+* Stateless protocol
+
+* Non Persistent HTTP/1.0
+    * At most 1 object sent over the connection
+    * Downloading multiple objects requires multiple connections
+
+* Persistent HTTP/1.1
+    * Multiple objects can be requested on the same TCP connection.
+
+#### SMTP
+
+* Mail transfer between client and server
+* USes TCP to reliably transfer email message
+* SMTP uses persistent TCP TCP connection
+* Stateful protocol
+
+#### FTP
+
+* Reliable transfer of files
+* USes 2 TCP connection for control and data
+* It is a stateful protocol
+* It can be used to transfer any kind of file 
+
 ### Presentation layer
 
 * Performs Code Conversion
@@ -90,6 +132,82 @@
 
     * Refer -> protocol_mappings.png
 * It takes messages from Application layer and breaks if they are big into smaller segments, and then adds it's header to the segments.
+
+### Transport Layer Protocols
+
+#### UDP
+
+* User Datagram Protocol is a Connection less and unreliable service
+* It is simple and fast
+* Preferred for shorter communication - Query and Response
+
+#### TCP
+
+* Transmission Control Protocol provides Connection-oriented and reliable services
+* Provides Flow, Error and COngestion Control
+* Has connection establishment procedure, then proceeds for data transfer
+* The connection is a logical connection
+* Preferred 
+
+### IP Allocation
+
+* IP allocation happens when host connects to a network
+* Unique IP address is assigned to it
+
+1. Static Allocation -> Manual update
+    * Need to manually change IP address when switching networks
+2. Dynamic Allocation -> DHCP (Dynamic Host Configuration Protocol)
+
+#### Network Address Translation
+
+* A device That converts private IP address to public IP address and vice versa in Source IP address field while moving packet out of private network and into the private network
+
+#### Routing
+
+* Identifying best path between Source and Destination
+
+1. Static Routing -> Non adaptive Routing
+    * Uses Dijkstra's, Bellman-Ford, Floyd-Warshall Algorithms
+    1. Shortest Path Algorithm
+    2. Flooding
+2. Dynamic Routing
+    * Adaptive Routing
+    1. Link state routing -> Uses Dijkstra
+    2. Distance Vector Routing -> Uses Bellman Ford
+
+#### Routing Protocols
+
+1. Interior Gateway Protocol
+    * Routing Information protocol -> Uses Distance Vector Routing
+    * Open Shortest Path First (OSPF) -> Uses Link state Routing
+
+2. Exterior Gateway Protocol
+    * Border Gateway protocol -> Path vector Routing
+
+#### Switching
+
+* Process of forwarding packets towards destination
+
+1. Circuit Switching
+    * Establish dedicated path between sender and receiver
+    * Connection oriented and reliable service
+    * Example: Telephone Network
+    * Inefficient and Costly
+2. Packet Switching
+    * Message divided into packets
+    * No path reservation is required
+    * Connection less and unreliable services
+    * Example: Internet
+    * Efficient utilization
+3. Message Switching
+    * No dedicated path
+    * Store and Forward
+    * Entire message is transmitted as single chunk
+
+* Types of services
+
+1. Connection Oriented Services
+2. Connection Less Services
 
 ### Network Layer
 
@@ -262,6 +380,44 @@
         * Total nodes = n
         * Total links = n
         * Simplex Communication using Access Control Method
+
+#### Media Access Control
+
+* It is the lower sub layer of Data Link Layer
+* This layer determines who can have access to media on the multipoint line configuration.
+* It is not useful in point to point line configuration
+* Has multiple access protocols
+* MAC Address
+    * Used in identification of Source and Destination nodes of a packet
+    * It is a physical address given on NIC card
+    * MAC Address is of 6 bytes
+    * MAC should be unique for all devices within the network
+    * Hexa representation of MAC address - ac:d1:b8:d5:59:0d
+
+### MAC Protocols
+
+* MAC protocols are of 3 types
+    1. Channel partitioning : Static allocation
+    2. Random Access : No any allocation
+    3. Taking Turns : Dynamic allocation
+
+#### Channel Partitioning
+
+1. TDMA : Time division Multiple access
+2. FDMA: Frequency division Multiple access
+3. CDMA : Code Division Multiple access
+
+#### Random Access
+
+1. ALOHA : Pure ALOHA and Slotted ALOHA
+
+2. CSMA : Consists of CSMA/CA and CSMA/CD
+
+#### Controlled Access MAC protocol
+
+1. Reservation
+2. Polling
+3. Token passing
 
 ### Physical Layer
  
