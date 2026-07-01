@@ -127,12 +127,12 @@
 
 * This constraint occurs during deletion and updation of records in the following situations
 
-1. On delete no action
-2. on delete cascade
-3. On delete set NULL
-4. On update no action
-5. On update cascade
-6. On update set NULL
+1. On delete no action -> On deletion of primary key, no action to be taken is enforced on parent table by referencing table
+2. on delete cascade -> On deletion of primary key, delete all data with respect to primary key in referencing table
+3. On delete set NULL -> On deletion of primary key, set Foreign key with respect to the referenced records as NULL
+4. On update no action -> On update of primary key, no action to be taken is enforced on parent table by referencing table
+5. On update cascade -> On update of primary key, delete all data with respect to primary key in referencing table
+6. On update set NULL -> On update of primary key, set Foreign key with respect to the referenced records as NULL
 
 ### Functional Dependency
 
