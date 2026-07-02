@@ -17,12 +17,12 @@
         * Limited number of users can send their data
         * Expensive
     2. Packet Switching -> refer packet_switching.png
-        [Refer Here for packet switching](Computer Networks/Basics%20of%20%20CN/notes.md)
+    * [Refer Here for packet switching](../Basics%20of%20%20CN/notes.md)
     1. Virtual Circuit Switching
 
 ## 2 Process Communication 
 
-[Refer Here for 2 process communication](Computer Networks/Basics%20of%20%20CN/notes.md)
+[Refer Here for 2 process communication](../Basics%20of%20%20CN/notes.md)
 
 ## TCP/IP Model
 
