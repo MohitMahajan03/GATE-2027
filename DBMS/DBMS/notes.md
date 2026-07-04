@@ -72,7 +72,105 @@ Refer Filesystem VS DBMS from (DBMS/Basics of DBMS/notes.md)
 
 [Refer](../Basics%20of%20DBMS/notes.md)
 
-#### H.W.
+
+### Membership Test
+
+1. Does F{XY->Q} exist given F={XY->W, Y->Z, WZ->P, WP->QR, Q->X}
+
+```
+{XY}+ -> {XYWZPQR}
+So {XY}+ has closure on Q, therefore XY->Q exists
+```
+
+### Covering
+
+* F covers G if all the dependencies of G can be derived from F
+* F = {A->B, B->C} ; G = {A->C}
+```
+A->B and B->C, Therefore A->C
+Hence F covers G
+```
+
+1. Does F cover G or G covers F 
+```
+F = {A->B, B->C, C->A}
+G = {A->BC, B->AC, BC->A, AB->C}
+
+F covering G
+G
+{A}+ = {ABC}, {B}+ = {BAC}, {BC}+ = {BCA}, {AB}+ = {ABC}
+F
+{A}+ = {ABC}, {B}+ = {BCA}, {BC}+ = {BCA}, {AB}+ = {ABC}
+
+Only F can cover G
+```
+
+2. F = {A->BCDEF, BC->ADEF, B->F, D->E, AD->E} ; G = {A->BC, B->F, BC->AD, D->E}
+
+```
+F covering G
+
+G
+{A}+ = {ABCDEF}, {B}+ = {BF}, {BC}+ = {BCADEF}, {D}+ = {DE}
+F
+{A}+ = {ABCDEF}, {B}+ = {BF}, {BC}+ = {ABCDEF}, {D}+ = {DE}
+
+
+G covering F
+Yes, same as above as all keys are getting covered
+
+G = F as F covers G and G covers F
+
+```
+
+### Redundant FD [Extra FD]
+
+* if we have F = {A->B, B->C, A->C}
+* Here we know that if we remove A->C, we can still derive AC from the Set of the F
+* So, Therefore A->C is redundant FD
+
+1. F = {X->Y, Y->X, Y->Z, Z->Y, X->Z, Z->X}
+```
+Excluding X->Y to check if X will be covered by Y
+
+{X}+ = {XZY} -> Yes
+
+Remove X->Y
+
+F = {Y->X, Y->Z, Z->Y, X->Z, Z->X}
+
+Excluding Y->X
+
+{Y}+ = {YZX} -> Yes
+Remove Y->X
+
+F = {Y->Z, Z->Y, X->Z, Z->X}
+
+Excluding Y->Z
+
+{Y}+ = {Y} -> No
+Keep Y->Z
+
+Excluding Z->Y
+
+{Z}+ = {ZX} -> No
+Keep Z->Y
+
+Excluding X->Z
+
+{X}+ = {X} -> No
+Keep X->Z
+
+Excluding Z->X
+{Z}+ = {ZY}
+
+Keep Z->X
+
+Final F = {Y->Z, Z->Y, X->Z, Z->X}
+
+```
+
+### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
 
@@ -164,4 +262,47 @@ n-3 = 3
 n = 6
 
 Therefore, the Relation has 6 attributes!
+```
+
+6. Find All CK using closure R(A,B,C,D,E,F); FD = {AB->C, C->D, CD->BE, DE->F, EF->A}
+
+```
+1. {AB}+ -> {ABCDEF}
+2. {C}+ -> {CDBEFA}
+3. {BDE}+ -> {DEFABC}
+4. {BEF}+ -> {BEFACD}
+
+```
+
+7. R(E,F,G,H,I,J,K,L,M,N); FD = {EF->G, F->IJ, EH->KL, K->M, L->N} find key for R
+
+```
+{EF}+ -> {EFGIJ}     x
+{EFH}+ -> {EFGHIJKLMN}   \/
+```
+8. R(A,B,C,D,E,F); FD = {AB->C, C->DE, E->F, F->B}
+
+```
+{AB}+ -> {ABCDEF}
+{AC}+ -> {ACDEFB}
+{AE}+ -> {AFBCDE}
+{AF}+ -> {AFBCDE}
+```
+
+9. R(A,B,C,D,E); FD = {A->B, B->C, C->D, D->A}
+
+```
+{AE}+ -> {ABCDE}
+{BE}+ -> {BCDAE}
+{CE}+ -> {CDABE}
+{DE}+ -> {DABCE}
+```
+
+10. R(A,B,C,D,E); FD = {A->B, A->C, CD->E, B->D, E->A}
+
+```
+{AC}+ -> {ACBDE}
+{BC}+ -> {BCDEA}
+{BD}+ -> {BDE}    x
+{CD}+ -> {CDEAB}
 ```
