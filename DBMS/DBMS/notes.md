@@ -51,6 +51,27 @@ Refer Filesystem VS DBMS from (DBMS/Basics of DBMS/notes.md)
 
 [Refer Here for referential integrity constraint](../Basics%20of%20DBMS/notes.md###Keys%20in%20RDBMS)
 
+### Functional Dependency
+
+[Refer This image](functional_dependency.png)
+
+* Trivial FD: [Refer](../Basics%20of%20DBMS/notes.md###Keys%20in%20RDBMS)
+
+* Non-Trivial FD: [Refer](../Basics%20of%20DBMS/notes.md###Keys%20in%20RDBMS)
+
+### Inference Axioms (Armstrong's Axioms)
+
+1. if Y is subset of X, then X->Y (Reflexivity)
+2. If X->Y, then XW->Y or XW->YW (Augmentation)
+3. If X->Y and Y->Z, then X->Z (Transitivity)
+4. If X->Y and YW->Z, then XW->Z (Puedotransitivity)
+5. if X->Z and X->Y, then X->YZ (Additivity or Union)
+6. If X->YZ, X->Y and X->Z (Projectivity or Decomposition)
+
+### Closure
+
+[Refer](../Basics%20of%20DBMS/notes.md)
+
 #### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
