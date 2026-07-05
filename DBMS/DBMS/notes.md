@@ -1,5 +1,7 @@
 # DBMS for GATE 8 - 10 marks -> Scoring
 
+# Complete all Home work!!
+
 ## Introduction to DBMS
 
 * Database is a collection of related data
@@ -167,6 +169,61 @@ Excluding Z->X
 Keep Z->X
 
 Final F = {Y->Z, Z->Y, X->Z, Z->X}
+
+```
+
+### Extraneous Attributes
+x
+* Given F = {A1A2 -> B}
+```
+
+Excluding A2 from F
+
+Then iff A1 -> B Then A2 is extraneous attribute
+
+```
+
+### Canonical Cover
+
+* Canonical Cover of F is F if
+    * Every FD of F is simple -> Right side of every FD of F has only 1 attribute
+    * F is left-reduced
+    * F is non redundant
+
+
+1. Find Canonical Cover for R(V,W,X,Y,Z); F = {V->W, VW->X, Y->VX, Y->Z}
+
+```
+F = {V->W, VW->X, Y->V, Y->X, Y->Z}
+
+
+Checking Left Redundancy
+excluding V in VW->X
+
+{W}+ = {W}
+
+V is required
+
+excluding W in VW->X
+
+{V}+ = {VW}
+
+Therefore VW->X is a required FD
+
+
+Checking Non Redundancy
+
+Excluding V->W
+
+{V}+ = {V} Requireed
+
+Excluding VW->X
+
+{VW}+ = {VW} Required
+
+Excluding 
+
+
 
 ```
 
