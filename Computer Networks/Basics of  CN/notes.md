@@ -50,7 +50,8 @@
 ### Application Layer
 
 * Network application program is program that connects the User to the application layer. EX: Browsers
-* Port number is a 16 bit identifier that is used to identify a network process in a machine. It is machine dependent
+* Port number is a 16 bit unsigned int identifier that is used to identify a network process in a machine. It is machine dependent
+* It is assigned and managed by OS
 * Application layer protocols
     * DNS: Domain Name System
     * HTTP: Hyper Text Transfer Protocol
@@ -433,7 +434,7 @@
 
 ### Service Data Unit
 
-* Servicec Data Unit is the PDU of the Upper layer. For example Message from the Application layer is the SDU of Transport Layer
+* Service Data Unit is the PDU of the Upper layer. For example Message from the Application layer is the SDU of Transport Layer
 
 ### Protocol
 
