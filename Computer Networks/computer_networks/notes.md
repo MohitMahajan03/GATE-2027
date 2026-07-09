@@ -169,6 +169,14 @@ Physical Layer
 
 [Refer Here for Routing](../Basics%20of%20%20CN/notes.md)
 
+## Data Link Layer
+
+[Refer Here for Data Link Layer](../Basics%20of%20%20CN/notes.md)
+
+## Physical Layer
+
+[Refer Here for Physical Layer](../Basics%20of%20%20CN/notes.md)
+
 ### Questions
 
 1. The PDU for Application layer in internet stack is
