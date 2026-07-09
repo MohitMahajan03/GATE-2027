@@ -159,6 +159,16 @@ Physical Layer
 
 [Refer Here for Transport Layer Protocols](../Basics%20of%20%20CN/notes.md)
 
+[Refer Here for Protocol Mapping](protocol_mapping.png)
+
+## Network Layer
+
+[Refer Here for Network Layer Protocols](../Basics%20of%20%20CN/notes.md)
+
+## Routing
+
+[Refer Here for Routing](../Basics%20of%20%20CN/notes.md)
+
 ### Questions
 
 1. The PDU for Application layer in internet stack is
