@@ -204,12 +204,17 @@ excluding V in VW->X
 
 V is required
 
+-----------------------
+
 excluding W in VW->X
 
-{V}+ = {VW}
+{V}+ = {VWX}
 
-Therefore VW->X is a required FD
+Therefore W is redundant FD
 
+F = {V->W, V->X, Y->V, Y->X, Y->Z}
+
+-------------------------
 
 Checking Non Redundancy
 
@@ -217,13 +222,100 @@ Excluding V->W
 
 {V}+ = {V} Requireed
 
-Excluding VW->X
+-------------------
 
-{VW}+ = {VW} Required
+Excluding V->X
 
-Excluding 
+{V}+ = {VW} Required
 
+------------------
 
+Excluding Y->V
+
+{Y}+ = {YZX} Required
+
+-----------------
+
+Excluding Y->X
+
+{Y}+ = {YVWX}
+
+Redundant
+
+F = {V->W, V->X, Y->V, Y->Z}
+
+-----------------------
+
+Excluding Y->Z
+
+{Y}+ = {YVXW} 
+Reqired
+
+Final FD = {V->W, V->X, Y->V, Y->Z}
+
+```
+
+2. Find Canonical Cover for R(A,B,C,D,E,F,G); F = {BCD->A, BC->E, A->F, F->G, C->D, A->G}
+
+```
+F = {BCD->A, BC->E, A->F, F->G, C->D, A->G}
+
+Checking Left Redundancy
+excluding B in BCD->A
+
+{CD}+ = {CD}
+
+B is required
+
+-----------------------
+
+excluding C in BCD->A
+
+{BD}+ = {BD}
+
+C is required
+
+-----------------------
+
+excluding D in BCD->A
+
+{BC}+ = {BCDAE}
+
+Therefore D is extra, removing D
+
+F = {BC->A, BC->E, A->F, F->G, C->D, A->G}
+
+---------------------------------------------
+
+BC->E Required Eyeballing, because, {B}+ = B, and {C}+ = {CD} 
+
+-------------------------
+
+Checking Non Redundancy
+
+BC->A; Required Eyeballing, because, {BC}+ = {BCDE}
+
+-------------------
+
+BC->E; Required Eyeballing, because, {BC}+ = {BCAFGD}
+
+------------------
+
+A->F Required Eyeballing, because, {A}+ = {AG},
+
+-----------------
+
+F->G Required Eyeballing, because, {F}+ = F
+
+--------------------
+
+C->D Required Eyeballing, because, {C}+ = C
+
+-----------------------
+
+A->G Redundant Eyeballing, because, A->F and F->G exists
+
+Final FD = {BC->A, BC->E, A->F, F->G, C->D}
 
 ```
 
