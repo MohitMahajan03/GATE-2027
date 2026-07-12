@@ -319,6 +319,10 @@ Final FD = {BC->A, BC->E, A->F, F->G, C->D}
 
 ```
 
+### Normalization
+
+* Done to reduce redundancy and thereby reduce anomalies
+
 ### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
