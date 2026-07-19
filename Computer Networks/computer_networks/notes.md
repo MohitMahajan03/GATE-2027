@@ -177,7 +177,18 @@ Physical Layer
 
 [Refer Here for Physical Layer](../Basics%20of%20%20CN/notes.md)
 
-### Questions
+## Network Delays
+
+* There are 4 types of Network delays
+    1. Transmission delay
+    2. Propagation delay
+    3. Queuing delay
+    4. Processing delay
+* There are a few assumptions in Network delays
+    1. Negligible overhead in IP packet -> Ignore IP packet header size
+    2. Negligible over head in Frame -> Ignore header and footer size
+
+## Questions
 
 1. The PDU for Application layer in internet stack is
     * Message
