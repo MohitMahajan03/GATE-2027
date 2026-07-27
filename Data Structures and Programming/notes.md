@@ -66,6 +66,44 @@ total size = 4749 * 2 = 9498
 Address = 1000+9498 = 10498
 ```
 
+### Sparse Matrix
+
+* Sparse matrix is a matrix in which relatively few entries are non-zero
+
+#### Lower Triangular Matrix
+
+* Lower Triangular matrix : elements above principle diagonal are zero. Always a square matrix. So, for every i > j in A[i][j] = 0
+* Row major order
+   * Given nxn matrix number of non zero elements = n(n+1)/2
+   * Address = BA + [[i(i-1)/2 + {j-1}] * Size]
+
+* Column major order
+   * Given nxn matrix, total elements from 1st column till j-1 columns = n + n-1 + n-2 + n-3 ... + n-j-2 = (j-1)/2 [n + (n-j-2)] = n(j-1) - (j-1)(j-2)/2
+   * Address = BA + [n(j-1) - (j-1)(j-2)/2 + (i-j)] * size
+
+* Upper Triangular matrix: Elements below the principle diagonal are zero
+
+* IN GENERAL if a[lb1 ,,, ub1][lb2 .. ub2]
+   * Row major order Address = BA + [(i-lb1) * (ub2-lb2+1) + (j-lb2)] * size
+   * Column major order Address = BA + [(j - lb2) * (ub1-lb1 + 1) + (i-lb1)] * size 
+
+### 3-D Array
+
+* So in C, 3D Arrays are stored in the form of frames. A frame is one set of 2D array.
+* So a 3x3x3 matrix will have 3 frames of 3x3 matrices.
+* A[i][j][k] -> i : Frame, j : row, k : columns
+* for an nxnxn matrix Address = BA + [(i-1) * n<sup>2</sup> + (j-1)*n + (k-1)] * size
+* In general Address = BA + [(i-1) * # of rows * # of cols + (j-1)* # of cols + (k-1)] * size
+
 ## HW
 
-### L1
+### L2
+
+1. arr[-15 ti 15][-7 to 7] find address of arr[10][5] in column major order if starting address is 500 and size is 4 bytes
+
+2. Consider a 1D array with 101 elements. if base address of the array is 108 and size of each array element is 4 bytes then address of a[7] is? array index starts from -25
+
+3. Consider a 2D array[28 to 39][-3 to 10] with natural numbers stored. find element at location arr[35][10] in row major order and column major order
+
+And more in ppt
+
