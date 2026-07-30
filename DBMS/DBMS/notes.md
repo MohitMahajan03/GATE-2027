@@ -323,6 +323,16 @@ Final FD = {BC->A, BC->E, A->F, F->G, C->D}
 
 * Done to reduce redundancy and thereby reduce anomalies
 
+#### Anomalies
+
+1. Update Anomaly -> Double Work Problem
+2. Insertion Anomaly -> The Blocker Problem
+3. Deletion Anomaly -> The accidental loss problem
+
+* Decomposition of relation is done to organize data properly so that redundancy and anomalies are removed while keeping the data correct
+* Joining of decomposed tables that give back original data is called as a loss less join. [Refer Here](DBMS/DBMS/lossless_join.png). [Refer Example](DBMS/DBMS/loss_less_join_example.png)
+* Lossy Join decomposition means that when the decomposed parts are joined back the result does not produce the exact relation, it may generate extra incorrect tuples.
+
 ### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
