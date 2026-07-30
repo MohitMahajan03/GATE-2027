@@ -72,7 +72,7 @@ Address = 1000+9498 = 10498
 
 #### Lower Triangular Matrix
 
-* Lower Triangular matrix : elements above principle diagonal are zero. Always a square matrix. So, for every i > j in A[i][j] = 0
+* Lower Triangular matrix : elements above principle diagonal are zero. Always a square matrix. So, for every i < j in A[i][j] = 0
 * Row major order
    * Given nxn matrix number of non zero elements = n(n+1)/2
    * Address = BA + [[i(i-1)/2 + {j-1}] * Size]
@@ -87,6 +87,22 @@ Address = 1000+9498 = 10498
    * Row major order Address = BA + [(i-lb1) * (ub2-lb2+1) + (j-lb2)] * size
    * Column major order Address = BA + [(j - lb2) * (ub1-lb1 + 1) + (i-lb1)] * size 
 
+* Bound Adjustment, If the bound does not start from 1, adjust lower bound to 1 and all other bounds correspondingly, also apply the same adjustment for the questions
+   * Ex A[-5][-19] Find A[10][7]-> A[1][25] and A[16][13]
+
+
+#### Upper Triangular Matrix
+
+* Upper Triangular matrix : elements below principle diagonal are zero. Always a square matrix. So, for every i > j in A[i][j] = 0
+
+* Column major order
+   * Given nxn matrix number of non zero elements = n(n+1)/2
+   * Address = BA + [[j(j-1)/2 + {i-1}] * Size]
+
+* Row major order
+   * Given nxn matrix
+   * Address = BA + [n(i-1) - {(i-1)(i-2)/2} + (j-i)] * size
+
 ### 3-D Array
 
 * So in C, 3D Arrays are stored in the form of frames. A frame is one set of 2D array.
@@ -94,6 +110,23 @@ Address = 1000+9498 = 10498
 * A[i][j][k] -> i : Frame, j : row, k : columns
 * for an nxnxn matrix Address = BA + [(i-1) * n<sup>2</sup> + (j-1)*n + (k-1)] * size
 * In general Address = BA + [(i-1) * # of rows * # of cols + (j-1)* # of cols + (k-1)] * size
+* Considering A[LB1 ... UB1][LB2 ... UB2][LB3 ... UB3] Address of A[i][j][k]
+   * Address = BA + [(i-LB1)(UB2-LB2+1)(UB3-LB3+1) + (j-LB2)(UB3-LB3+1) + (k-LB3)] * Size
+
+### Advantages of Arrays
+
+1. Random accessing of elements
+2. Cache friendly data structure
+
+### Disadvantages of Arrays
+
+1. Static allocation
+2. Memory wastage occurs
+3. Time consuming process for shifting the elements in the array
+
+## Stacks
+
+
 
 ## HW
 
@@ -106,4 +139,3 @@ Address = 1000+9498 = 10498
 3. Consider a 2D array[28 to 39][-3 to 10] with natural numbers stored. find element at location arr[35][10] in row major order and column major order
 
 And more in ppt
-
