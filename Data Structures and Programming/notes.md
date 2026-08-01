@@ -1,5 +1,7 @@
 # Data Structures and Programming 5 to 6 marks
 
+DO ALL HOMEWORK QUESTIONS!!
+
 * Data Structure is organization and management
 * It specifies the storage format and 
 * It performs operations on them that enables effective access and modification 
@@ -126,7 +128,100 @@ Address = 1000+9498 = 10498
 
 ## Stacks
 
+1. Stack is a linear data structure
+2. Stack is one ended data structure operations are performed only on end indexed by top
+3. operation on stack are push and pop
+4. stack works on LIFO principle (Last in First out)
+5. top is the only index on the stack. it is incremented upon push and decremented on pop.
 
+### Implementation of stack
+
+```c
+# define max 100;
+int a[max];
+int top;
+
+void init()
+{
+   top = -1;
+}
+
+int isEmpty()
+{
+   if(top == -1)
+      return 1;
+   else
+      return 0;
+}
+
+int isFull()
+{
+   if(top == max-1)
+      return 1;
+   else
+      return 0;
+}
+
+void push(int x)
+{
+   if(top == max-1)
+   {
+      printf("stack is full");
+      return;
+   }
+   top = top + 1;
+   a[top] = x; 
+}
+
+int pop()
+{
+   int data;
+   if(top == -1)
+   {
+      printf("stack is empty");
+      return -1;
+   }
+   data = a[top];
+   top--;
+   return data;
+}
+```
+
+### Applications of stack
+
+1. Permutation Generator
+2. Recursion
+3. Expression in Computers -> Infix, Prefix, Postfix
+4. Parsing
+5. Push Down Automata (PDA)
+
+#### Permutation Generator
+
+* Stack can generate different permutations in which element will be entered in given order but it can be popped any time
+
+1. 
+```text
+total possible permutations with abc = abc, acb, bac, bca, cab, cba
+
+You cannot change insertion order of abc, therefore stack operations for every permutation is as follows
+
+abc = push(a) pop push(b) pop push(c) pop
+acb = push(a) pop push(b) push(c) pop pop
+bac = push(a) push(b) pop pop push(c) pop
+bca = push(a) push(b) pop push(c) pop pop
+cab = push(a) push(b) push(c) pop -> cannot pop a as it is at the bottom
+cba = push(a) push(b) push(c) pop pop pop
+
+```
+
+2. 
+```text
+How many permutations are possible with abcd
+out of = cbad, cbda, cabd, cadb, cdba, cadb
+cabd not possible -> Through eye balling
+cadb not possible -> Through eye balling
+cdab not possible -> Through eye balling
+```
 
 ## HW
 
