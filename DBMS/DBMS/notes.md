@@ -333,6 +333,33 @@ Final FD = {BC->A, BC->E, A->F, F->G, C->D}
 * Joining of decomposed tables that give back original data is called as a loss less join. [Refer Here](DBMS/DBMS/lossless_join.png). [Refer Example](DBMS/DBMS/loss_less_join_example.png)
 * Lossy Join decomposition means that when the decomposed parts are joined back the result does not produce the exact relation, it may generate extra incorrect tuples.
 
+#### Dependency preserving Loss Less joins
+
+* Given a decomposition, R1 and R2, and they have FD1 and FD2 then FD1 U FD2 = FD
+
+* [Refer Concept](DBMS/DBMS/fd_preserving_join_concept.png)
+* [Refer Example](DBMS/DBMS/fd_preserving_joins.png)
+
+
+#### 1 NF
+
+* Every step followed for normalization is called as normal forms
+
+1. No multivalued attributes
+2. Allows only atomic values
+
+#### 2 NF
+
+1. No Partial Dependencies
+2. 2 NF makes sure that non key attributes do not derive other attributes. As having these relations induces redundancy
+3. Also if any of attributes of CK derives non - prime, redundancy occurs
+4. If non prime attributes derive non prime attributes, redundancy occurs
+5. if any of attributes of CK + non prime attribute derives non prime attribute, redundancy occurs
+6. prime attribute deriving prime attribute, redundancy occurs
+
+* 2NF says remove partial dependencies. If there are partial dependencies, decompose the DB
+
+
 ### H.W.
 
 1. R{A1, A2, A3, ...  An} ; Candidate Keys [{A1}, {A1A2}, {A1A2, A2A3}]
@@ -469,3 +496,5 @@ Therefore, the Relation has 6 attributes!
 {BD}+ -> {BDE}    x
 {CD}+ -> {CDEAB}
 ```
+
+#### CH01 L7 all questions
