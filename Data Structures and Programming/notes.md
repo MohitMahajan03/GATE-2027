@@ -85,7 +85,7 @@ Address = 1000+9498 = 10498
 
 * Upper Triangular matrix: Elements below the principle diagonal are zero
 
-* IN GENERAL if a[lb1 ,,, ub1][lb2 .. ub2]
+* IN GENERAL if a[lb1 ... ub1][lb2 ... ub2]
    * Row major order Address = BA + [(i-lb1) * (ub2-lb2+1) + (j-lb2)] * size
    * Column major order Address = BA + [(j - lb2) * (ub1-lb1 + 1) + (i-lb1)] * size 
 
