@@ -1,6 +1,6 @@
 # Data Structures and Programming 5 to 6 marks
 
-DO ALL HOMEWORK QUESTIONS!!
+# DO ALL HOMEWORK QUESTIONS!!
 
 * Data Structure is organization and management
 * It specifies the storage format and 
@@ -251,6 +251,67 @@ cdab not possible -> Through eye balling
 * A-B/C*D^E -> A-(B/C)*(D^E) -> A-(BC/)*(DE^) -> A-(BC/DE^)* -> A-(BC/CD^*) -> ABC/DE^*-
 
 
+#### Postfix to Prefix
+
+1. 624*5+-
+   * 6 *24 5+-
+   * 6 + *245 -
+   * -6+*245
+
+#### Infix to Postfix using stacks
+
+* Scan the symbol left to right
+* print the symbol left to right
+* If input is operand then print
+* If input is operator and stack is empty, then push the operator
+* End of the string pop everything and print
+* If input operator is having higher precedence than top of stack, then perform push
+* If input operator is having lower precedence than the top of the stack then perform pop
+
+1. a + b * c
+
+```algo
+input a: -> output a
+input +: -> push +
+input b: -> output ab
+input *: -> push *
+input c: -> output abc
+end of string: pop everything and print output abc*+
+```
+
+2. a * b - c
+
+```algo
+input a: -> output a
+input *: -> push *
+input b: -> output ab
+input -: -> pop * push -
+input c: -> output ab*c
+end of string: pop everything and print output ab*c-
+```
+
+2. a * b / c
+
+```algo
+input a: -> output a
+input *: -> push *
+input b: -> output ab
+input /: -> pop * push /  Because of Left associativity
+input c: -> output ab*c/
+end of string: pop everything and print output ab*c/
+```
+
+3. a ^ b ^ c
+
+```algo
+input a: -> output a
+input ^: -> push ^
+input b: -> output ab
+input ^: -> push ^  Because of Right associativity
+input c: -> output abc^^
+end of string: pop everything and print output abc^^
+```
+
 ## HW
 
 ### L2
@@ -262,3 +323,5 @@ cdab not possible -> Through eye balling
 3. Consider a 2D array[28 to 39][-3 to 10] with natural numbers stored. find element at location arr[35][10] in row major order and column major order
 
 And more in ppt
+
+### Solve Ch02 L02
