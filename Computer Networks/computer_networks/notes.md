@@ -1,5 +1,7 @@
 # Computer Networks
 
+# Solve ALL HOMEWORKS!!
+
 * Communication of hosts is defined by computer networks
 * Host are computers, servers, smartohones
 * Host can be connected either directly via point to point link or indirectly through some networking devices
@@ -180,13 +182,50 @@ Physical Layer
 ## Network Delays
 
 * There are 4 types of Network delays
-    1. Transmission delay
-    2. Propagation delay
-    3. Queuing delay
-    4. Processing delay
+    1. Transmission delay - major
+    2. Propagation delay - major
+    3. Queuing delay - minor
+    4. Processing delay - minor
 * There are a few assumptions in Network delays
     1. Negligible overhead in IP packet -> Ignore IP packet header size
     2. Negligible over head in Frame -> Ignore header and footer size
+
+1. Transmission Delay
+    * Time required to transmit a packet/frame over a link
+    * Tx inversely proportional to Data Transfer rate
+    * Tx is directly proportional to Frame size
+    * Frame size 5k bits data transfer rate is 1k bps. Tx = 5 seconds
+    * Tx = (Packet size)/(Data Transfer Rate)
+    * Data Transfer rate is also called as bandwidth
+    * Baud Rate -> Number of signals generated into channel per second
+    * [Refer Packet Size](Computer%20Networks/computer_networks/packet_size.png)
+    * if 1 bit is represented by 1 signal -> bit rate = Baud rate
+    * If 1 bit is represented by 2 signals -> bit rate = Baud rate / 2 
+    * [Refer Transfer Rates](Computer%20Networks/computer_networks/transfer_rates.png)
+
+    ```text
+    packet size = 50KB, transfer rate = 100 Kbps
+
+    size = 50*8 * 2^10 b = 400 * 2^10 b
+
+    delay = 4 * 2^10 * 10^-3 sec = 4096 milliseconds
+    ```
+
+2. Propagation Delay
+    * Time required for signal to travel from one end to other end of a link
+    * Denoted by Tp
+    * Tp is Directly proportional to Distance
+    * Tp is inversely proportional to signal propagation speed
+    * 4 KM wire, with 10^5 m/s speed, Tp = 4000/10^5 = 0.04 seconds = 40 milliseconds
+    * Tp = Distance / Signal Speed if given in m/s
+    * Tp = Distance / Signal Speed if given in seconds per meter
+    * Round trip Tp = 2 * Tp
+    
+    ```text
+    7KM wire, 20 millisecs per meter transfer rate
+
+    Tp = 7000 * 20 * 10^-3 = 140 seconds 
+    ```
 
 ## Questions
 
