@@ -103,7 +103,7 @@
 
 ### Intro to C programming
 
-* A token is a sequence of characters having a logical meaning to C language. Example : Keywords, operators, constants, identifiers, special symbol.
+* A token is a sequence of characters (smallest logical unit) having a logical meaning to C language. Example : Keywords, operators, constants, identifiers, special symbol.
 * Keywords : Words that are reserved by the C language, that cannot be used for any other purposes.
 * Identifiers: They are name given to variables and functions: naming conventions -> alphabet, underscore/numeric, alphabet/numeric.
 
