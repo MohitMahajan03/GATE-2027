@@ -358,6 +358,15 @@ Final FD = {BC->A, BC->E, A->F, F->G, C->D}
 6. prime attribute deriving prime attribute, redundancy occurs
 
 * 2NF says remove partial dependencies. If there are partial dependencies, decompose the DB
+* So in 2NF All non prime attributes are fully functionally dependent on Candidate keys
+
+#### 3 NF
+
+* Remove all transitive Dependency
+
+#### BCNF
+
+* States that LHS of FD is always a key
 
 
 ### H.W.
