@@ -1,5 +1,5 @@
 # C Programming
-
+## Solve All Questions
 ## Intro to C programming
 
 [Refer Intro C programming](../Introduction%20to%20C/notes.md)
@@ -21,3 +21,4 @@
     double x = 2.14567892;
     char ch[10] = "Hello";
 ```
+
