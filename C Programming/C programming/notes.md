@@ -22,3 +22,13 @@
     char ch[10] = "Hello";
 ```
 
+* "%d" is a string constant, which is a format specifier
+
+### Primitive Data Types
+
+* Data type is defined by 3 things, The value it takes; Amount of memory required and iterpretation of value
+
+* int
+  * Range -> -2<sup>n-1</sup> to -2<sup>n-1</sup>-1 where n is number of bits
+* char
+* float
