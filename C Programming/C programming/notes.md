@@ -1,5 +1,5 @@
 # C Programming
-## Solve All Questions
+## Solve All Questions and Homework
 ## Intro to C programming
 
 [Refer Intro C programming](../Introduction%20to%20C/notes.md)
@@ -57,6 +57,46 @@
   * It updates the value of variables
   * Pre and post increments and decrements are allowed.
 
+### Assignment operators
+
+* =
+* +=
+* -=
+* -=
+* /=
+* %=
+* *=
+* ">>="
+* "<<="
+* &=
+* ^=
+* |=
+
+### Relational Operator
+
+* These operators have left to right associativity
+* Higher precedence
+  * ">"
+  * "<"
+  * "<="
+  * ">="
+* Lower Precedence
+* ==
+* !=
+
+### Logical Operators
+
+* Higher Precedence
+  * ! - NOT
+* Lower Precedence
+  * && - AND
+  * || - OR
+
+### Short Circuit Code
+
+* Now given R1 && R2, if R1 is false, then the whole expression is false. So the compiler skips the check for R2 completely. This is called short circuting
+* Now given R1 || R2, if R1 is true, then the whole expression is true. So the compiler skips the check for R2 completely. This is called short circuting
+
 ### Questions
 
 1. 
@@ -90,7 +130,21 @@ y = 160, x = 8
 
 x+y = 168
 ```
+2. 
+```C
+#include <stdio.h>
+int main()
+{
+    int x = 0, y = 0, a;
+    a = x && ++y;
+    printf("%d %d", x, y)
+    return 0
+}
+```
 
+```md
+* Answer is 0 and 0 due to code short circuiting
+```
 ### MISC
 
 * % Does not apply on float and double values
