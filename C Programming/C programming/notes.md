@@ -32,3 +32,8 @@
   * Range -> -2<sup>n-1</sup> to -2<sup>n-1</sup>-1 where n is number of bits
 * char
 * float
+* operation between int and int give int
+* operation between float and int give float
+* operation between float and in give float
+
+### Arithmetric Operators
