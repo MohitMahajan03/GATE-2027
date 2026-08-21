@@ -29,24 +29,24 @@
 
 * Data Communication mode that works on packet switching/ store and forward network
 
-```
-Application Layer
-Transport Layer
-Network Layer
-Data Link Layer
-Physical Layer
+```md
+1. Application Layer
+2. Transport Layer
+3. Network Layer
+4. Data Link Layer
+5. Physical Layer
 ```
 
 ## OSI Model
 
-```
-Application Layer
-Presentation Layer
-Session Layer
-Transport Layer
-Network Layer
-Data Link Layer
-Physical Layer
+```md
+1. Application Layer
+2. Presentation Layer
+3. Session Layer
+4. Transport Layer
+5. Network Layer
+6. Data Link Layer
+7. Physical Layer
 ```
 
 ## Application Layer
@@ -203,12 +203,10 @@ Physical Layer
     * If 1 bit is represented by 2 signals -> bit rate = Baud rate / 2 
     * [Refer Transfer Rates](Computer%20Networks/computer_networks/transfer_rates.png)
 
-    ```text
-    packet size = 50KB, transfer rate = 100 Kbps
-
-    size = 50*8 * 2^10 b = 400 * 2^10 b
-
-    delay = 4 * 2^10 * 10^-3 sec = 4096 milliseconds
+    ```md
+    * packet size = 50KB, transfer rate = 100 Kbps
+        * size = 50*8 * 2<sup>10</sup> b = 400 * 2<sup>10</sup> b
+        * delay = 4 * 2<sup>10</sup> * 10<sup>-3</sup> sec = 4096 milliseconds
     ```
 
 2. Propagation Delay
@@ -221,13 +219,44 @@ Physical Layer
     * Tp = Distance / Signal Speed if given in seconds per meter
     * Round trip Tp = 2 * Tp
     
-    ```text
-    7KM wire, 20 millisecs per meter transfer rate
-
-    Tp = 7000 * 20 * 10^-3 = 140 seconds 
+    ```md
+    * 7KM wire, 20 millisecs per meter transfer rate
+        * Tp = 7000 * 20 * 10<sup>-3</sup> = 140 seconds 
     ```
+
+3. End to End delay
+    * Time required for a packet to be transmitted from transmitter to the receiver
+    * End to end delay is propagation delay + transmission delay
+
+    * Case 1
+      * If frame size is small transmission delay < propogation delay
+    * Case 2
+      * If frame size is large transmission delay = propogation delay
+    * Case 3
+      * Frame size is too large that tansmission delay > propogation delay
+    * If there are wires of 2 materials half with delay tp1 and the rest with tp2. Then E2E delay = tx + (tp1 + tp2)
+
+4. Store and Forward Delay
+
+    * Layer 2 devices for Store and Forward -> Switch or bridge
+    * Layer 3 device -> router
+    * E2E delay = (tx + tp1) + {queue + processing + tx} + tp2
+    * sfd = {queue + processing + tx}
 
 ## Questions
 
 1. The PDU for Application layer in internet stack is
     * Message
+
+2. 2 hosts A and B, bandwidth of link is 500 Kbps, tp = 150 ms. Host A sends 15,000 bytes to host B dividing file into 5000 bytes Calculate amount of time required in ms for the file completely from A to B
+
+```md
+total = 120,000 bits
+speed = 500,000 bits/s
+
+tx = 40000/500000 = 0.08s = 80ms
+
+End to End delay = (N * tx) + tp
+
+E2E = 3*80 + 150 = 390ms
+```
