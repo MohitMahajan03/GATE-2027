@@ -153,3 +153,5 @@ d/dx  |a  b  c|    |a` b` c`|   |a  b  c |   |a  b  c |
 ```
 
 * We can differentiate row wise or column wise
+
+## Algebra of Matrices
