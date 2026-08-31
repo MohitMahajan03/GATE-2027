@@ -118,6 +118,7 @@ int main()
     printf("%d", x+y);
 }
 ```
+
 ```text
 y = 8, x = 9
 y = 10, x = 10
@@ -130,7 +131,8 @@ y = 160, x = 8
 
 x+y = 168
 ```
-2. 
+
+2.
 ```C
 #include <stdio.h>
 int main()
