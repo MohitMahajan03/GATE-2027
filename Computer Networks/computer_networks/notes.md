@@ -243,6 +243,11 @@
     * E2E delay = (tx + tp1) + {queue + processing + tx} + tp2
     * sfd = {queue + processing + tx}
 
+### End to End delays for A file (Multiple Packets)
+
+* [Refer This Picture](N-packet_e2e_delay.png)
+* [Refer This Formula](N-packet_e2e_formula.png)
+
 ## Questions
 
 1. The PDU for Application layer in internet stack is
