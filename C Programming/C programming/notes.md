@@ -1,4 +1,5 @@
 # C Programming
+# Solve all Home work
 ## Solve All Questions and Homework
 ## Intro to C programming
 
@@ -96,6 +97,45 @@
 
 * Now given R1 && R2, if R1 is false, then the whole expression is false. So the compiler skips the check for R2 completely. This is called short circuting
 * Now given R1 || R2, if R1 is true, then the whole expression is true. So the compiler skips the check for R2 completely. This is called short circuting
+
+### Bit-wise Operator
+
+```table
+Operator     Meaning
+&           Bitwise AND
+|           Bitwise OR
+^           Bitwise XOR
+~           Bitwise NOT
+<<          Left Shift
+>>          Right Shift
+```
+
+```md
+1. 5 & 17
+
+ 
+  101 & 10001
+
+  10001
+  00101  = 00001
+
+
+2. 5 | 17
+
+  101 | 10001
+
+  10001
+  00101  = 10101
+
+3. 5 ^ 17
+
+  101 ^ 10001
+
+  10001
+  00101 = 10100
+
+```
+
 
 ### Questions
 
