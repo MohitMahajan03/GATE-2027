@@ -32,8 +32,12 @@
 * int
   * Size -> 2B/4B
   * Stored as 2's complement in the memory
-  * Range -> -2<sup>n-1</sup> to -2<sup>n-1</sup>-1 where n is number of bits, so either 32 bit or 16 bit
+  * Range -> -2<sup>n-1</sup> to 2<sup>n-1</sup>-1 where n is number of bits, so either 32 bit or 16 bit
   * Format specifier %d
+  * unsigend range = 2<sup>32</sup>-1
+  * short int -> 2B 
+  * long int -> 8B
+  * %lu -> long unsigned
 * char
   * Size -> 1 byte
   * Stored as integers in ASCII code
@@ -136,6 +140,18 @@ Operator     Meaning
 
 ```
 
+### Ternanry Operator
+
+* expr1 ? expr2 : expr3
+
+```C
+    if (expr1)
+      expr2;
+    else
+      expr3;
+```
+* expr1 can be relational expression or a normal expression
+
 
 ### Questions
 
@@ -190,3 +206,6 @@ int main()
 ### MISC
 
 * % Does not apply on float and double values
+* Printf returns number of characters printed
+* Scanf returns number of characters accepted
+* c = a+++b -> c = a++ + b -> by longest prefix property
