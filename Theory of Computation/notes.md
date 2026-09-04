@@ -2,8 +2,6 @@
 
 * Scoring subject
 
-## DFA
-
 * The problems faced in real worlds that can be solved using a computer are called as decidable problems.
   * Algorithm Exists
 * The problems that cannot be solved using the computer are called undecidable problem
@@ -25,3 +23,18 @@
   * If the set of sentences are finite, then it is called as finite language. If the set of sentences are infinite, then it is called as a infinite language. If the set is empty, then it is called as empty language.
 * Complete Language: An infinite language, having all possible strings that can be constructed using the alphabet, including ε.
   * Ex: Given {a, b} -> {ε, a, b, ab, aab, ....}
+
+# Finite Automata
+
+* It is a mathematical model which contains finite number of states and transiions.
+* [Refer Types of Automata here](finite_automata.png)
+* Finite Automata consists of states and transitions
+
+## DFA
+* It is a finite automata in which from every state on the input symbol exactly one transition should exists.
+* Defined as DFA = (Q, ∑, q<sub>0</sub>, F, δ)
+  * Q : Finite set of states
+  * ∑ : Input alphabet
+  * q<sub>0</sub> : Initial state
+  * F : set of final states (Can be an empty set)
+  * δ : Transition function Q * ∑ -> Q
