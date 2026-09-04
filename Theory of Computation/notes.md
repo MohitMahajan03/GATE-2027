@@ -41,6 +41,9 @@
 
 * DFA reads characters one by one left to right. This machine does not have memory
 * DFA Fails to when there are dependencies with respect to alphabet as DFA does not have any memory
+* To cover large repetetive languages, we make use of self loops and cycles
+* If any language formed over 1 symbol then DFA is possible only when common difference exists. That means, string's lenghts are in AP
+* The Language for which DFA is possible is known as Regular Language
 
 ### Questions
 
