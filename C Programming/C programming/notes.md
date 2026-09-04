@@ -209,3 +209,48 @@ int main()
 * Printf returns number of characters printed
 * Scanf returns number of characters accepted
 * c = a+++b -> c = a++ + b -> by longest prefix property
+
+## Control flow statements
+
+### if
+
+* Syntax
+
+```c
+stmt0;
+if(condition/expression)
+{
+  stmt1;
+  stmt2;
+}
+else{
+  stmt3;
+  stmt4;
+}
+stmt5;
+```
+* NOTE
+```c
+// The semicolon terminates the "if" statement. The block is now a sequential block, and will always execute. The "expression" will always execute
+// Therefore any else block present will throw an error "else without if" error
+if(expression);
+{
+  stmt1;
+  stmt2;
+}
+```
+
+### switch
+
+* Switch allows an expression to be tested for equality against list of values
+* Each value in list is called as case
+* If none of the case is true, default case executes and it is optional
+* 
+```c
+switch(expression)
+{
+  case value : stmts;
+
+  break;
+}
+```
