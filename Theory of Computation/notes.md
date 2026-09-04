@@ -32,7 +32,7 @@
 
 ## DFA
 * It is a finite automata in which from every state on the input symbol exactly one transition should exists.
-* Defined as DFA = (Q, ∑, q<sub>0</sub>, F, δ)
+* Defined as DFA = (Q, ∑, q<sub>0</sub>, F, ç)
   * Q : Finite set of states
   * ∑ : Input alphabet
   * q<sub>0</sub> : Initial state
@@ -49,3 +49,25 @@
 
 1. L = {a<sup>n</sup>b<sup>m</sup> | n < m} m has dependency on n so DFA cannot be constructed
 2. L = {a<sup>n</sup>b<sup>m</sup> | n>=0, m>=0} no dependency DFA possible. 
+
+### Minimization of DFA
+
+* For any given language multiple DFA can be constructed.
+* There are 2 algorithms that help in minimization of DFA
+    1. State equivalence algorithm
+    2. Table filling algorithm
+
+### State Equivalence Algorithm
+
+1. Eliminate Inaccessible States
+    * Any state not reachable from initial state is known as inaccessible state
+2. Merge equivalent states
+    * 2 states q0, q1 are said to be equivalent if both δ(q0, x) and δ(q1, x) for all x belonging to ∑ should either result in final state or non final state
+ 
+* Make a transition table first.
+* Make 2 groups, final states and non final states
+* take 2 states at a time and check their tranisitions on each input
+* if all the transition fall in the same group, separate the states into another group.
+* After forming new groups, repeat the process with the new groups
+* Repeat the above process till the groups repeat as is.
+* These are the final groups, and the DFA will be minimized
