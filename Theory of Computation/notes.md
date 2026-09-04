@@ -38,3 +38,11 @@
   * q<sub>0</sub> : Initial state
   * F : set of final states (Can be an empty set)
   * δ : Transition function Q * ∑ -> Q
+
+* DFA reads characters one by one left to right. This machine does not have memory
+* DFA Fails to when there are dependencies with respect to alphabet as DFA does not have any memory
+
+### Questions
+
+1. L = {a<sup>n</sup>b<sup>m</sup> | n < m} m has dependency on n so DFA cannot be constructed
+2. L = {a<sup>n</sup>b<sup>m</sup> | n>=0, m>=0} no dependency DFA possible. 
