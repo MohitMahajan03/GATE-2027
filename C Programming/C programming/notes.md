@@ -270,3 +270,26 @@ for(expr1; expr2; expr3)
 * expr1 = Initialization of the loop
 * expr2 = conditional expression for function call, if not present, the loop is infinite
 * expr3 = updation of loop variable, if the loop variable is not updated, infitie loop
+* For loops can be nested
+* Interesting
+```c
+for (i = 10; i>=1; i--);
+{
+  block of code
+}
+
+//will execute the loop, and the value of i will be 0 at the end
+```
+
+### While Loop
+
+* Number of iteration is unkown contrary to for loop
+* Syntax
+  
+```c
+while(condition)
+{
+  body of code
+}
+//condition cannot be empty, empty error throws syntax error
+```
