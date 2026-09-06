@@ -245,7 +245,8 @@ if(expression);
 * Switch allows an expression to be tested for equality against list of values
 * Each value in list is called as case
 * If none of the case is true, default case executes and it is optional
-* 
+* If break is not present all subsequent cases evaluates to true
+* Duplicate case values throw errors, and case values containing variables throw errors, 
 ```c
 switch(expression)
 {
@@ -254,3 +255,18 @@ switch(expression)
   break;
 }
 ```
+
+### For Loop
+
+* Syntax
+
+```c
+
+for(expr1; expr2; expr3)
+{
+  body of loop
+}
+```
+* expr1 = Initialization of the loop
+* expr2 = conditional expression for function call, if not present, the loop is infinite
+* expr3 = updation of loop variable, if the loop variable is not updated, infitie loop
