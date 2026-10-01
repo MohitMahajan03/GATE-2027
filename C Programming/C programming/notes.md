@@ -284,6 +284,7 @@ for (i = 10; i>=1; i--);
 ### While Loop
 
 * Number of iteration is unkown contrary to for loop
+* It is an entry controlled loop
 * Syntax
   
 ```c
@@ -293,3 +294,40 @@ while(condition)
 }
 //condition cannot be empty, empty error throws syntax error
 ```
+
+### Do While Loop
+
+* Executes loop atleast once
+* It is an exit controlled loop
+* Syntax
+  
+```c
+do
+{
+  body of code
+}while(condition)
+//condition cannot be empty, empty error throws syntax error
+```
+
+* If the while loop or do while loop are nested inside a loop, and if the condition variable is not initialized before loop executes, then the variable will not be initialized at all from the 2nd iteration of the main loop.
+
+  * For example:
+  ```c
+  #include <stdio.h>
+  int main()
+  {
+    int i, j=10, count = 0;
+    for(i = 1; i <= 3, i++)
+    {
+      do{
+        printf("Hello");
+        j = j + 10;
+        count++;
+      }while(j <= 200)
+    }
+    return 0
+  }
+  ```
+  * Here when the for loop is in 2nd iteration, j = 200 and has not been reset to 10.
+
+### Break and Continue
