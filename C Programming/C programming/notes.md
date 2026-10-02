@@ -330,4 +330,9 @@ do
   ```
   * Here when the for loop is in 2nd iteration, j = 200 and has not been reset to 10.
 
-### Break and Continue
+* Watch CH02 L04 -> Important questions. [Refer questions here](/C%20Programming/C%20programming/crazy_q_1.png)
+
+### Break, Continue and goto
+
+* Break causes control of execution to transfer outside of loop and switch block where break statement is used. It cannot be used with if and else block and functions block
+* The continue statement forces to the next iteration without executing the rest of the statements in the loop.
