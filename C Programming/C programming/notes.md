@@ -336,3 +336,35 @@ do
 
 * Break causes control of execution to transfer outside of loop and switch block where break statement is used. It cannot be used with if and else block and functions block
 * The continue statement forces to the next iteration without executing the rest of the statements in the loop.
+
+## Function and Storage class
+
+* A function is a self contained block of code designed to perform a specific task. It allows you to organize your program into smaller manageable and resuable units.
+
+```c
+#include <stdio.h>
+int fun(int, int);  //Forward declaration
+
+int main()
+{
+  int a = 10, b = 20;
+  printf("%d", fun(a,b)); //function call, with call by value parameter value passing
+}
+
+int fun(int x, int y) //Function definition with arguments.
+{
+  int z;
+  z = x++* ++y;
+  return z;
+}
+```
+
+* Function can be defined before main can be made to avoid function declaration
+* Any variable declared within the block is a local variable. Which is created only during the function call.
+* And upon termination of the function, local variables are destroyed.
+
+### Activation Records
+
+* When a function is in execution, the compiler maintains a set of records related to activation called activation record.
+* When a function is called, activation Record is created and pushed onto the run time stack and upon termination, it is popped from the stack.
+* 
