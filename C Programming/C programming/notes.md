@@ -367,4 +367,5 @@ int fun(int x, int y) //Function definition with arguments.
 
 * When a function is in execution, the compiler maintains a set of records related to activation called activation record.
 * When a function is called, activation Record is created and pushed onto the run time stack and upon termination, it is popped from the stack.
-* 
+* Activation Tree is the flow tree generated for the Activation records.
+* [Refer Here](/C%20Programming/C%20programming/activation_tree.pdf)
