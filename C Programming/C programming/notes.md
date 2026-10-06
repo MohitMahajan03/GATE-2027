@@ -362,6 +362,7 @@ int fun(int x, int y) //Function definition with arguments.
 * Function can be defined before main can be made to avoid function declaration
 * Any variable declared within the block is a local variable. Which is created only during the function call.
 * And upon termination of the function, local variables are destroyed.
+* Function parameter evaluation order is not defined, it is compiler dependent
 
 ### Activation Records
 
@@ -369,3 +370,39 @@ int fun(int x, int y) //Function definition with arguments.
 * When a function is called, activation Record is created and pushed onto the run time stack and upon termination, it is popped from the stack.
 * Activation Tree is the flow tree generated for the Activation records.
 * [Refer Here](/C%20Programming/C%20programming/activation_tree.pdf)
+
+### Storage class
+
+Storage class is defined by these 4 points
+* Storage class of a variable defines the memory location where the variable will be stored.
+* Scope defines where we can access and modify the variable
+* Life time of a variable -> How long a variable will be allocated
+* What is the initial value of variable
+
+
+### Types of memory in C program
+* So, the memory for the C program have 4 sections, code area, static data, heap and run time stack
+* static data section has static data and is allocated memory durin compile time
+* Heap is present for Runtime memory allocation
+* The runtime stack is to store the Activation records to store all the active function calls.
+
+### Auto storage class
+
+* Auto is the default storage class, of local variable.
+* int a; is same as auto int a;
+* Auto variables are stored on the stack
+* Life time -> until block is in execution
+* Initial value is always garbage value
+
+### Static storage class
+
+* Static is default storage class for global variables
+* static int a;
+* Scope 
+  * If Global, then entire program.
+  * If local, then within the block
+* Life time -> until program is running
+* Initial value of static is always 0
+
+
+* Incases of conflict, local variables are preferred over global variables
