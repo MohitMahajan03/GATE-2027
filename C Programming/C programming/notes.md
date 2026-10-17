@@ -406,3 +406,36 @@ Storage class is defined by these 4 points
 
 
 * Incases of conflict, local variables are preferred over global variables
+
+### Recursion
+
+Refer (CH 03 L 03)
+
+It is a problem solving technique in which solution of a problem is expressed in terms of smaller instance of same problem
+
+```md
+factorial
+n! = (n-1)! * n where n > 0
+1 if n=0
+```
+
+```c
+int fact(int n)
+{
+  if(n == 0)
+    return 1;
+
+  else
+    return n*fact(n-1);
+}
+```
+
+#### Tail Recursion
+
+* If the recursive call is, the last statement of the function, then it is called as tail recursion.
+* Build a recursion tree, and if the value generated is on left sub tree, then the values should be followed Top down, else bottom up.
+
+#### Non Tail Recursion
+
+* If recursive call is not the last statement of the function then, it is a non tail recursion.
+* Build a recursion tree, and if the value generated is on right sub tree, then the values should be followed bottom up, else top down.
