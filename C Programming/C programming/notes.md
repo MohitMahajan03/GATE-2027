@@ -439,3 +439,7 @@ int fact(int n)
 
 * If recursive call is not the last statement of the function then, it is a non tail recursion.
 * Build a recursion tree, and if the value generated is on right sub tree, then the values should be followed bottom up, else top down.
+
+#### Indirect Recursion.
+
+* In indirect recursion more than 1 function is present and they call each other in circular manner.
