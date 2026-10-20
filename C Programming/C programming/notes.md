@@ -443,3 +443,18 @@ int fact(int n)
 #### Indirect Recursion.
 
 * In indirect recursion more than 1 function is present and they call each other in circular manner.
+
+#### Tower of Hanoi
+
+* TOH(n, L, M, R) -> Function that moves n disc from tower L to tower R using tower M
+
+```c
+TOH(n, L, M, R)
+{
+  if (n >= 1){
+    TOH(n-1, L, R, M)
+    TOH(n-1, M, L, R)
+  }
+  
+}
+```
