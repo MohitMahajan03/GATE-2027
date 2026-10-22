@@ -458,3 +458,41 @@ TOH(n, L, M, R)
   
 }
 ```
+
+### Pointers
+
+* Pointer is a variable that can hold address of another variable of similar data type.
+
+```c
+//Declaration
+
+int *ptr;
+
+//ptr points to an integer. By holding address of an integer.
+int b;
+
+ptr = &b;
+
+// & denoted address of operator.
+
+// Now *ptr will display value stored in b
+
+printf("%d", b); //value b holds
+printf("%p", &b); //address of b
+printf("%p", ptr); //values p holds -> address of b
+printf("%d", *ptr); //value of b
+printf("%p", &ptr); //address of ptr
+
+int a, *b, **c; // Double pointer
+
+a = 10;
+b = &a;
+c = &b;
+
+a = a+10;
+*b = *b+20;
+**c = **c+20;
+
+printf("%d", a); // a = 60
+
+```
